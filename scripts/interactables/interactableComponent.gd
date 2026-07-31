@@ -1,8 +1,11 @@
 extends Node
 
-@onready var player: CharacterBody2D = get_tree().get_nodes_in_group(&"Player")[0]
+@onready var player: Player
 @export var dialogue_resource: DialogueResource
 @export var interactable: bool = true
+
+func _ready() -> void:
+	player = get_tree().get_nodes_in_group(&"Player")[0]
 
 func _process(delta: float) -> void:
 	if player.global_position.distance_to(get_parent().global_position) < 100 and interactable:

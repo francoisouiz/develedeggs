@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 const speed: float = 300.0
 

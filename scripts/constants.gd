@@ -7,5 +7,11 @@ const SCENE_PATHS: Dictionary = {
 
 const DIALOGUE_PATHS: Dictionary[String, String] = {
 	"house_1_start": "uid://dou5hcsecewgy",
-	"door": "uid://k6jkg4fgisgv"
+}
+
+const CHARACTER_ICON_PATHS: Dictionary[String, String] = {
+	"Max": "uid://4q335xxs2p",
+	"Joshua": "uid://b6iebvwqbl1rp",
+	"Martin": "uid://cvd0xw28tuhy3",
+	"Driver": "uid://bygrfesmr5pkk"
 }

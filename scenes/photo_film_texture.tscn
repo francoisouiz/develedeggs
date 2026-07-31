@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://sdxoheqqy1oc"]
+
+[ext_resource type="Shader" uid="uid://p51yknichyex" path="res://assets/shaders/grayscale.gdshader" id="1_wk1w8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k6aki"]
+shader = ExtResource("1_wk1w8")
+
+[node name="PhotoFilmTexture" type="ColorRect" unique_id=1465462974]
+material = SubResource("ShaderMaterial_k6aki")
+offset_left = 6.1035156e-05
+offset_right = 1600.0
+offset_bottom = 1110.0

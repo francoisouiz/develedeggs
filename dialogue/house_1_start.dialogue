@@ -1,0 +1,17 @@
+~ start
+Max: Can’t you guys believe it’s Christmas already? A full year of working as bonafide adults in the photography industry.
+Joshua: Oh shut up. Us? Adults? We just graduated from highschool yesterday, what do you mean?
+Martin: Yeah, it was just last week when Nugget was trying to eat Max’s cafeteria lunch.
+Max: *chuckle* That takes me back. I miss that stupid little cat in that stupid little highschool.
+Martin: And he misses your lunches too. 
+Joshua: Aren’t you going back to the province tomorrow, Max?
+Max: I’m dreading the commute back though. Jam-packed in a bus like a can of sardines in the midst of Christmas traffic? I’m already sweating just thinking about it.
+Joshua: I mean that’s practically expected already. Every commute here in the Philippines is like going through the 9 circles of hell.
+Max: I guess so.
+Martin: You got your pasalubong already? Surely you don’t plan on going back home empty-handed.
+Max: Oh shoot, you’re right. I’m gonna have to think about it on the way home. Thanks for the reminder.
+do play_doorbell()
+Driver: BabaMove delivery for Max Bayubay?
+Joshua: That’s your cue.
+Max: For me? I don’t think I got anything delivered.
+=> END

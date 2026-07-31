@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d1xves3s5ijtb"]
+
+[ext_resource type="Texture2D" uid="uid://b6iebvwqbl1rp" path="res://assets/temp/joshua.png" id="1_3c4jj"]
+[ext_resource type="Script" uid="uid://dyuoqfwhokgv8" path="res://scripts/interactables/joshua.gd" id="1_lobag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(184.26967, 184.26967)
+
+[node name="Joshua" type="CharacterBody2D" unique_id=1281993070]
+scale = Vector2(0.445, 0.445)
+script = ExtResource("1_lobag")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=669902933]
+texture = ExtResource("1_3c4jj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1627342092]
+position = Vector2(-7.232923e-06, -8.572352e-06)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_s3x7s")

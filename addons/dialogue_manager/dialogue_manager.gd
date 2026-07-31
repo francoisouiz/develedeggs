@@ -70,7 +70,6 @@ var _dotnet_dialogue_manager: RefCounted
 
 var _expression_parser: DMExpressionParser = DMExpressionParser.new()
 
-
 func _on_dialogue_ended(resource: DialogueResource) -> void:
 	PlayerStats.can_move = true
 

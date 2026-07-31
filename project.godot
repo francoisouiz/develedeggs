@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="DevelUp"
+run/main_scene="uid://cpxhwj5o5l2kk"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://assets/images/icon.svg"
 
@@ -18,6 +19,12 @@ config/icon="res://assets/images/icon.svg"
 
 ScreenLoader="*uid://1tpx023i35uw"
 Constants="*uid://bgy7umjjdr1qe"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/inferred_declaration=2
+gdscript/warnings/unsafe_call_argument=1
 
 [display]
 

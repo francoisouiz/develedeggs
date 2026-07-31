@@ -13,7 +13,7 @@ config_version=5
 config/name="DevelUp"
 run/main_scene="uid://cpxhwj5o5l2kk"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://assets/images/icon.svg"
+config/icon="res://assets/sprites/icon.svg"
 
 [autoload]
 
@@ -30,6 +30,10 @@ gdscript/warnings/unsafe_call_argument=1
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/TileMapDual/plugin.cfg")
 
 [physics]
 

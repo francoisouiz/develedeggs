@@ -71,8 +71,12 @@ var _dotnet_dialogue_manager: RefCounted
 var _expression_parser: DMExpressionParser = DMExpressionParser.new()
 
 
+func _on_dialogue_ended(resource: DialogueResource) -> void:
+	PlayerStats.can_move = true
+
 func _ready() -> void:
 	# Cache the known Node2D properties
+	dialogue_ended.connect(_on_dialogue_ended)
 	_node_properties = ["Script Variables"]
 	var temp_node: Node2D = Node2D.new()
 	for property in temp_node.get_property_list():

@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 const speed: float = 300.0
 
+func _ready() -> void:
+	add_to_group(&"Player")
+
 func _physics_process(delta: float) -> void:
 	var direction_hor: float = Input.get_axis("ui_left", "ui_right")
 	if direction_hor and PlayerStats.can_move:

@@ -5,6 +5,7 @@ const SCENE_PATHS: Dictionary = {
 	"house_1": "uid://cjggqamfjfa5j"
 }
 
-const DIALOGUE_PATHS: Dictionary = {
-	"house_1_start": "uid://dou5hcsecewgy"
+const DIALOGUE_PATHS: Dictionary[String, String] = {
+	"house_1_start": "uid://dou5hcsecewgy",
+	"door": "uid://k6jkg4fgisgv"
 }

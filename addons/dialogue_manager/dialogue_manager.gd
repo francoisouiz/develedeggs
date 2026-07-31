@@ -37,7 +37,6 @@ signal bridge_get_line_completed(call_index: int, line: DialogueLine)
 ## Used internally
 signal bridge_mutated(call_index: int)
 
-
 ## The list of globals that dialogue can query
 var game_states: Array = []
 
@@ -483,7 +482,7 @@ func get_resolved_character(data: Dictionary, extra_game_states: Array = []) -> 
 	for found in random_regex.search_all(character):
 		var options = found.get_string(&"options").split("|")
 		character = character.replace("[[%s]]" % found.get_string(&"options"), options[randi_range(0, options.size() - 1)])
-
+	
 	return character
 
 
@@ -525,6 +524,7 @@ func show_example_dialogue_balloon(resource: DialogueResource, title: String = "
 func show_dialogue_balloon(resource: DialogueResource, title: String = "", extra_game_states: Array = []) -> Node:
 	PlayerStats.can_move = false
 	var balloon_path: String = DMSettings.get_setting(DMSettings.BALLOON_PATH, _get_example_balloon_path())
+	print(balloon_path)
 	if not ResourceLoader.exists(balloon_path):
 		balloon_path = _get_example_balloon_path()
 	return show_dialogue_balloon_scene(balloon_path, resource, title, extra_game_states)

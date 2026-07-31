@@ -28,6 +28,10 @@ gdscript/warnings/untyped_declaration=2
 gdscript/warnings/inferred_declaration=2
 gdscript/warnings/unsafe_call_argument=1
 
+[dialogue_manager]
+
+runtime/balloon_path="res://scenes/balloon.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"

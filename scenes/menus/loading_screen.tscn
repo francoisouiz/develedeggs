@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qk4cctayieey"]
 
-[ext_resource type="Script" uid="uid://buufor6hwd6fx" path="res://scripts/loading_screen.gd" id="1_ep5rh"]
+[ext_resource type="Script" uid="uid://buufor6hwd6fx" path="res://scripts/loading_screen.gd" id="1_h0sde"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3x7s"]
 bg_color = Color(0, 0, 0, 0)
@@ -42,8 +42,10 @@ _data = {
 &"loading_transition": SubResource("Animation_ep5rh")
 }
 
-[node name="Loading Screen" type="CanvasLayer" unique_id=192179698]
-script = ExtResource("1_ep5rh")
+[node name="Loading Screen" type="CanvasLayer" unique_id=192179698 node_paths=PackedStringArray("animation_player")]
+layer = 10
+script = ExtResource("1_h0sde")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="Panel" type="Panel" parent="." unique_id=1009569303]
 anchors_preset = 15

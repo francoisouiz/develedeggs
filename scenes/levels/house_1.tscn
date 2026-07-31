@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cjggqamfjfa5j"]
+
+[ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="1_o2kl1"]
+[ext_resource type="Script" uid="uid://wqfxo4ft8u85" path="res://scripts/house_1.gd" id="1_r6q8b"]
+[ext_resource type="PackedScene" uid="uid://d1xves3s5ijtb" path="res://scenes/joshua.tscn" id="2_3hd4g"]
+
+[node name="House 1" type="Node2D" unique_id=1938029275]
+script = ExtResource("1_r6q8b")
+
+[node name="Player" parent="." unique_id=2008015409 instance=ExtResource("1_o2kl1")]
+position = Vector2(685, 287)
+
+[node name="Joshua" parent="." unique_id=1281993070 instance=ExtResource("2_3hd4g")]
+position = Vector2(325.00003, 269.00003)

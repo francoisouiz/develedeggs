@@ -1,6 +1,6 @@
 extends Node
 
-signal progress_changed(progress)
+signal progress_changed(progress: Array)
 signal load_finished
 
 var loading_screen: PackedScene = preload(Constants.SCENE_PATHS.loading_screen)
@@ -15,7 +15,7 @@ func _ready() -> void:
 func load_scene(_scene_path: String) -> void:
 	scene_path = _scene_path
 	
-	var new_load_screen = loading_screen.instantiate()
+	var new_load_screen: CanvasLayer = loading_screen.instantiate()
 	add_child(new_load_screen)
 	progress_changed.connect(new_load_screen._on_progress_changed)
 	load_finished.connect(new_load_screen._on_load_finished)
@@ -25,12 +25,12 @@ func load_scene(_scene_path: String) -> void:
 	start_load()
 
 func start_load() -> void:
-	var state = ResourceLoader.load_threaded_request(scene_path, "", use_sub_threads)
+	var state: Error = ResourceLoader.load_threaded_request(scene_path, "", use_sub_threads)
 	if state == OK:
 		set_process(true)
 
 func _process(_delta: float) -> void:
-	var load_status = ResourceLoader.load_threaded_get_status(scene_path, progress)
+	var load_status: ResourceLoader.ThreadLoadStatus = ResourceLoader.load_threaded_get_status(scene_path, progress)
 	progress_changed.emit(progress[0])
 	match load_status:
 		ResourceLoader.THREAD_LOAD_INVALID_RESOURCE, ResourceLoader.THREAD_LOAD_FAILED:

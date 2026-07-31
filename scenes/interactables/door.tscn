@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dryev7r8enta3"]
 
-[ext_resource type="Script" uid="uid://ohcc6aiogbrr" path="res://scripts/interactables/interactableComponent.gd" id="1_fnoyy"]
+[ext_resource type="Script" uid="uid://ohcc6aiogbrr" path="res://scripts/interactables/interactable_component.gd" id="1_fnoyy"]
 [ext_resource type="Texture2D" uid="uid://muf2llqugfyh" path="res://assets/temp/door.png" id="1_hpvv5"]
 [ext_resource type="Resource" uid="uid://k6jkg4fgisgv" path="res://dialogue/door.dialogue" id="3_xetrc"]
 

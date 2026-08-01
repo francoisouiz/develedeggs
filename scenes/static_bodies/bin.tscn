@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ciq6ngge3o6us"]
+
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_5lal4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3x7s"]
+atlas = ExtResource("1_5lal4")
+region = Rect2(13, 56, 8, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(8, 6)
+
+[node name="Bin" type="StaticBody2D" unique_id=1128115162]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2047480977]
+texture_filter = 1
+texture = SubResource("AtlasTexture_s3x7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1330003927]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_s3x7s")

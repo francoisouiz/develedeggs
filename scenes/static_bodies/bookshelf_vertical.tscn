@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://detvj8qedytbv"]
+
+[ext_resource type="Texture2D" uid="uid://dv6vgexos8245" path="res://assets/textures/bookshelf_vertical.tres" id="1_0akq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(8, 42)
+
+[node name="BookshelfVertical" type="StaticBody2D" unique_id=1233828754]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1162614216]
+texture_filter = 1
+texture = ExtResource("1_0akq8")
+region_rect = Rect2(3, 34, 8, 42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=62748631]
+shape = SubResource("RectangleShape2D_s3x7s")

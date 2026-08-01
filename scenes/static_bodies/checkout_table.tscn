@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bw1kc5gq35frl"]
+
+[ext_resource type="Texture2D" uid="uid://d0o8tph4aodpa" path="res://assets/textures/checkout_table.tres" id="1_k52yy"]
+
+[node name="CheckoutTable" type="StaticBody2D" unique_id=1478182563]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=24395035]
+texture_filter = 1
+texture = ExtResource("1_k52yy")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=761930436]
+polygon = PackedVector2Array(1, -7, -7, -7, -7, 11, 8, 11, 8, 1, 1, 1)

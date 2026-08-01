@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://dknajkr1x47qe"]
 
-[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_mwadb"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s3x7s"]
-atlas = ExtResource("1_mwadb")
-region = Rect2(23, 55, 17, 9)
+[ext_resource type="Texture2D" uid="uid://bxybnmdis88hn" path="res://assets/textures/duffle_bag.tres" id="1_mwadb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
 size = Vector2(15, 7)
@@ -13,7 +9,7 @@ size = Vector2(15, 7)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1603203103]
 texture_filter = 1
-texture = SubResource("AtlasTexture_s3x7s")
+texture = ExtResource("1_mwadb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1437005408]
 position = Vector2(1, 1)

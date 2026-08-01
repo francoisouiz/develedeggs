@@ -133,12 +133,10 @@ func apply_dialogue_line() -> void:
 	balloon.grab_focus()
 
 	character_label.visible = not dialogue_line.character.is_empty()
-	var char_txt: String = tr(dialogue_line.character, "dialogue")
-	character_label.text = char_txt
-	if Constants.CHARACTER_ICON_PATHS.has(char_txt):
-		texture_rect.texture = load(Constants.CHARACTER_ICON_PATHS[char_txt])
-	if Constants.CHARACTER_AUDIO_PATHS.has(char_txt):
-		audio_stream_player.stream = load(Constants.CHARACTER_AUDIO_PATHS[char_txt])
+	character_label.text = tr(dialogue_line.character, "dialogue")
+	texture_rect.texture = load(Constants.CHARACTER_ICON_PATHS[tr(dialogue_line.character, "dialogue")])
+	print("test")
+	audio_stream_player.stream = load(Constants.CHARACTER_AUDIO_PATHS[tr(dialogue_line.character, "dialogue")])
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
@@ -222,9 +220,3 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
-
-
-func _on_dialogue_label_spoke(letter: String, letter_index: int, speed: float) -> void:
-	if not letter in [".", " "]:
-		audio_stream_player.pitch_scale = randf_range(0.9, 1.1)
-		audio_stream_player.play()

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bmcwnlb3oa7tt"]
+
+[ext_resource type="SpriteFrames" uid="uid://c7s776feufp1l" path="res://assets/textures/cat_sleeping.tres" id="1_mkhkd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m2g58"]
+radius = 6.0827627
+
+[node name="Cat" type="StaticBody2D" unique_id=1510551811]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=844901754]
+texture_filter = 1
+sprite_frames = ExtResource("1_mkhkd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=222235687]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_m2g58")

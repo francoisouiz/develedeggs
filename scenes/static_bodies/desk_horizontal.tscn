@@ -9,4 +9,5 @@ texture_filter = 1
 texture = ExtResource("1_4ei1y")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1242711446]
+position = Vector2(-1, 0)
 polygon = PackedVector2Array(-4, -5, -4, 2, 5, 2, 5, -5)

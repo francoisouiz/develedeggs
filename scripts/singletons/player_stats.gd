@@ -1,9 +1,9 @@
 extends Node
 
 var curr_level: String = ""
-var level_pointer: int = 0
+var scene_progress: int = 0
 var can_move: bool = false
 var in_photo: bool = false
 
-func increase_pointer() -> void:
-	level_pointer += 1
+func continue_scene() -> void:
+	scene_progress += 1

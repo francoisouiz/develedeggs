@@ -1,7 +1,7 @@
 ~ start
 match PlayerStats.curr_level
 	when "start"
-		match PlayerStats.level_pointer
+		match PlayerStats.scene_progress
 			when 0
 				Joshua: we're at the start and u no picjk
 			when 1

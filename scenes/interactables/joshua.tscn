@@ -7,7 +7,7 @@
 size = Vector2(184.26967, 184.26967)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6aki"]
-size = Vector2(157.3034, 146.06746)
+size = Vector2(184.26971, 184.26971)
 
 [node name="Joshua" type="CharacterBody2D" unique_id=1281993070]
 scale = Vector2(0.445, 0.445)
@@ -24,6 +24,6 @@ shape = SubResource("RectangleShape2D_s3x7s")
 script = ExtResource("2_0ja13")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=667407812]
-position = Vector2(-1.071544e-06, 1.1235943)
+position = Vector2(-2.143088e-06, -2.143088e-06)
 scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_k6aki")

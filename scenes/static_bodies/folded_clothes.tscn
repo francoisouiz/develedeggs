@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://r5arwt0rxink"]
 
 [ext_resource type="Texture2D" uid="uid://57cg8cqo53x7" path="res://assets/textures/folded_clothes.tres" id="1_6bq17"]
+[ext_resource type="Script" uid="uid://d3y4fmtja2gq0" path="res://scripts/interactables/folded_clothes.gd" id="2_du4nn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(12.75, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(14, 11)
 
 [node name="FoldedClothes" type="StaticBody2D" unique_id=374037775]
 
@@ -13,3 +17,10 @@ texture = ExtResource("1_6bq17")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1229821787]
 shape = SubResource("RectangleShape2D_m2g58")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=1640051471]
+script = ExtResource("2_du4nn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1409404371]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_s3x7s")

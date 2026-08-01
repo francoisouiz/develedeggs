@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var doorbell: AudioStreamPlayer2D = $Doorbell
+@onready var cat: AudioStreamPlayer2D = $Cat
 
 func _ready() -> void:
 	await get_tree().create_timer(2.0).timeout
@@ -9,3 +10,6 @@ func _ready() -> void:
 func play_doorbell() -> void:
 	doorbell.play()
 	await doorbell.finished
+
+func play_cat() -> void:
+	cat.play()

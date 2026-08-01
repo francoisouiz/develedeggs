@@ -37,8 +37,8 @@ func _input(event: InputEvent) -> void:
 		# ChangeTileset
 
 func get_nearest_interactable() -> void:
-	if nearby_interactables.is_empty():
-		if target:
+	if target:
+		if target not in nearby_interactables:
 			target.darken()
 			target = null
 		return
@@ -51,7 +51,6 @@ func get_nearest_interactable() -> void:
 		if distance < min_distance:
 			min_distance = distance
 			nearest = interactable
-	
 	target = nearest
 
 func _on_interactable_area_area_entered(area: Area2D) -> void:

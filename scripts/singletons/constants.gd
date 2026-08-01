@@ -9,7 +9,12 @@ const DIALOGUE_PATHS: Dictionary[String, String] = {
 	"house_1_start": "uid://dou5hcsecewgy",
 	"house_1_door": "uid://k6jkg4fgisgv",
 	"house_1_postpickup": "uid://cvfhpohokm35x",
-	"joshua": "uid://b5olxe1wu01fs"
+	"joshua": "uid://b5olxe1wu01fs",
+	"house_1_bed": "uid://dqnyt0wodjpj3",
+	"house_1_bookshelf": "uid://4vncduk2lyp5",
+	"house_1_television": "uid://b0v5tgaeb2jtm",
+	"house_1_cat": "uid://ceresl40sv6gg",
+	"house_1_clothes": "uid://dxktigwqst6ew"
 }
 
 const CHARACTER_ICON_PATHS: Dictionary[String, String] = {

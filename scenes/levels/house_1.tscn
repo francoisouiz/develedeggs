@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://r2p6dxl41mpf" path="res://scenes/interactables/television.tscn" id="12_k26ww"]
 [ext_resource type="PackedScene" uid="uid://dknajkr1x47qe" path="res://scenes/static_bodies/duffle_bag.tscn" id="13_u6x60"]
 [ext_resource type="PackedScene" uid="uid://bmcwnlb3oa7tt" path="res://scenes/interactables/cat.tscn" id="15_6wds3"]
+[ext_resource type="AudioStream" uid="uid://cu4hmomc6e3y3" path="res://assets/audio/cat_purr.mp3" id="17_jm6tu"]
 
 [sub_resource type="Environment" id="Environment_vr0rt"]
 background_mode = 3
@@ -121,3 +122,7 @@ stream = ExtResource("7_15vgw")
 [node name="Joshua" parent="." unique_id=1281993070 instance=ExtResource("2_3hd4g")]
 position = Vector2(205, 120)
 scale = Vector2(0.1, 0.1)
+
+[node name="Cat" type="AudioStreamPlayer2D" parent="." unique_id=1989016382]
+stream = ExtResource("17_jm6tu")
+volume_db = 5.0

@@ -1,0 +1,135 @@
+[gd_scene format=4 uid="uid://dm8cnmbmk8prj"]
+
+[ext_resource type="TileSet" uid="uid://bcy6e1346sv0x" path="res://assets/tilesets/store.tres" id="1_fl5pn"]
+[ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="2_kas8u"]
+[ext_resource type="PackedScene" uid="uid://dfk0tc12mj1ph" path="res://scenes/static_bodies/store_shelf_horizontal.tscn" id="3_im67j"]
+[ext_resource type="PackedScene" uid="uid://d1xves3s5ijtb" path="res://scenes/interactables/joshua.tscn" id="4_vydj2"]
+[ext_resource type="PackedScene" uid="uid://bgsg61l51br7b" path="res://scenes/static_bodies/checkout_table.tscn" id="5_ojqlp"]
+[ext_resource type="PackedScene" uid="uid://52q3dog5tqi6" path="res://scenes/static_bodies/clothes_rack_horizontal_b.tscn" id="6_1eynv"]
+[ext_resource type="PackedScene" uid="uid://d0yqixk1qe7x5" path="res://scenes/static_bodies/clothes_rack_vertical_a.tscn" id="7_1gq04"]
+[ext_resource type="PackedScene" uid="uid://cree7oyv7ruxk" path="res://scenes/static_bodies/store_shelf_vertical.tscn" id="9_1eynv"]
+[ext_resource type="PackedScene" uid="uid://cyt00tjtj6ivu" path="res://scenes/static_bodies/clothes_rack_horizontal_a.tscn" id="9_6qlkj"]
+[ext_resource type="PackedScene" uid="uid://doiubi1kc654m" path="res://scenes/static_bodies/refrigerator.tscn" id="10_1gq04"]
+[ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="11_6qlkj"]
+[ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="11_i1bva"]
+[ext_resource type="PackedScene" uid="uid://8knopplr1vny" path="res://scenes/static_bodies/sdoor.tscn" id="13_clymf"]
+
+[sub_resource type="Environment" id="Environment_kas8u"]
+background_mode = 3
+tonemap_mode = 1
+glow_enabled = true
+glow_intensity = 1.5
+glow_bloom = 0.25
+glow_blend_mode = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enyy3"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Store Inside" type="Node2D" unique_id=675514822]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1413475699]
+color = Color(0.2065543, 0.2065543, 0.20655426, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1235631011]
+environment = SubResource("Environment_kas8u")
+
+[node name="Panel" type="Panel" parent="." unique_id=330638386]
+offset_left = -75.0
+offset_top = -15.0
+offset_right = 242.0
+offset_bottom = 162.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_enyy3")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=186705124]
+position = Vector2(97, 72)
+zoom = Vector2(4, 4)
+
+[node name="Lights" type="Node2D" parent="." unique_id=1745530952]
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights" unique_id=1249863752]
+texture_filter = 1
+position = Vector2(128, 79)
+color = Color(0.98039216, 0.9607843, 0.9019608, 1)
+energy = 0.75
+texture = ExtResource("2_kas8u")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lights" unique_id=220756175]
+position = Vector2(67, 79)
+color = Color(0.9800367, 0.9619611, 0.90186304, 1)
+energy = 0.75
+texture = ExtResource("2_kas8u")
+
+[node name="Tilemaps" type="Node2D" parent="." unique_id=722759322]
+texture_filter = 1
+
+[node name="Floor" type="TileMapLayer" parent="Tilemaps" unique_id=1399215463]
+tile_map_data = PackedByteArray("AAABAAEAAAABAAIAAAACAAEAAAACAAIAAAADAAEAAAADAAIAAAABAAIAAAACAAIAAAACAAIAAAADAAIAAAADAAIAAAACAAIAAAABAAMAAAABAAIAAAACAAMAAAACAAIAAAADAAMAAAADAAIAAAABAAQAAAABAAIAAAACAAQAAAADAAIAAAADAAQAAAADAAIAAAABAAUAAAABAAIAAAACAAUAAAACAAIAAAADAAUAAAADAAIAAAABAAYAAAABAAIAAAACAAYAAAADAAIAAAADAAYAAAADAAIAAAABAAcAAAABAAIAAAACAAcAAAACAAIAAAADAAcAAAADAAIAAAABAAgAAAABAAIAAAACAAgAAAADAAIAAAADAAgAAAADAAIAAAAEAAEAAAABAAIAAAAFAAEAAAACAAIAAAAGAAEAAAADAAIAAAAEAAIAAAABAAIAAAAFAAIAAAACAAIAAAAGAAIAAAADAAIAAAAEAAMAAAADAAIAAAAFAAMAAAABAAIAAAAGAAMAAAADAAIAAAAEAAQAAAACAAIAAAAFAAQAAAADAAIAAAAGAAQAAAACAAIAAAAEAAUAAAABAAIAAAAFAAUAAAABAAIAAAAGAAUAAAADAAIAAAAEAAYAAAACAAIAAAAFAAYAAAADAAIAAAAGAAYAAAADAAIAAAAEAAcAAAADAAIAAAAFAAcAAAADAAIAAAAGAAcAAAADAAIAAAAEAAgAAAABAAIAAAAFAAgAAAADAAIAAAAGAAgAAAADAAIAAAAHAAEAAAABAAIAAAAIAAEAAAABAAIAAAAHAAIAAAABAAIAAAAIAAIAAAABAAIAAAAHAAMAAAADAAIAAAAIAAMAAAACAAIAAAAHAAQAAAADAAIAAAAIAAQAAAACAAIAAAAHAAUAAAABAAIAAAAIAAUAAAACAAIAAAAHAAYAAAABAAIAAAAIAAYAAAADAAIAAAAHAAcAAAABAAIAAAAIAAcAAAACAAIAAAAHAAgAAAABAAIAAAAIAAgAAAABAAIAAAAJAAEAAAABAAIAAAAJAAIAAAABAAIAAAAJAAMAAAACAAIAAAAJAAQAAAABAAIAAAAJAAUAAAADAAIAAAAJAAYAAAABAAIAAAAJAAcAAAABAAIAAAAJAAgAAAACAAIAAAAKAAcAAAADAAIAAAAKAAQAAAADAAIAAAAKAAEAAAACAAIAAAAKAAgAAAACAAIAAAAKAAUAAAABAAIAAAAKAAYAAAABAAIAAAAKAAIAAAABAAIAAAAKAAMAAAABAAIAAAA=")
+tile_set = ExtResource("1_fl5pn")
+
+[node name="Wall" type="TileMapLayer" parent="Tilemaps" unique_id=1377821373]
+tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAAAAAAAAAAAAAEAAAABAP//AAABAAAAAAABAAAAAAABAAEAAAACAP//AAACAAAAAAADAP//AAACAAAAAAAEAP//AAACAAAAAAAFAP//AAACAAAAAAAGAP//AAACAAAAAAAHAP//AAACAAAAAAAIAP//AAACAAAAAAAJAP//AAACAAAAAAACAAAAAAADAAEAAAADAAAAAAACAAEAAAAEAAAAAAADAAEAAAAFAAAAAAADAAEAAAAGAAAAAAADAAEAAAAHAAAAAAACAAEAAAAIAAAAAAADAAEAAAAJAAAAAAADAAEAAAAAAAEAAAAAAAIAAAAAAAIAAAAAAAIAAAAAAAMAAAAAAAIAAAAAAAQAAAAAAAIAAAAAAAgAAAAAAAEAAAAAAAkAAAAAAAMAAAABAAkAAAABAAMAAAACAAkAAAABAAMAAAADAAkAAAABAAMAAAAEAAkAAAABAAMAAAAFAAkAAAABAAMAAAAGAAkAAAABAAMAAAAHAAkAAAABAAMAAAAIAAkAAAABAAMAAAAJAAkAAAABAAMAAAAAAAcAAAAAAAEAAAALAAkAAAAEAAMAAAALAP//AAAEAAAAAAALAAAAAAAEAAEAAAALAAEAAAAEAAEAAAALAAIAAAAEAAEAAAALAAMAAAAEAAEAAAALAAQAAAAEAAEAAAALAAUAAAAEAAEAAAALAAYAAAAEAAEAAAALAAcAAAAEAAEAAAALAAgAAAAEAAEAAAAKAAkAAAACAAMAAAAKAP//AAACAAAAAAAKAAAAAAADAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAEAAAA=")
+tile_set = ExtResource("1_fl5pn")
+
+[node name="Joshua" parent="." unique_id=1281993070 instance=ExtResource("4_vydj2")]
+position = Vector2(164, 25)
+scale = Vector2(0.1, 0.1)
+
+[node name="Interactables" type="Node2D" parent="." unique_id=942752220]
+
+[node name="StoreShelfHorizontal7" parent="Interactables" unique_id=1283429178 instance=ExtResource("3_im67j")]
+position = Vector2(84, 16)
+
+[node name="StoreShelfHorizontal" parent="Interactables" unique_id=1027792264 instance=ExtResource("3_im67j")]
+position = Vector2(29, 16)
+
+[node name="StoreShelfHorizontal2" parent="Interactables" unique_id=2073443212 instance=ExtResource("3_im67j")]
+position = Vector2(51, 16)
+
+[node name="StoreShelfHorizontal5" parent="Interactables" unique_id=2111625867 instance=ExtResource("3_im67j")]
+position = Vector2(99, 85)
+
+[node name="StoreShelfHorizontal6" parent="Interactables" unique_id=1354316388 instance=ExtResource("3_im67j")]
+position = Vector2(77, 85)
+
+[node name="ClothesRackVerticalA" parent="Interactables" unique_id=1960616215 instance=ExtResource("7_1gq04")]
+position = Vector2(39, 97)
+
+[node name="ClothesRackHorizontalA2" parent="Interactables" unique_id=428423637 instance=ExtResource("9_6qlkj")]
+position = Vector2(48, 72)
+
+[node name="ClothesRackHorizontalA" parent="Interactables" unique_id=439737166 instance=ExtResource("9_6qlkj")]
+position = Vector2(145, 135)
+
+[node name="CheckoutTable2" parent="Interactables" unique_id=1101850620 instance=ExtResource("5_ojqlp")]
+position = Vector2(153, 30)
+
+[node name="StoreShelfVertical2" parent="Interactables" unique_id=228330972 instance=ExtResource("9_1eynv")]
+position = Vector2(20, 109)
+
+[node name="StoreShelfVertical3" parent="Interactables" unique_id=1741441454 instance=ExtResource("9_1eynv")]
+position = Vector2(171, 119)
+
+[node name="StoreShelfVertical" parent="Interactables" unique_id=447233718 instance=ExtResource("9_1eynv")]
+position = Vector2(20, 44)
+
+[node name="CheckoutTable" parent="Interactables" unique_id=1478182563 instance=ExtResource("5_ojqlp")]
+position = Vector2(154, 62)
+
+[node name="ClothesRackHorizontalB2" parent="Interactables" unique_id=487126144 instance=ExtResource("6_1eynv")]
+position = Vector2(48, 136)
+
+[node name="ClothesRackHorizontalB" parent="Interactables" unique_id=928687768 instance=ExtResource("6_1eynv")]
+position = Vector2(96, 136)
+
+[node name="Refrigerator" parent="Interactables" unique_id=1233546609 instance=ExtResource("10_1gq04")]
+position = Vector2(69, 14)
+
+[node name="PhotoFilmTexture" parent="." unique_id=1465462974 instance=ExtResource("11_6qlkj")]
+visible = false
+
+[node name="Player" parent="." unique_id=2008015409 instance=ExtResource("11_i1bva")]
+position = Vector2(128, 32)
+scale = Vector2(0.15, 0.15)
+
+[node name="SDoor" parent="." unique_id=2039554147 instance=ExtResource("13_clymf")]
+position = Vector2(128, 8)

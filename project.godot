@@ -103,7 +103,7 @@ flip_photo={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/house_1/start.dialogue", "res://dialogue/house_1/joshua.dialogue", "res://dialogue/house_1/house_door.dialogue", "res://dialogue/house_1/bed.dialogue", "res://dialogue/house_1/bookshelf.dialogue", "res://dialogue/house_1/television.dialogue", "res://dialogue/house_1/cat.dialogue", "res://dialogue/house_1/clothes.dialogue", "res://dialogue/house_1/calendar.dialogue", "res://dialogue/house_1/martin.dialogue", "res://dialogue/house_1/queso.dialogue", "res://dialogue/house_1/console.dialogue", "res://dialogue/house_1/realization.dialogue", "res://dialogue/house_1/post_photo.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/house_1/start.dialogue", "res://dialogue/house_1/joshua.dialogue", "res://dialogue/house_1/house_door.dialogue", "res://dialogue/house_1/bed.dialogue", "res://dialogue/house_1/bookshelf.dialogue", "res://dialogue/house_1/television.dialogue", "res://dialogue/house_1/cat.dialogue", "res://dialogue/house_1/clothes.dialogue", "res://dialogue/house_1/calendar.dialogue", "res://dialogue/house_1/martin.dialogue", "res://dialogue/house_1/queso.dialogue", "res://dialogue/house_1/console.dialogue", "res://dialogue/house_1/realization.dialogue", "res://dialogue/house_1/post_photo.dialogue", "res://dialogue/door.dialogue", "res://dialogue/house_1_end.dialogue", "res://dialogue/house_1_start.dialogue", "res://dialogue/house_1/postpickup.dialogue", "res://dialogue/house_1/player.dialogue")
 
 [physics]
 

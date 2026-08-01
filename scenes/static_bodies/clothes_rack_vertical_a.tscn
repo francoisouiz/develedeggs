@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d0yqixk1qe7x5"]
+
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_tkggp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
+atlas = ExtResource("1_tkggp")
+region = Rect2(146, 80, 12, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6aki"]
+size = Vector2(10.5, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72ghi"]
+size = Vector2(10, 32)
+
+[node name="ClothesRackVerticalA" type="StaticBody2D" unique_id=1960616215]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=78413938]
+texture_filter = 1
+texture = SubResource("AtlasTexture_k6aki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=580165122]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_k6aki")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=703803630]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1156383240]
+shape = SubResource("RectangleShape2D_72ghi")

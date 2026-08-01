@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://l8c00jroeji7"]
+
+[ext_resource type="Texture2D" uid="uid://bjll4yk0onqdd" path="res://assets/textures/nightstand.tres" id="1_1lcli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
+size = Vector2(6, 6.5)
+
+[node name="Nightstand" type="StaticBody2D" unique_id=943642657]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1091518166]
+texture = ExtResource("1_1lcli")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1059041178]
+shape = SubResource("RectangleShape2D_m2g58")

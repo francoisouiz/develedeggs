@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bfol2tlu43457"]
+
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_wwa42"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
+atlas = ExtResource("1_wwa42")
+region = Rect2(47, 53, 5, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qoxa0"]
+size = Vector2(4, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjjmt"]
+size = Vector2(6, 12)
+
+[node name="Watch" type="StaticBody2D" unique_id=27694661]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1581464006]
+texture = SubResource("AtlasTexture_k6aki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1363760587]
+shape = SubResource("RectangleShape2D_qoxa0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=460019785]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=970567785]
+shape = SubResource("RectangleShape2D_xjjmt")

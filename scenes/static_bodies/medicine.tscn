@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://5mim6cyvewpe"]
+
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_s4ad3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
+atlas = ExtResource("1_s4ad3")
+region = Rect2(142, 63, 2, 4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k6aki"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_72ghi"]
+radius = 5.0
+
+[node name="Medicine" type="StaticBody2D" unique_id=781152904]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1936253543]
+texture = SubResource("AtlasTexture_k6aki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2068450645]
+shape = SubResource("CircleShape2D_k6aki")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=631958446]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=884761204]
+shape = SubResource("CircleShape2D_72ghi")

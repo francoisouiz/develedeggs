@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://ccrft7gb3nvsr"]
 
-[ext_resource type="Texture2D" uid="uid://b3u8ntvtkbjwe" path="res://assets/textures/bookshelf_horizontal.tres" id="1_qtuj2"]
+[ext_resource type="Shader" uid="uid://c6mjayxoed2v4" path="res://assets/shaders/dropshadow4.gdshader" id="1_22nti"]
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="2_22nti"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mkhkd"]
+shader = ExtResource("1_22nti")
+shader_parameter/deform = Vector2(0, 0)
+shader_parameter/offset = Vector2(0, -0.15)
+shader_parameter/modulate = Color(0, 0, 0, 0.67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8awvg"]
+atlas = ExtResource("2_22nti")
+region = Rect2(3, 8.855113, 26.317547, 23.741356)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ykry"]
 size = Vector2(24, 15.5)
@@ -9,7 +20,8 @@ size = Vector2(24, 15.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127524125]
 texture_filter = 1
-texture = ExtResource("1_qtuj2")
+material = SubResource("ShaderMaterial_mkhkd")
+texture = SubResource("AtlasTexture_8awvg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=19024271]
 position = Vector2(0, -1.75)

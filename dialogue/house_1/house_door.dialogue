@@ -1,0 +1,7 @@
+~ start
+match PlayerStats.level_pointer
+	when 0
+		Driver: Hello, this package is already paid for by the sender.
+		Max: Oh, thank you very much.
+		do PlayerStats.increase_pointer()
+=> END

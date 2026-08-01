@@ -1,4 +1,4 @@
 extends Interactable
 
 func interact(player: Player) -> void:
-	pass
+	DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.house_1_door), "start")

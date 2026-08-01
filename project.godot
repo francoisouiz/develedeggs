@@ -103,7 +103,7 @@ flip_photo={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/house_1/door.dialogue", "res://dialogue/house_1/start.dialogue", "res://dialogue/house_1/postpickup.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/house_1/start.dialogue", "res://dialogue/house_1/postpickup.dialogue", "res://dialogue/house_1/joshua.dialogue", "res://dialogue/house_1/house_door.dialogue")
 
 [physics]
 

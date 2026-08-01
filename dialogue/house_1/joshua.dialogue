@@ -1,0 +1,9 @@
+~ start
+match PlayerStats.curr_level
+	when "start"
+		match PlayerStats.level_pointer
+			when 0
+				Joshua: we're at the start and u no picjk
+			when 1
+				Joshua: we at start and u pick	
+=> END

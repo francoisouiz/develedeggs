@@ -9,6 +9,7 @@ const DIALOGUE_PATHS: Dictionary[String, String] = {
 	"house_1_start": "uid://dou5hcsecewgy",
 	"house_1_door": "uid://k6jkg4fgisgv",
 	"house_1_postpickup": "uid://cvfhpohokm35x",
+	"joshua": "uid://b5olxe1wu01fs"
 }
 
 const CHARACTER_ICON_PATHS: Dictionary[String, String] = {

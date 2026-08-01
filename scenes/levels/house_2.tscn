@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://cquk6xu5u4jhl" path="res://scripts/levels/house_2.gd" id="1_dx4pa"]
 [ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="2_we1d7"]
 [ext_resource type="TileSet" uid="uid://c6oiehtpxvgqs" path="res://assets/tilesets/room.res" id="3_bh02f"]
+[ext_resource type="PackedScene" uid="uid://bfol2tlu43457" path="res://scenes/static_bodies/watch.tscn" id="4_2itsv"]
 [ext_resource type="PackedScene" uid="uid://ccrft7gb3nvsr" path="res://scenes/static_bodies/bookshelf_horizontal.tscn" id="4_kckwm"]
 [ext_resource type="PackedScene" uid="uid://l8c00jroeji7" path="res://scenes/static_bodies/night_stand.tscn" id="5_tbgrb"]
 [ext_resource type="PackedScene" uid="uid://dk5jtc25y63m6" path="res://scenes/static_bodies/bed.tscn" id="6_dx4pa"]
+[ext_resource type="PackedScene" uid="uid://c6owyi14ryg2x" path="res://scenes/static_bodies/jacket.tscn" id="6_xs8by"]
+[ext_resource type="PackedScene" uid="uid://dw3ty0jcumf7u" path="res://scenes/static_bodies/cat_carrier.tscn" id="7_8fpgl"]
 [ext_resource type="PackedScene" uid="uid://de2lit42uv5hl" path="res://scenes/static_bodies/desk_horizontal.tscn" id="7_ihvlh"]
 [ext_resource type="PackedScene" uid="uid://r5arwt0rxink" path="res://scenes/static_bodies/folded_clothes.tscn" id="8_bduq6"]
 [ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="9_0lq3d"]
@@ -14,7 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://bmcwnlb3oa7tt" path="res://scenes/interactables/cat.tscn" id="10_utx66"]
 [ext_resource type="PackedScene" uid="uid://dknajkr1x47qe" path="res://scenes/static_bodies/duffle_bag.tscn" id="11_2itsv"]
 [ext_resource type="PackedScene" uid="uid://dbl8e1lnpft0w" path="res://scenes/static_bodies/single_book.tscn" id="11_bduq6"]
+[ext_resource type="PackedScene" uid="uid://5mim6cyvewpe" path="res://scenes/static_bodies/medicine.tscn" id="12_utx66"]
 [ext_resource type="PackedScene" uid="uid://r2p6dxl41mpf" path="res://scenes/interactables/television.tscn" id="12_xs8by"]
+[ext_resource type="PackedScene" uid="uid://dnh1pgg08cgnm" path="res://scenes/static_bodies/medical_bills.tscn" id="13_2itsv"]
 [ext_resource type="PackedScene" uid="uid://dryev7r8enta3" path="res://scenes/interactables/door.tscn" id="13_8fpgl"]
 [ext_resource type="PackedScene" uid="uid://ctdc38toal8rl" path="res://scenes/interactables/calendar.tscn" id="14_g6v37"]
 [ext_resource type="AudioStream" uid="uid://bra18aykgnoy7" path="res://assets/audio/doorbell.mp3" id="15_lq8vg"]
@@ -80,6 +85,20 @@ tile_set = ExtResource("3_bh02f")
 tile_map_data = PackedByteArray("AAAFAAMAAQADAAEAAAAGAAMAAQADAAEAAAAHAAMAAQADAAEAAAAIAAMAAQADAAEAAAAJAAMAAQACAAEAAAAKAAMAAQADAAEAAAALAAMAAQADAAEAAAAMAAMAAQACAAEAAAANAAMAAQADAAEAAAAFAAIAAQADAAAAAAAGAAIAAQADAAAAAAAHAAIAAQADAAAAAAAIAAIAAQADAAAAAAAJAAIAAQADAAAAAAAKAAIAAQADAAAAAAALAAIAAQADAAAAAAAMAAIAAQADAAAAAAANAAIAAQADAAAAAAAOAAIAAQAEAAAAAAAOAAMAAQAEAAEAAAAOAAQAAQAEAAEAAAAOAAUAAQAEAAEAAAAOAAYAAQAEAAEAAAAOAAcAAQAEAAEAAAAEAAMAAQAAAAEAAAAEAAQAAQAAAAEAAAAEAAUAAQAAAAEAAAAEAAYAAQAAAAEAAAAEAAcAAQAAAAEAAAAEAAIAAQAAAAAAAAAFAAgAAQADAAMAAAAGAAgAAQADAAMAAAAHAAgAAQADAAMAAAAIAAgAAQADAAMAAAAJAAgAAQADAAMAAAAKAAgAAQADAAMAAAALAAgAAQADAAMAAAAMAAgAAQADAAMAAAANAAgAAQADAAMAAAAOAAgAAQAEAAMAAAAEAAgAAQAAAAMAAAA=")
 tile_set = ExtResource("3_bh02f")
 
+[node name="HiddenObjects" type="Node2D" parent="." unique_id=1874429688]
+
+[node name="Watch" parent="HiddenObjects" unique_id=27694661 instance=ExtResource("4_2itsv")]
+position = Vector2(186, 116)
+
+[node name="Jacket" parent="HiddenObjects" unique_id=1289356418 instance=ExtResource("6_xs8by")]
+position = Vector2(152, 105)
+
+[node name="Medicine" parent="HiddenObjects" unique_id=781152904 instance=ExtResource("12_utx66")]
+position = Vector2(210, 78)
+
+[node name="CatCarrier" parent="HiddenObjects" unique_id=1095099862 instance=ExtResource("7_8fpgl")]
+position = Vector2(215, 116)
+
 [node name="StaticObjects" type="Node2D" parent="." unique_id=1053370653]
 texture_filter = 1
 
@@ -122,7 +141,7 @@ position = Vector2(169, 69)
 sprite_id = 3
 
 [node name="FoldedClothes5" parent="StaticObjects" unique_id=1014125672 instance=ExtResource("8_bduq6")]
-position = Vector2(197, 82)
+position = Vector2(184, 87)
 sprite_id = 3
 
 [node name="Books" parent="StaticObjects" unique_id=1406148510 instance=ExtResource("10_ihvlh")]
@@ -139,6 +158,9 @@ position = Vector2(117, 81)
 
 [node name="SingleBook2" parent="StaticObjects" unique_id=1024145413 instance=ExtResource("11_bduq6")]
 position = Vector2(96, 79)
+
+[node name="MedicalBills" parent="StaticObjects" unique_id=911890532 instance=ExtResource("13_2itsv")]
+position = Vector2(209, 79)
 
 [node name="Interactable" type="Node2D" parent="." unique_id=1975110209]
 

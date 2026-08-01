@@ -2,7 +2,8 @@ extends Node
 
 const SCENE_PATHS: Dictionary = {
 	"loading_screen": "uid://qk4cctayieey",
-	"house_1": "uid://cjggqamfjfa5j"
+	"house_1": "uid://cjggqamfjfa5j",
+	"main_menu": "uid://blqco4uwjomll"
 }
 
 const DIALOGUE_PATHS: Dictionary[String, String] = {

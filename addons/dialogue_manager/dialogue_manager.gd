@@ -526,7 +526,6 @@ func show_dialogue_balloon(resource: DialogueResource, title: String = "", extra
 	var balloon_path: String = DMSettings.get_setting(DMSettings.BALLOON_PATH, _get_example_balloon_path())
 	if not ResourceLoader.exists(balloon_path):
 		balloon_path = _get_example_balloon_path()
-	print(balloon_path)
 	return show_dialogue_balloon_scene(balloon_path, resource, title, extra_game_states)
 
 

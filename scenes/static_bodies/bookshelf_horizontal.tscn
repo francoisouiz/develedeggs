@@ -1,13 +1,7 @@
 [gd_scene format=3 uid="uid://ccrft7gb3nvsr"]
 
-[ext_resource type="Shader" uid="uid://c6mjayxoed2v4" path="res://assets/shaders/dropshadow4.gdshader" id="1_22nti"]
 [ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="2_22nti"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mkhkd"]
-shader = ExtResource("1_22nti")
-shader_parameter/deform = Vector2(0, 0)
-shader_parameter/offset = Vector2(0, -0.15)
-shader_parameter/modulate = Color(0, 0, 0, 0.67)
+[ext_resource type="Script" uid="uid://51kc6lcfvklc" path="res://scripts/interactables/bookshelf_horizontal.gd" id="3_8awvg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8awvg"]
 atlas = ExtResource("2_22nti")
@@ -23,7 +17,6 @@ size = Vector2(24, 22)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127524125]
 texture_filter = 1
-material = SubResource("ShaderMaterial_mkhkd")
 texture = SubResource("AtlasTexture_8awvg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=19024271]
@@ -31,7 +24,7 @@ position = Vector2(0, -1.75)
 shape = SubResource("RectangleShape2D_8ykry")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=1214162894]
-script = ExtResource("2_22nti")
+script = ExtResource("3_8awvg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1741063181]
 shape = SubResource("RectangleShape2D_s3x7s")

@@ -90,7 +90,7 @@ func people_leave() -> void:
 	load_finished.emit()
 	
 func go_to_store() -> void:
-	pass
+	SceneLoader.load_scene(Constants.SCENE_PATHS.main_menu)
 	
 func on_dialogue_ended(resource: DialogueResource) -> void:
 	if PlayerStats.scene_progress == 1 and PlayerStats.bed_interacted and PlayerStats.has_talked_house and PlayerStats.console_interacted and PlayerStats.calendar_interacted:

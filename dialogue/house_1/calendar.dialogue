@@ -1,0 +1,8 @@
+~ start
+if not PlayerStats.in_photo
+	Max: December 20, 2026
+	Max: It's that time of the year again!
+else
+	Max: December 20, 2019… Exactly 7 years ago.
+	$> PlayerStats.calendar_interacted = true
+=> END

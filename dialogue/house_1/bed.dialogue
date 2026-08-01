@@ -1,4 +1,8 @@
 ~ start
-Max: Sad to say I haven't slept on this bed for a while.
-Max: Work has made me sleep in my crooked office nowadays.
+if not PlayerStats.in_photo
+	Max: Sad to say I haven't slept on this bed for a while.
+	Max: Work has made me sleep in my crooked office nowadays.
+else
+	Max: The same old dusty bed I never sleep in...
+	$> PlayerStats.bed_interacted = true
 => END

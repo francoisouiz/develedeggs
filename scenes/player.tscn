@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://assets/temp/icon.svg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://b1l2iraddpoic" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="FontFile" uid="uid://c2ske2q13exsd" path="res://assets/fonts/body.ttf" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://b8tbtd60b844w" path="res://assets/audio/camera.mp3" id="4_dqkch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
 size = Vector2(127.27272, 127.27272)
@@ -12,6 +14,16 @@ size = Vector2(160.00024, 160.00021)
 [node name="Player" type="CharacterBody2D" unique_id=2008015409]
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_g2els")
+
+[node name="Label" type="Label" parent="." unique_id=1642648615]
+offset_left = -20.0
+offset_top = -125.0
+offset_right = 19.999996
+offset_bottom = -55.0
+theme_override_fonts/font = ExtResource("3_qhqgy")
+theme_override_font_sizes/font_size = 61
+text = "e"
+horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1191939003]
 texture = ExtResource("1_3vyb7")
@@ -26,6 +38,9 @@ shape = SubResource("RectangleShape2D_s3x7s")
 position = Vector2(3.576278e-06, 7.152555e-06)
 scale = Vector2(0.99999833, 0.99999833)
 shape = SubResource("RectangleShape2D_3q5lw")
+
+[node name="Camera" type="AudioStreamPlayer2D" parent="." unique_id=409415596]
+stream = ExtResource("4_dqkch")
 
 [connection signal="area_entered" from="InteractableArea" to="." method="_on_interactable_area_area_entered"]
 [connection signal="area_exited" from="InteractableArea" to="." method="_on_interactable_area_area_exited"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://rpibm06yhuy0"
+path="res://.godot/imported/post_photo.dialogue-8f898d381c1d84311c6a15244b9d913b.tres"
+
+[deps]
+
+source_file="res://dialogue/house_1/post_photo.dialogue"
+dest_files=["res://.godot/imported/post_photo.dialogue-8f898d381c1d84311c6a15244b9d913b.tres"]
+
+[params]
+
+defaults=true

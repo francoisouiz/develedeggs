@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://bltnejy11p6il"]
+[gd_scene format=3 uid="uid://bw8tnfmhk0acs"]
 
-[ext_resource type="Script" uid="uid://hy6lh62bfs16" path="res://scripts/menus/balloon.gd" id="1_36de5"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="FontFile" uid="uid://c2ske2q13exsd" path="res://assets/fonts/body.ttf" id="3_u045a"]
+[ext_resource type="Script" uid="uid://hy6lh62bfs16" path="res://scripts/menus/balloon.gd" id="1_c0rul"]
+[ext_resource type="FontFile" uid="uid://c2ske2q13exsd" path="res://assets/fonts/body.ttf" id="2_cnlgj"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="3_q1kt0"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="4_vlpqx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -72,11 +72,11 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [sub_resource type="Theme" id="Theme_xetrc"]
-default_font = ExtResource("3_u045a")
+default_font = ExtResource("2_cnlgj")
 default_font_size = 40
 
 [sub_resource type="Theme" id="Theme_ck2wt"]
-default_font = ExtResource("3_u045a")
+default_font = ExtResource("2_cnlgj")
 default_font_size = 35
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
@@ -115,9 +115,18 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y7emc"]
+bg_color = Color(0.9882353, 0.87058824, 0.5647059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cnlgj"]
+bg_color = Color(0.9882353, 0.87058824, 0.5647059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0rul"]
+bg_color = Color(0.69, 0.605935, 0.3933, 1)
+
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
 layer = 100
-script = ExtResource("1_36de5")
+script = ExtResource("1_c0rul")
 
 [node name="Balloon" type="Control" parent="." unique_id=359403728]
 unique_name_in_owner = true
@@ -155,7 +164,7 @@ theme_override_constants/separation = 20
 
 [node name="TextureRect" type="TextureRect" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=2057282415]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(158.19, 0)
 layout_mode = 2
 expand_mode = 4
 
@@ -175,7 +184,7 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1225160028 instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1225160028 instance=ExtResource("3_q1kt0")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -215,11 +224,17 @@ grow_vertical = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
-script = ExtResource("3_72ixx")
+script = ExtResource("4_vlpqx")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cnlgj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_y7emc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cnlgj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c0rul")
 text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]

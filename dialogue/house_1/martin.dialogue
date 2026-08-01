@@ -4,13 +4,9 @@ match PlayerStats.curr_level
 		if not PlayerStats.in_photo
 			match PlayerStats.scene_progress
 				when 0
-					Joshua: Don't keep the delivery guy waiting.
+					Martin: The door's right there brodie.
 				when 1
-					Joshua: So what was that about?
-					Max: This old-timey camera from my parents apparently? Not sure what it’s about. Something about reliving the past.
-					Martin: I mean, a camera is used for pictures, ain’t it. Cmon, snap a photo of us right now!
-					Max: If you say so.
-					do show_instruction()
+					Martin: Quite a package you got there. Joshua's very interested in it, do show it to him.
 		else
 			match PlayerStats.scene_progress
 				when 1

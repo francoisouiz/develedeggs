@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c6n6kavjmw7bm"
+path="res://.godot/imported/queso.dialogue-900d7e7128a284ff93dad9a509d3c170.tres"
+
+[deps]
+
+source_file="res://dialogue/house_1/queso.dialogue"
+dest_files=["res://.godot/imported/queso.dialogue-900d7e7128a284ff93dad9a509d3c170.tres"]
+
+[params]
+
+defaults=true

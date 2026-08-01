@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="1_o2kl1"]
 [ext_resource type="Script" uid="uid://wqfxo4ft8u85" path="res://scripts/levels/house_1.gd" id="1_r6q8b"]
+[ext_resource type="PackedScene" uid="uid://d1xves3s5ijtb" path="res://scenes/interactables/joshua.tscn" id="2_3hd4g"]
 [ext_resource type="TileSet" uid="uid://c6oiehtpxvgqs" path="res://assets/tilesets/room.res" id="2_r6q8b"]
 [ext_resource type="PackedScene" uid="uid://l8c00jroeji7" path="res://scenes/static_bodies/night_stand.tscn" id="3_882u3"]
 [ext_resource type="PackedScene" uid="uid://de2lit42uv5hl" path="res://scenes/static_bodies/desk_horizontal.tscn" id="3_jctd3"]
@@ -116,3 +117,7 @@ position = Vector2(220, 69)
 
 [node name="Doorbell" type="AudioStreamPlayer2D" parent="." unique_id=1473498917]
 stream = ExtResource("7_15vgw")
+
+[node name="Joshua" parent="." unique_id=1281993070 instance=ExtResource("2_3hd4g")]
+position = Vector2(205, 120)
+scale = Vector2(0.1, 0.1)

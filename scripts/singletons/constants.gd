@@ -4,6 +4,7 @@ const SCENE_PATHS: Dictionary = {
 	"loading_screen": "uid://qk4cctayieey",
 	"house_1": "uid://cjggqamfjfa5j",
 	"store_inside": "uid://dm8cnmbmk8prj",
+	"messy_house": "uid://lwpelvekgdtu",
 	"main_menu": "uid://blqco4uwjomll"
 }
 

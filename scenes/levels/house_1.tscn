@@ -50,7 +50,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_un3t3"]
 resource_name = "canvas_anim"
-length = 0.39999999999999997
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -90,7 +90,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_hwbqv"]
 resource_name = "watch_transition"
-length = 0.39999999999999997
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -164,9 +164,11 @@ texture_filter = 1
 
 [node name="BookshelfHorizontal" parent="StaticObjects" unique_id=1964835267 instance=ExtResource("3_lnvac")]
 position = Vector2(96, 60)
+sprite_id = 2
 
 [node name="BookshelfHorizontal2" parent="StaticObjects" unique_id=572557387 instance=ExtResource("3_lnvac")]
 position = Vector2(123, 60)
+sprite_id = 2
 
 [node name="Nightstand" parent="StaticObjects" unique_id=943642657 instance=ExtResource("3_882u3")]
 position = Vector2(220, 74)

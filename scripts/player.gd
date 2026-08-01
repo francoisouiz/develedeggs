@@ -1,10 +1,12 @@
 extends CharacterBody2D
 class_name Player
 
-const speed: float = 300.0
+const speed: float = 10
 
 func _ready() -> void:
 	add_to_group(&"Player")
+	
+	
 
 func _physics_process(delta: float) -> void:
 	var direction_hor: float = Input.get_axis("ui_left", "ui_right")
@@ -18,5 +20,5 @@ func _physics_process(delta: float) -> void:
 		velocity.y = direction_vert * speed
 	else:
 		velocity.y = move_toward(velocity.y, 0, speed)
-
+		
 	move_and_slide()

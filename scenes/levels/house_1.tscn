@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="1_o2kl1"]
 [ext_resource type="Script" uid="uid://wqfxo4ft8u85" path="res://scripts/levels/house_1.gd" id="1_r6q8b"]
 [ext_resource type="TileSet" uid="uid://c6oiehtpxvgqs" path="res://assets/tilesets/room.res" id="2_r6q8b"]
+[ext_resource type="PackedScene" uid="uid://l8c00jroeji7" path="res://scenes/static_bodies/night_stand.tscn" id="3_882u3"]
+[ext_resource type="PackedScene" uid="uid://ccrft7gb3nvsr" path="res://scenes/static_bodies/bookshelf_horizontal.tscn" id="3_lnvac"]
+[ext_resource type="PackedScene" uid="uid://dk5jtc25y63m6" path="res://scenes/static_bodies/bed.tscn" id="3_s3r2u"]
+[ext_resource type="AudioStream" uid="uid://bra18aykgnoy7" path="res://assets/audio/doorbell.mp3" id="7_15vgw"]
 
 [node name="House 1" type="Node2D" unique_id=1938029275]
 script = ExtResource("1_r6q8b")
@@ -21,8 +25,27 @@ tile_set = ExtResource("2_r6q8b")
 [node name="StaticObjects" type="Node2D" parent="." unique_id=1053370653]
 texture_filter = 1
 
+[node name="BookshelfHorizontal" parent="StaticObjects" unique_id=1964835267 instance=ExtResource("3_lnvac")]
+position = Vector2(96, 60)
+
+[node name="BookshelfHorizontal2" parent="StaticObjects" unique_id=572557387 instance=ExtResource("3_lnvac")]
+position = Vector2(123, 60)
+
+[node name="Nightstand" parent="StaticObjects" unique_id=943642657 instance=ExtResource("3_882u3")]
+position = Vector2(221, 74)
+
+[node name="Bed" parent="StaticObjects" unique_id=432711283 instance=ExtResource("3_s3r2u")]
+position = Vector2(214, 83)
+
 [node name="Interactable" type="Node2D" parent="." unique_id=1975110209]
 
 [node name="Player" parent="." unique_id=2008015409 instance=ExtResource("1_o2kl1")]
-position = Vector2(57.000015, 4.0000076)
+position = Vector2(180.00002, 77)
 scale = Vector2(0.12, 0.12)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=115279644]
+position = Vector2(152, 88)
+zoom = Vector2(7.545, 7.545)
+
+[node name="Doorbell" type="AudioStreamPlayer2D" parent="." unique_id=1473498917]
+stream = ExtResource("7_15vgw")

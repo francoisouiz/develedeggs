@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+@onready var photo_film: PhotoFilm = $"../PhotoFilmTexture2"
 const speed: float = 300.0
 
 func _ready() -> void:
@@ -20,3 +21,14 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, speed)
 
 	move_and_slide()
+	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("FlipPhoto") and PlayerStats.can_move:
+		match PlayerStats.in_photo:
+			true:
+				photo_film.hide()
+				PlayerStats.in_photo = false
+			false:
+				photo_film.show()
+				PlayerStats.in_photo = true
+		# ChangeTileset

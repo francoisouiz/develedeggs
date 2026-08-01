@@ -1,19 +1,11 @@
 [gd_scene format=3 uid="uid://de2lit42uv5hl"]
 
 [ext_resource type="Texture2D" uid="uid://dsg674cg7h8ec" path="res://assets/textures/desk_horizontal.tres" id="1_4ei1y"]
-[ext_resource type="Shader" uid="uid://c6mjayxoed2v4" path="res://assets/shaders/dropshadow4.gdshader" id="1_ib7ul"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7rkcb"]
-shader = ExtResource("1_ib7ul")
-shader_parameter/deform = Vector2(0, 0)
-shader_parameter/offset = Vector2(0, -0.15)
-shader_parameter/modulate = Color(0, 0, 0, 0.67)
 
 [node name="DeskHorizontal" type="StaticBody2D" unique_id=1601209415]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1751074750]
 texture_filter = 1
-material = SubResource("ShaderMaterial_7rkcb")
 texture = ExtResource("1_4ei1y")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1242711446]

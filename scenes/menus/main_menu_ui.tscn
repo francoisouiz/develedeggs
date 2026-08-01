@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dp3s2phqp7tjs" path="res://scripts/menus/main_menu_ui.gd" id="1_ag3nm"]
 [ext_resource type="FontFile" uid="uid://c2ske2q13exsd" path="res://assets/fonts/body.ttf" id="2_v426f"]
 [ext_resource type="FontFile" uid="uid://bbga5wbdg3o80" path="res://assets/fonts/header.ttf" id="3_54tme"]
+[ext_resource type="AudioStream" uid="uid://jqdbs41hai2w" path="res://assets/audio/home_draft.mp3" id="4_6krui"]
 
 [sub_resource type="Theme" id="Theme_u045a"]
 default_font = ExtResource("2_v426f")
@@ -70,8 +71,12 @@ offset_bottom = 239.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_54tme")
 theme_override_font_sizes/font_size = 138
-text = "Title"
+text = "Snapshot"
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=190709909]
+stream = ExtResource("4_6krui")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

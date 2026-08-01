@@ -19,7 +19,7 @@ var target: Interactable = null
 func _ready() -> void:
 	add_to_group(&"Player")
 	label.hide()
-	house_1.queso_finished.connect(on_queso_finished)
+	#house_1.queso_finished.connect(on_queso_finished)
 	
 func _physics_process(_delta: float) -> void:
 	get_nearest_interactable()

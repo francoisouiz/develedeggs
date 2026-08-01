@@ -9,6 +9,7 @@ var has_talked_house: bool = false
 var calendar_interacted: bool = false
 var bed_interacted: bool = false
 var console_interacted: bool = false
+var post_photo_played: bool = false
 
 func continue_scene() -> void:
 	scene_progress += 1

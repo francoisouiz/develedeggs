@@ -19,4 +19,5 @@ do house_wait()
 Max: That was weird… It all felt so real… Was all of that really just me being tired? 
 Max: ...
 Max: Oh right, the pasalubong! I better hurry to Joshua’s store.
+$> PlayerStats.post_photo_played = true
 => END

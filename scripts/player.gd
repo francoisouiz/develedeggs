@@ -36,12 +36,13 @@ func get_input() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("flip_photo") and PlayerStats.can_move and PlayerStats.can_photo:
+		print(PlayerStats.scene_progress)
 		if PlayerStats.curr_level == "start" and PlayerStats.scene_progress == 0:
 			return
 		elif PlayerStats.curr_level == "start" and PlayerStats.scene_progress == 1:
 			PlayerStats.can_photo = false
 			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.queso), "start")
-		elif PlayerStats.curr_level == "start" and PlayerStats.scene_progress == 2:
+		elif PlayerStats.curr_level == "start" and PlayerStats.scene_progress == 2 and not PlayerStats.post_photo_played:
 			flash()
 			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.post_photo), "start")
 		else:

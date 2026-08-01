@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c8suja75qf7m6"]
+
+[ext_resource type="Texture2D" uid="uid://bja083mp4biav" path="res://assets/sprites/closeups.png" id="1_tpcwv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n02en"]
+atlas = ExtResource("1_tpcwv")
+region = Rect2(7, 60, 58, 58)
+
+[node name="WatchCloseup" type="Sprite2D" unique_id=793976936]
+texture_filter = 1
+texture = SubResource("AtlasTexture_n02en")

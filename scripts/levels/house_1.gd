@@ -15,6 +15,8 @@ extends Node2D
 @onready var bookshelf_horizontal_2: StaticBody2D = $StaticObjects/BookshelfHorizontal2
 @onready var console: StaticBody2D = $StaticObjects/Console
 var loading_screen: PackedScene = preload(Constants.SCENE_PATHS.loading_screen)
+@onready var watch_anim: AnimationPlayer = $WatchCloseup/WatchAnim
+@onready var canvas_anim: AnimationPlayer = $WorldEnvironment/CanvasAnim
 
 signal queso_finished
 signal load_finished
@@ -88,6 +90,15 @@ func people_leave() -> void:
 	disable_node(martin)
 	load_finished.connect(new_load_screen._on_load_finished)
 	load_finished.emit()
+
+func play_watch() -> void:
+	canvas_anim.play("canvas_anim")
+	watch_anim.play("watch_transition")
+	await watch_anim.animation_finished
+	await get_tree().create_timer(1.0).timeout
+	canvas_anim.play_backwards("canvas_anim")
+	watch_anim.play_backwards()
+	await watch_anim.animation_finished
 	
 func go_to_store() -> void:
 	SceneLoader.load_scene(Constants.SCENE_PATHS.main_menu)

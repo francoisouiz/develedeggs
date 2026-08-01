@@ -26,7 +26,7 @@ signal paused_typing(duration: float)
 @export var skip_action: StringName = &"ui_cancel"
 
 ## The speed with which the text types out.
-@export var seconds_per_step: float = 0.02
+@export var seconds_per_step: float = 0.03
 
 ## Automatically have a brief pause when these characters are encountered.
 @export var pause_at_characters: String = ".?!"
@@ -40,7 +40,7 @@ signal paused_typing(duration: float)
 @export var skip_pause_at_abbreviations: PackedStringArray = ["Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex"]
 
 ## The amount of time to pause when exposing a character present in `pause_at_characters`.
-@export var seconds_per_pause_step: float = 0.3
+@export var seconds_per_pause_step: float = 0.03
 
 var _already_mutated_indices: PackedInt32Array = []
 

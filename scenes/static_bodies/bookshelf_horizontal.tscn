@@ -24,6 +24,7 @@ hframes = 3
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=19024271]
+visible = false
 position = Vector2(0, -1.75)
 shape = SubResource("RectangleShape2D_8ykry")
 
@@ -31,4 +32,5 @@ shape = SubResource("RectangleShape2D_8ykry")
 script = ExtResource("3_8awvg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1741063181]
+visible = false
 shape = SubResource("RectangleShape2D_s3x7s")

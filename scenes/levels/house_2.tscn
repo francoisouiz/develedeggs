@@ -10,8 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://r5arwt0rxink" path="res://scenes/static_bodies/folded_clothes.tscn" id="8_bduq6"]
 [ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="9_0lq3d"]
 [ext_resource type="PackedScene" uid="uid://druuebev04twd" path="res://scenes/interactables/console.tscn" id="9_utx66"]
+[ext_resource type="PackedScene" uid="uid://dvyn7452c5rl" path="res://scenes/static_bodies/books.tscn" id="10_ihvlh"]
 [ext_resource type="PackedScene" uid="uid://bmcwnlb3oa7tt" path="res://scenes/interactables/cat.tscn" id="10_utx66"]
 [ext_resource type="PackedScene" uid="uid://dknajkr1x47qe" path="res://scenes/static_bodies/duffle_bag.tscn" id="11_2itsv"]
+[ext_resource type="PackedScene" uid="uid://dbl8e1lnpft0w" path="res://scenes/static_bodies/single_book.tscn" id="11_bduq6"]
 [ext_resource type="PackedScene" uid="uid://r2p6dxl41mpf" path="res://scenes/interactables/television.tscn" id="12_xs8by"]
 [ext_resource type="PackedScene" uid="uid://dryev7r8enta3" path="res://scenes/interactables/door.tscn" id="13_8fpgl"]
 [ext_resource type="PackedScene" uid="uid://ctdc38toal8rl" path="res://scenes/interactables/calendar.tscn" id="14_g6v37"]
@@ -94,6 +96,10 @@ position = Vector2(220, 74)
 [node name="Bed" parent="StaticObjects" unique_id=432711283 instance=ExtResource("6_dx4pa")]
 position = Vector2(215, 116)
 
+[node name="PhotoBed" parent="StaticObjects" unique_id=906732320 instance=ExtResource("6_dx4pa")]
+visible = false
+position = Vector2(215, 85)
+
 [node name="DeskHorizontal" parent="StaticObjects" unique_id=1601209415 instance=ExtResource("7_ihvlh")]
 position = Vector2(145, 65)
 
@@ -101,14 +107,14 @@ position = Vector2(145, 65)
 position = Vector2(152.8, 65.765)
 
 [node name="FoldedClothes" parent="StaticObjects" unique_id=374037775 instance=ExtResource("8_bduq6")]
-position = Vector2(151, 98)
+position = Vector2(151, 105)
 
 [node name="FoldedClothes2" parent="StaticObjects" unique_id=36228650 instance=ExtResource("8_bduq6")]
 position = Vector2(92, 109)
 sprite_id = 4
 
 [node name="FoldedClothes4" parent="StaticObjects" unique_id=2093820876 instance=ExtResource("8_bduq6")]
-position = Vector2(177, 111)
+position = Vector2(186, 114)
 sprite_id = 4
 
 [node name="FoldedClothes3" parent="StaticObjects" unique_id=1064667795 instance=ExtResource("8_bduq6")]
@@ -116,16 +122,31 @@ position = Vector2(169, 69)
 sprite_id = 3
 
 [node name="FoldedClothes5" parent="StaticObjects" unique_id=1014125672 instance=ExtResource("8_bduq6")]
-position = Vector2(182, 87)
+position = Vector2(197, 82)
 sprite_id = 3
+
+[node name="Books" parent="StaticObjects" unique_id=1406148510 instance=ExtResource("10_ihvlh")]
+position = Vector2(118, 75)
+
+[node name="Books2" parent="StaticObjects" unique_id=1927481522 instance=ExtResource("10_ihvlh")]
+position = Vector2(124, 78)
+
+[node name="Books3" parent="StaticObjects" unique_id=493709375 instance=ExtResource("10_ihvlh")]
+position = Vector2(91, 77)
+
+[node name="SingleBook" parent="StaticObjects" unique_id=1396255644 instance=ExtResource("11_bduq6")]
+position = Vector2(117, 81)
+
+[node name="SingleBook2" parent="StaticObjects" unique_id=1024145413 instance=ExtResource("11_bduq6")]
+position = Vector2(96, 79)
 
 [node name="Interactable" type="Node2D" parent="." unique_id=1975110209]
 
 [node name="Cat" parent="Interactable" unique_id=1510551811 instance=ExtResource("10_utx66")]
-position = Vector2(152, 92)
+position = Vector2(151, 95)
 
 [node name="DuffleBag" parent="Interactable" unique_id=487774771 instance=ExtResource("11_2itsv")]
-position = Vector2(215, 81)
+position = Vector2(215, 96)
 
 [node name="Television" parent="Interactable" unique_id=644916159 instance=ExtResource("12_xs8by")]
 position = Vector2(145, 56)

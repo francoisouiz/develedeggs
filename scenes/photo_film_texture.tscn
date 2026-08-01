@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://sdxoheqqy1oc"]
 
 [ext_resource type="Shader" uid="uid://p51yknichyex" path="res://assets/shaders/grayscale.gdshader" id="1_wk1w8"]
+[ext_resource type="Script" uid="uid://dutj27ak0phpu" path="res://scripts/photo_film_texture.gd" id="2_rxflh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k6aki"]
 shader = ExtResource("1_wk1w8")
@@ -10,3 +11,4 @@ material = SubResource("ShaderMaterial_k6aki")
 offset_left = 6.1035156e-05
 offset_right = 1600.0
 offset_bottom = 1110.0
+script = ExtResource("2_rxflh")

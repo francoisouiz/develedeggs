@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cree7oyv7ruxk"]
+
+[ext_resource type="Texture2D" uid="uid://cn5c7lg2kjb8r" path="res://assets/textures/store_shelf_vertical.tres" id="1_k52yy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
+size = Vector2(6, 29)
+
+[node name="StoreShelfVertical" type="StaticBody2D" unique_id=228330972]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=843495929]
+texture = ExtResource("1_k52yy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1727094174]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_m2g58")

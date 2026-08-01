@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://r2p6dxl41mpf"]
+
+[ext_resource type="Texture2D" uid="uid://y7r0e0xda2nv" path="res://assets/textures/television.tres" id="1_j81ui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
+size = Vector2(14, 8.875)
+
+[node name="Television" type="StaticBody2D" unique_id=644916159]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=120864233]
+texture_filter = 1
+texture = ExtResource("1_j81ui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=442442919]
+position = Vector2(0, -0.5625)
+shape = SubResource("RectangleShape2D_m2g58")

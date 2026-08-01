@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
-const speed: float = 10
+const speed: float = 60
 
 func _ready() -> void:
 	add_to_group(&"Player")

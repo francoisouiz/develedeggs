@@ -1,24 +1,22 @@
 [gd_scene format=3 uid="uid://dryev7r8enta3"]
 
 [ext_resource type="Script" uid="uid://ohcc6aiogbrr" path="res://scripts/interactables/interactable_component.gd" id="1_fnoyy"]
-[ext_resource type="Texture2D" uid="uid://muf2llqugfyh" path="res://assets/temp/door.png" id="1_hpvv5"]
+[ext_resource type="SpriteFrames" uid="uid://dpt6rp366h0ah" path="res://assets/textures/door.tres" id="1_xetrc"]
 [ext_resource type="Resource" uid="uid://k6jkg4fgisgv" path="res://dialogue/door.dialogue" id="3_xetrc"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3q5lw"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5f452"]
-size = Vector2(541.17645, 529.41174)
+size = Vector2(14.705832, 2.9411163)
 
 [node name="Door" type="StaticBody2D" unique_id=392175972]
-scale = Vector2(0.17, 0.17)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=46897017]
-material = SubResource("ShaderMaterial_3q5lw")
-texture = ExtResource("1_hpvv5")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=62044389]
+texture_filter = 1
+scale = Vector2(0.9999999, 0.9999999)
+sprite_frames = ExtResource("1_xetrc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=501413069]
-position = Vector2(3.2256623e-05, 2.5244315e-05)
-scale = Vector2(0.9999998, 0.9999998)
+position = Vector2(0, 5.882353)
+scale = Vector2(0.9999996, 0.9999996)
 shape = SubResource("RectangleShape2D_5f452")
 
 [node name="InteractableComponent" type="Node" parent="." unique_id=1071166292]

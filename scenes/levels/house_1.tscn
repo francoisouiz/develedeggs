@@ -4,12 +4,62 @@
 [ext_resource type="Script" uid="uid://wqfxo4ft8u85" path="res://scripts/levels/house_1.gd" id="1_r6q8b"]
 [ext_resource type="TileSet" uid="uid://c6oiehtpxvgqs" path="res://assets/tilesets/room.res" id="2_r6q8b"]
 [ext_resource type="PackedScene" uid="uid://l8c00jroeji7" path="res://scenes/static_bodies/night_stand.tscn" id="3_882u3"]
+[ext_resource type="PackedScene" uid="uid://de2lit42uv5hl" path="res://scenes/static_bodies/desk_horizontal.tscn" id="3_jctd3"]
 [ext_resource type="PackedScene" uid="uid://ccrft7gb3nvsr" path="res://scenes/static_bodies/bookshelf_horizontal.tscn" id="3_lnvac"]
 [ext_resource type="PackedScene" uid="uid://dk5jtc25y63m6" path="res://scenes/static_bodies/bed.tscn" id="3_s3r2u"]
+[ext_resource type="PackedScene" uid="uid://r5arwt0rxink" path="res://scenes/static_bodies/folded_clothes.tscn" id="4_gphhu"]
 [ext_resource type="AudioStream" uid="uid://bra18aykgnoy7" path="res://assets/audio/doorbell.mp3" id="7_15vgw"]
+[ext_resource type="PackedScene" uid="uid://dryev7r8enta3" path="res://scenes/interactables/door.tscn" id="10_gphhu"]
+[ext_resource type="PackedScene" uid="uid://ctdc38toal8rl" path="res://scenes/interactables/calendar.tscn" id="11_1powb"]
+[ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="11_vr0rt"]
+[ext_resource type="PackedScene" uid="uid://r2p6dxl41mpf" path="res://scenes/interactables/television.tscn" id="12_k26ww"]
+[ext_resource type="PackedScene" uid="uid://dknajkr1x47qe" path="res://scenes/static_bodies/duffle_bag.tscn" id="13_u6x60"]
+[ext_resource type="PackedScene" uid="uid://bmcwnlb3oa7tt" path="res://scenes/interactables/cat.tscn" id="15_6wds3"]
+
+[sub_resource type="Environment" id="Environment_vr0rt"]
+background_mode = 3
+tonemap_mode = 1
+glow_enabled = true
+glow_intensity = 1.5
+glow_bloom = 0.25
+glow_blend_mode = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2g58"]
+bg_color = Color(0.4, 0.2509804, 0.2, 1)
 
 [node name="House 1" type="Node2D" unique_id=1938029275]
 script = ExtResource("1_r6q8b")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1010844489]
+color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1855041528]
+environment = SubResource("Environment_vr0rt")
+
+[node name="Panel" type="Panel" parent="." unique_id=306915669]
+offset_left = 61.0
+offset_top = 36.0
+offset_right = 242.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m2g58")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=115279644]
+position = Vector2(152, 88)
+zoom = Vector2(6.65, 6.65)
+
+[node name="Lights" type="Node2D" parent="." unique_id=1078453975]
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights" unique_id=1518812349]
+position = Vector2(190, 93)
+color = Color(0.98851186, 0.9317842, 0.7939912, 1)
+energy = 0.75
+texture = ExtResource("11_vr0rt")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lights" unique_id=374803047]
+position = Vector2(109, 91)
+color = Color(0.98851186, 0.9317842, 0.7939912, 1)
+energy = 0.75
+texture = ExtResource("11_vr0rt")
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=726801911]
 texture_filter = 1
@@ -32,20 +82,37 @@ position = Vector2(96, 60)
 position = Vector2(123, 60)
 
 [node name="Nightstand" parent="StaticObjects" unique_id=943642657 instance=ExtResource("3_882u3")]
-position = Vector2(221, 74)
+position = Vector2(220, 74)
 
 [node name="Bed" parent="StaticObjects" unique_id=432711283 instance=ExtResource("3_s3r2u")]
-position = Vector2(214, 83)
+position = Vector2(215, 84)
 
-[node name="Interactable" type="Node2D" parent="." unique_id=1975110209]
+[node name="DeskHorizontal" parent="StaticObjects" unique_id=1601209415 instance=ExtResource("3_jctd3")]
+position = Vector2(145, 65)
+
+[node name="FoldedClothes" parent="StaticObjects" unique_id=374037775 instance=ExtResource("4_gphhu")]
+position = Vector2(149, 121)
 
 [node name="Player" parent="." unique_id=2008015409 instance=ExtResource("1_o2kl1")]
 position = Vector2(180.00002, 77)
 scale = Vector2(0.12, 0.12)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=115279644]
-position = Vector2(152, 88)
-zoom = Vector2(7.545, 7.545)
+[node name="Interactable" type="Node2D" parent="." unique_id=1975110209]
+
+[node name="Cat" parent="Interactable" unique_id=1510551811 instance=ExtResource("15_6wds3")]
+position = Vector2(89, 80)
+
+[node name="DuffleBag" parent="Interactable" unique_id=487774771 instance=ExtResource("13_u6x60")]
+position = Vector2(165, 122)
+
+[node name="Television" parent="Interactable" unique_id=644916159 instance=ExtResource("12_k26ww")]
+position = Vector2(145, 56)
+
+[node name="Door" parent="Interactable" unique_id=392175972 instance=ExtResource("10_gphhu")]
+position = Vector2(115, 120)
+
+[node name="Calendar" parent="Interactable" unique_id=616343683 instance=ExtResource("11_1powb")]
+position = Vector2(220, 69)
 
 [node name="Doorbell" type="AudioStreamPlayer2D" parent="." unique_id=1473498917]
 stream = ExtResource("7_15vgw")

@@ -16,6 +16,9 @@ region = Rect2(3, 8.855113, 26.317547, 23.741356)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ykry"]
 size = Vector2(24, 15.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(24, 22)
+
 [node name="BookshelfHorizontal" type="StaticBody2D" unique_id=1964835267]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127524125]
@@ -26,3 +29,9 @@ texture = SubResource("AtlasTexture_8awvg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=19024271]
 position = Vector2(0, -1.75)
 shape = SubResource("RectangleShape2D_8ykry")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=1214162894]
+script = ExtResource("2_22nti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1741063181]
+shape = SubResource("RectangleShape2D_s3x7s")

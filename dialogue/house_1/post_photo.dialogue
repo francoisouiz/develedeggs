@@ -1,0 +1,22 @@
+~ start
+Max: …
+Joshua: Yo Max, you good? You look like you just saw Medusa.
+Max: …did none of you see that? We were back in 2019?? With my DS4?
+Martin: Bro are you still hung up on that? I’m sorry that I broke it man, I can pay for it now.
+Max: No no no, I was literally in 2019. I saw you guys… as college students. Everything was frozen in place and I couldn’t talk to anyone…
+Martin: …
+Joshua: …
+Martin: I think you’ve had a long day man, go get some rest. I’ll also dip, I still got some backlogs to do.
+Joshua: Same here, I need to sort out our shelves in the shop. Maybe you can stop by our store to look for your pasalubong, Max.
+Max: …Maybe I AM just tired… Thanks for stopping by, guys.
+Martin: Oh, when you go back to the province, say hi to Tito Elpa for me. Been a while since I’ve seen that grumpy ol’ fella.
+Max: Sure thing. I doubt he misses your shopliftings in his sari-sari store though; don’t expect a hi back
+Martin: Cmon dude that was just a choc nut, what’s 2 pesos for him when he bets all his money in cock fighting?
+Max: Yeah yeah, now scram already.
+Joshua: See ya at the store, Max.
+do people_leave()
+do house_wait()
+Max: That was weird… It all felt so real… Was all of that really just me being tired? 
+Max: ...
+Max: Oh right, the pasalubong! I better hurry to Joshua’s store.
+=> END

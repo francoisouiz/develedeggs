@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://r2p6dxl41mpf"]
 
 [ext_resource type="Texture2D" uid="uid://y7r0e0xda2nv" path="res://assets/textures/television.tres" id="1_j81ui"]
+[ext_resource type="Script" uid="uid://bkw4lw3e23f6s" path="res://scripts/interactables/television.gd" id="2_40vyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(14, 8.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(14, 19)
 
 [node name="Television" type="StaticBody2D" unique_id=644916159]
 
@@ -14,3 +18,10 @@ texture = ExtResource("1_j81ui")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=442442919]
 position = Vector2(0, -0.5625)
 shape = SubResource("RectangleShape2D_m2g58")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=611879486]
+script = ExtResource("2_40vyg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=2020390398]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_s3x7s")

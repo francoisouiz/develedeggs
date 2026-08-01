@@ -1,0 +1,18 @@
+~ start
+match PlayerStats.curr_level
+	when "start"
+		if not PlayerStats.in_photo
+			match PlayerStats.scene_progress
+				when 0
+					Martin: The door's right there brodie.
+				when 1
+					Martin: Quite a package you got there. Joshua's very interested in it, do show it to him.
+		else
+			match PlayerStats.scene_progress
+				when 1
+					Max: Guys? Hello?...
+					Max: What on earth is happening.
+					Max: It seems as if... they’re frozen in time.
+					Max: They also look… younger?
+					$> PlayerStats.has_talked_house = true
+=> END

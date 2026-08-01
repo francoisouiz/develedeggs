@@ -1,0 +1,9 @@
+~ start
+Max: Wait, wasn’t this our Christmas party during college? I remember being too tired from our game night and hit the sack very early. I couldn’t update mom and woke up to 20 missed calls. 
+Max: Why… am I here, though?
+Max: ...
+Max: “The best way to relive the past is to capture its image, but the only way to capture its image is to beget the past”
+Max: This camera brought me here. Maybe... if I...
+do show_instruction()
+$> PlayerStats.can_photo = true
+=> END

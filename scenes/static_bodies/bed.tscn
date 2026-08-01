@@ -2,6 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://c6mjayxoed2v4" path="res://assets/shaders/dropshadow4.gdshader" id="1_7rkcb"]
 [ext_resource type="Texture2D" uid="uid://ctgk7nr3cc10q" path="res://assets/textures/bed.tres" id="1_i1khr"]
+[ext_resource type="Script" uid="uid://bt0jc4fvg4a1s" path="res://scripts/interactables/bed.gd" id="2_7rkcb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_22nti"]
 shader = ExtResource("1_7rkcb")
@@ -11,6 +12,9 @@ shader_parameter/modulate = Color(0, 0, 0, 0.67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(19.265015, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(19, 12)
 
 [node name="Bed" type="StaticBody2D" unique_id=432711283]
 
@@ -23,3 +27,10 @@ texture = ExtResource("1_i1khr")
 visible = false
 position = Vector2(-0.6325073, 0)
 shape = SubResource("RectangleShape2D_m2g58")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=1764645965]
+script = ExtResource("2_7rkcb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1100962929]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_s3x7s")

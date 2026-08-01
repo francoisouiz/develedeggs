@@ -1,0 +1,6 @@
+~ start
+Max: Say queso!
+$> queso_finished.emit()
+do house_wait()
+Max: Wha- Where am I? Joshua? Martin?
+=> END

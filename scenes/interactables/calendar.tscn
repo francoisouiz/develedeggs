@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://ctdc38toal8rl"]
 
 [ext_resource type="Texture2D" uid="uid://8kroyxqujyxi" path="res://assets/textures/calendar.tres" id="1_udp4r"]
+[ext_resource type="Script" uid="uid://coawei0bwnt04" path="res://scripts/interactables/calendar.gd" id="2_cg1s2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(10, 8)
 
 [node name="Calendar" type="Sprite2D" unique_id=616343683]
 texture_filter = 1
 texture = ExtResource("1_udp4r")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=1686749036]
+script = ExtResource("2_cg1s2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=209256069]
+shape = SubResource("RectangleShape2D_s3x7s")

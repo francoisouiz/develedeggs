@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="1_o2kl1"]
 [ext_resource type="Script" uid="uid://wqfxo4ft8u85" path="res://scripts/levels/house_1.gd" id="1_r6q8b"]
+[ext_resource type="PackedScene" uid="uid://d1xves3s5ijtb" path="res://scenes/interactables/joshua.tscn" id="2_3hd4g"]
 [ext_resource type="TileSet" uid="uid://c6oiehtpxvgqs" path="res://assets/tilesets/room.res" id="2_r6q8b"]
 [ext_resource type="PackedScene" uid="uid://l8c00jroeji7" path="res://scenes/static_bodies/night_stand.tscn" id="3_882u3"]
 [ext_resource type="PackedScene" uid="uid://de2lit42uv5hl" path="res://scenes/static_bodies/desk_horizontal.tscn" id="3_jctd3"]
@@ -9,12 +10,19 @@
 [ext_resource type="PackedScene" uid="uid://dk5jtc25y63m6" path="res://scenes/static_bodies/bed.tscn" id="3_s3r2u"]
 [ext_resource type="PackedScene" uid="uid://r5arwt0rxink" path="res://scenes/static_bodies/folded_clothes.tscn" id="4_gphhu"]
 [ext_resource type="AudioStream" uid="uid://bra18aykgnoy7" path="res://assets/audio/doorbell.mp3" id="7_15vgw"]
+[ext_resource type="PackedScene" uid="uid://druuebev04twd" path="res://scenes/interactables/console.tscn" id="9_mllfs"]
 [ext_resource type="PackedScene" uid="uid://dryev7r8enta3" path="res://scenes/interactables/door.tscn" id="10_gphhu"]
 [ext_resource type="PackedScene" uid="uid://ctdc38toal8rl" path="res://scenes/interactables/calendar.tscn" id="11_1powb"]
 [ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="11_vr0rt"]
 [ext_resource type="PackedScene" uid="uid://r2p6dxl41mpf" path="res://scenes/interactables/television.tscn" id="12_k26ww"]
 [ext_resource type="PackedScene" uid="uid://dknajkr1x47qe" path="res://scenes/static_bodies/duffle_bag.tscn" id="13_u6x60"]
 [ext_resource type="PackedScene" uid="uid://bmcwnlb3oa7tt" path="res://scenes/interactables/cat.tscn" id="15_6wds3"]
+[ext_resource type="AudioStream" uid="uid://cu4hmomc6e3y3" path="res://assets/audio/cat_purr.mp3" id="17_jm6tu"]
+[ext_resource type="AudioStream" uid="uid://c1s3o2cpbtoea" path="res://assets/audio/package.mp3" id="18_wql8k"]
+[ext_resource type="AudioStream" uid="uid://jqdbs41hai2w" path="res://assets/audio/home_draft.mp3" id="19_jud2l"]
+[ext_resource type="PackedScene" uid="uid://civv2yp8grlxw" path="res://scenes/interactables/martin.tscn" id="20_e11ul"]
+[ext_resource type="FontFile" uid="uid://c2ske2q13exsd" path="res://assets/fonts/body.ttf" id="21_56gmy"]
+[ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="21_dvkny"]
 
 [sub_resource type="Environment" id="Environment_vr0rt"]
 background_mode = 3
@@ -50,6 +58,7 @@ zoom = Vector2(6.65, 6.65)
 [node name="Lights" type="Node2D" parent="." unique_id=1078453975]
 
 [node name="PointLight2D" type="PointLight2D" parent="Lights" unique_id=1518812349]
+texture_filter = 1
 position = Vector2(190, 93)
 color = Color(0.98851186, 0.9317842, 0.7939912, 1)
 energy = 0.75
@@ -93,9 +102,8 @@ position = Vector2(145, 65)
 [node name="FoldedClothes" parent="StaticObjects" unique_id=374037775 instance=ExtResource("4_gphhu")]
 position = Vector2(149, 121)
 
-[node name="Player" parent="." unique_id=2008015409 instance=ExtResource("1_o2kl1")]
-position = Vector2(180.00002, 77)
-scale = Vector2(0.12, 0.12)
+[node name="Console" parent="StaticObjects" unique_id=692288730 instance=ExtResource("9_mllfs")]
+position = Vector2(152.8, 65.765)
 
 [node name="Interactable" type="Node2D" parent="." unique_id=1975110209]
 
@@ -116,3 +124,39 @@ position = Vector2(220, 69)
 
 [node name="Doorbell" type="AudioStreamPlayer2D" parent="." unique_id=1473498917]
 stream = ExtResource("7_15vgw")
+
+[node name="Joshua" parent="." unique_id=1281993070 instance=ExtResource("2_3hd4g")]
+position = Vector2(166, 103)
+scale = Vector2(0.1, 0.1)
+
+[node name="Cat" type="AudioStreamPlayer2D" parent="." unique_id=1989016382]
+stream = ExtResource("17_jm6tu")
+volume_db = 5.0
+
+[node name="Package" type="AudioStreamPlayer2D" parent="." unique_id=694105155]
+stream = ExtResource("18_wql8k")
+volume_db = 7.0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=1547267549]
+stream = ExtResource("19_jud2l")
+autoplay = true
+
+[node name="Martin" parent="." unique_id=1828701731 instance=ExtResource("20_e11ul")]
+position = Vector2(188, 102)
+
+[node name="Instruction" type="Label" parent="." unique_id=141172372]
+texture_filter = 2
+offset_left = 82.0
+offset_top = 109.0
+offset_right = 222.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("21_56gmy")
+theme_override_font_sizes/font_size = 15
+text = "(Press space to take a photo)"
+horizontal_alignment = 1
+
+[node name="PhotoFilmTexture" parent="." unique_id=1465462974 instance=ExtResource("21_dvkny")]
+
+[node name="Player" parent="." unique_id=2008015409 instance=ExtResource("1_o2kl1")]
+position = Vector2(180.00002, 77)
+scale = Vector2(0.12, 0.12)

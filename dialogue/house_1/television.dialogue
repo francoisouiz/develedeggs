@@ -1,0 +1,10 @@
+~ start
+if not PlayerStats.in_photo
+	Max: I don’t really have any use for this now after the DS4 broke. Who watches TV these days?
+else
+	Max: The DS4…
+	Max: Us three used to play on this all day.
+	Max: Quite sad that Martin spilled soda on it and fried the internals.
+	Max: Why is it here, though…?
+	$> PlayerStats.console_interacted = true
+=> END

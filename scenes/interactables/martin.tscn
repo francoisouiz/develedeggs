@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://civv2yp8grlxw"]
+
+[ext_resource type="Texture2D" uid="uid://cvd0xw28tuhy3" path="res://assets/temp/martin.png" id="1_hikge"]
+[ext_resource type="Script" uid="uid://ds00wc8qjwq3m" path="res://scripts/interactables/martin.gd" id="2_ful1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6iku0"]
+size = Vector2(64, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ful1d"]
+size = Vector2(64, 67)
+
+[node name="Martin" type="CharacterBody2D" unique_id=1828701731]
+scale = Vector2(0.315, 0.315)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=586822285]
+scale = Vector2(0.195, 0.195)
+texture = ExtResource("1_hikge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=231409900]
+shape = SubResource("RectangleShape2D_6iku0")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=1022864614]
+script = ExtResource("2_ful1d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1378141363]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ful1d")

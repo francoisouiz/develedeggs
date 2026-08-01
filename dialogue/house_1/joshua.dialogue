@@ -1,0 +1,22 @@
+~ start
+match PlayerStats.curr_level
+	when "start"
+		if not PlayerStats.in_photo
+			match PlayerStats.scene_progress
+				when 0
+					Joshua: Don't keep the delivery guy waiting.
+				when 1
+					Joshua: So what was that about?
+					Max: This old-timey camera from my parents apparently? Not sure what it’s about. Something about reliving the past.
+					Martin: I mean, a camera is used for pictures, ain’t it. Cmon, snap a photo of us right now!
+					Max: If you say so.
+					do show_instruction()
+		else
+			match PlayerStats.scene_progress
+				when 1
+					Max: Guys? Hello?...
+					Max: What on earth is happening.
+					Max: It seems as if... they’re frozen in time.
+					Max: They also look… younger?
+					$> PlayerStats.has_talked_house = true
+=> END

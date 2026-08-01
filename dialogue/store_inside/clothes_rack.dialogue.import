@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bex5og6ofepfx"
+path="res://.godot/imported/clothes_rack.dialogue-50c4160901354b50ada0713ceb7a2dce.tres"
+
+[deps]
+
+source_file="res://dialogue/store_inside/clothes_rack.dialogue"
+dest_files=["res://.godot/imported/clothes_rack.dialogue-50c4160901354b50ada0713ceb7a2dce.tres"]
+
+[params]
+
+defaults=true

@@ -19,4 +19,12 @@ match PlayerStats.curr_level
 					Max: It seems as if... they’re frozen in time.
 					Max: They also look… younger?
 					$> PlayerStats.has_talked_house = true
+	when "store_inside"
+		match PlayerStats.scene_progress
+			when 0
+				Joshua: Feel free to take a look around. There’s a ton of things here that you can bring back.
+				Max: Really trying to market to your friend, huh?
+				Joshua: Yeah, well after my dad retired, someone has to keep the store running.
+			when 2
+				Joshua: I’ll go close up the store. You go on ahead.
 => END

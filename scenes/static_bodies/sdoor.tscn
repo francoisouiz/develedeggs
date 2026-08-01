@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8knopplr1vny"]
 
 [ext_resource type="Texture2D" uid="uid://csr23tnp2ggs6" path="res://assets/tilesets/store.png" id="1_ur04n"]
+[ext_resource type="Script" uid="uid://cpdm22lndfqx5" path="res://scripts/interactables/sdoor.gd" id="2_6abvk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_72ghi"]
 atlas = ExtResource("1_ur04n")
@@ -22,16 +23,11 @@ texture_filter = 1
 position = Vector2(8, 0)
 texture = SubResource("AtlasTexture_k6aki")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1018990331]
-texture_filter = 1
-position = Vector2(-8, 0)
-texture = SubResource("AtlasTexture_k6aki")
-flip_h = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2095376814]
 shape = SubResource("RectangleShape2D_nj4ij")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=400468379]
+script = ExtResource("2_6abvk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=176493353]
 shape = SubResource("RectangleShape2D_tno63")

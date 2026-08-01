@@ -22,7 +22,13 @@ const DIALOGUE_PATHS: Dictionary[String, String] = {
 	"queso": "uid://c6n6kavjmw7bm",
 	"house_1_console": "uid://bpoj66qvo0htb",
 	"realization": "uid://df6f28chmfab0",
-	"post_photo": "uid://rpibm06yhuy0"
+	"post_photo": "uid://rpibm06yhuy0",
+	"store_inside_start": "uid://b2exfvafx88s",
+	"horizontal_storeshelf": "uid://dp4183pbekdyb",
+	"vertical_storeshelf": "uid://b45bse7qxbsym",
+	"clothes_rack": "uid://bex5og6ofepfx",
+	"post_getting": "uid://c3p7kkvewitnf",
+	"sdoor": "uid://dh0yrf05ycle5"
 }
 
 const CHARACTER_ICON_PATHS: Dictionary[String, String] = {

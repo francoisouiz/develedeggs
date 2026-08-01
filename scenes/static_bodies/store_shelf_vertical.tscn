@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://cree7oyv7ruxk"]
 
 [ext_resource type="Texture2D" uid="uid://cn5c7lg2kjb8r" path="res://assets/textures/store_shelf_vertical.tres" id="1_k52yy"]
+[ext_resource type="Script" uid="uid://bu6iebl1i7qf3" path="res://scripts/interactables/vertical_storeshelf.gd" id="2_25ssh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(6, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(8, 34)
 
 [node name="StoreShelfVertical" type="StaticBody2D" unique_id=228330972]
 
@@ -13,3 +17,10 @@ texture = ExtResource("1_k52yy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1727094174]
 position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_m2g58")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1897036818]
+script = ExtResource("2_25ssh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1312874142]
+texture_filter = 1
+shape = SubResource("RectangleShape2D_s3x7s")

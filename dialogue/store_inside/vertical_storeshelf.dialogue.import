@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b45bse7qxbsym"
+path="res://.godot/imported/vertical_storeshelf.dialogue-7084af23d40511bee3ef81385716aa9b.tres"
+
+[deps]
+
+source_file="res://dialogue/store_inside/vertical_storeshelf.dialogue"
+dest_files=["res://.godot/imported/vertical_storeshelf.dialogue-7084af23d40511bee3ef81385716aa9b.tres"]
+
+[params]
+
+defaults=true

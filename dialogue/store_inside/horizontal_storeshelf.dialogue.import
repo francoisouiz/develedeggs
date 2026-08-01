@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dp4183pbekdyb"
+path="res://.godot/imported/horizontal_storeshelf.dialogue-e8f97820e88937ff8ae2fe846d77225a.tres"
+
+[deps]
+
+source_file="res://dialogue/store_inside/horizontal_storeshelf.dialogue"
+dest_files=["res://.godot/imported/horizontal_storeshelf.dialogue-e8f97820e88937ff8ae2fe846d77225a.tres"]
+
+[params]
+
+defaults=true

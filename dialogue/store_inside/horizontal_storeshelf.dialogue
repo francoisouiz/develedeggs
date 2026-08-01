@@ -1,0 +1,16 @@
+~ start
+if not PlayerStats.in_photo
+	match PlayerStats.scene_progress
+		when 0
+			if not PlayerStats.has_food1
+				Max: Oh, some Dried Mangoes, Mom's favorite!
+				Max: I'll grab some of these before going home.
+				$> PlayerStats.has_food1 = true
+			else
+				Max: Nothing much here.
+		when 2
+			Max: I've already gathered enough pasalubong.
+else
+	Max: I can't exactly grab anything from the past.
+
+=> END

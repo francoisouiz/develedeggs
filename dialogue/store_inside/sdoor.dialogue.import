@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dh0yrf05ycle5"
+path="res://.godot/imported/sdoor.dialogue-77c2e8321234d4e6c4ce50c3d8e42cf7.tres"
+
+[deps]
+
+source_file="res://dialogue/store_inside/sdoor.dialogue"
+dest_files=["res://.godot/imported/sdoor.dialogue-77c2e8321234d4e6c4ce50c3d8e42cf7.tres"]
+
+[params]
+
+defaults=true

@@ -15,3 +15,7 @@ const CHARACTER_ICON_PATHS: Dictionary[String, String] = {
 	"Martin": "uid://cvd0xw28tuhy3",
 	"Driver": "uid://bygrfesmr5pkk"
 }
+
+const CHARACTER_AUDIO_PATHS: Dictionary[String, String] = {
+	
+}

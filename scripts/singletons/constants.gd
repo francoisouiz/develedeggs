@@ -32,5 +32,7 @@ const CHARACTER_ICON_PATHS: Dictionary[String, String] = {
 }
 
 const CHARACTER_AUDIO_PATHS: Dictionary[String, String] = {
-	
+	"Joshua": "uid://c8opa7cmuxq26",
+	"Max": "uid://b3i2l1d6f1ygc",
+	"Martin": "uid://bi6ysn3xas8mn"
 }

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cvfhpohokm35x"
+path="res://.godot/imported/postpickup.dialogue-8b7f1ba386603dec7091f48788de6d6a.tres"
+
+[deps]
+
+source_file="res://dialogue/house_1/postpickup.dialogue"
+dest_files=["res://.godot/imported/postpickup.dialogue-8b7f1ba386603dec7091f48788de6d6a.tres"]
+
+[params]
+
+defaults=true

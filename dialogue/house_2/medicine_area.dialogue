@@ -1,6 +1,6 @@
 ~ start
 do play_medicine()
-Max: Oh wow, my medicine was actually here.
+Max: Oh wow, my medicine was actually here. Right under mom's medical bills.
 Max: I'll quickly put them in my pockets.
 $> PlayerStats.picked_up_medicine = true
 => END

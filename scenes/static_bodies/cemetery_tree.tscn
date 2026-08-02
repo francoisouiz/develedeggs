@@ -16,7 +16,6 @@ script = ExtResource("1_b845u")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1258245038]
 texture = SubResource("AtlasTexture_k6aki")
 hframes = 2
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=977196571]
 position = Vector2(-1.5, 16.5)

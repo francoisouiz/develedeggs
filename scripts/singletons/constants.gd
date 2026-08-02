@@ -43,7 +43,18 @@ const DIALOGUE_PATHS: Dictionary[String, String] = {
 	"medicine_area": "uid://cxekgjygykbgh",
 	"jacket_area": "uid://ca4uyhd4y2rkw",
 	"house_2_end": "uid://chy7rpx4jjgpr",
-	"carrier_area": "uid://da25aqgsv3h7e"
+	"carrier_area": "uid://da25aqgsv3h7e",
+	"province_start": "uid://bbunr8hahu2lf",
+	"first_enter": "uid://chqfl5x4puwcc",
+	"round_table": "uid://bpqwda7stwh1y",
+	"long_table": "uid://1l48wg4fdw50",
+	"refrigerator": "uid://cql6qrdv8phrl",
+	"first_exit": "uid://b213drf28k8p5",
+	"first_enter_end": "uid://dbugcs8irtu0w",
+	"second_enter": "uid://cow545lqq80mv",
+	"second_enter_end": "uid://dr2c8vtu51ibe",
+	"second_exit": "uid://4rx8vhuxi5vp",
+	"cemetery": "uid://8r4svn0cby2w",
 }
 
 const CHARACTER_ICON_PATHS: Dictionary[String, String] = {

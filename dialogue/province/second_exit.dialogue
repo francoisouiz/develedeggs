@@ -1,0 +1,38 @@
+~ start
+do province_wait()
+Max: They... still didn't come with me.
+Max: Why... WHY?
+Tito Elpa: Max? What are you doing here?
+do add_tito()
+Max: Tito Elpa...
+Max: I... brought my parents some pasalubong...
+Max: I... thought I could finally give back to them now.
+Tito Elpa: Give back to them? You can always leave things in th-
+Tito Elpa: Wait... That camera.
+Tito Elpa: You got that from my wife.
+Max: ...
+Max: So you know what it does?
+Tito Elpa: ...Yes.
+Max: ...
+Tito Elpa: Max, you can only so much as live in the past.
+Tito Elpa: It's futile to try to interact with it.
+Tito Elpa: No matter how much the present bleeds into the past,
+Tito Elpa: And no matter how much the past bleeds into our present,
+Tito Elpa: We can do nothing but look back in our experiences set in stone by time.
+Max: ...
+Max: So there's no way for me to see them in person.
+Max: And there's no way for them to receive my pasalubong.
+Tito Elpa: They would want you to explore the world, Max. To capture all kinds of sights. 
+Tito Elpa: They wouldn’t want your camera trapped in the past.
+Max: Then, what am I supposed to do...
+Tito Elpa: If you want to give your pasalubong to them so badly, go visit them. 
+Tito Elpa: They've been patiently waiting for you this entire time.
+Tito Elpa: You've just been too scared to face them for so long..
+Max: ...
+Max: Thank you, Tito Elpa. 
+Max: I'll pick up my things and visit them myself
+Tito Elpa: Alright, I'll get going then.
+Tito Elpa: Best of luck to you, Max.
+do kill_tito()
+do PlayerStats.continue_scene() #scene_progress at 6 now
+=> END

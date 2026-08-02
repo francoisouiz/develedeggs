@@ -10,6 +10,7 @@ match PlayerStats.curr_level
 					Max: This old-timey camera from my parents apparently? Not sure what it’s about. Something about reliving the past.
 					Martin: I mean, a camera is used for pictures, ain’t it. Cmon, snap a photo of us right now!
 					Max: If you say so.
+					$> PlayerStats.has_talked_to_josh = true
 					do show_instruction()
 		else
 			match PlayerStats.scene_progress

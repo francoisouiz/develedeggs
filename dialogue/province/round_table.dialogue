@@ -1,0 +1,18 @@
+~ start
+match PlayerStats.scene_progress
+	when 1
+		if not PlayerStats.has_placed_jacket
+			Max: I'll put Dad's Lolo Martin leather jacket here.
+			Max: I can't wait to see his reaction.
+			do show_sprite("jacket")
+			$> PlayerStats.has_placed_jacket = true
+		else
+			Max: Nicely folded, if I do say so myself.
+	when 4
+		if not PlayerStats.has_placed_jacket
+			Max: ...Will these clothes also just end up collecting dust?
+			do show_sprite("jacket")
+			$> PlayerStats.has_placed_jacket = true
+		else
+			Max: ...
+=> END

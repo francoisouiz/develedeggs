@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://4rx8vhuxi5vp"
+path="res://.godot/imported/second_exit.dialogue-161604ae342479d4210ea4389e971829.tres"
+
+[deps]
+
+source_file="res://dialogue/province/second_exit.dialogue"
+dest_files=["res://.godot/imported/second_exit.dialogue-161604ae342479d4210ea4389e971829.tres"]
+
+[params]
+
+defaults=true

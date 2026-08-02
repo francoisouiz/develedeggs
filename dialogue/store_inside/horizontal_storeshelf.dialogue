@@ -3,7 +3,7 @@ if not PlayerStats.in_photo
 	match PlayerStats.scene_progress
 		when 0
 			if not PlayerStats.has_food1
-				Max: Oh, some Dried Mangoes, Mom's favorite!
+				Max: Oh, some bibingka, Mom's favorite!
 				Max: I'll grab some of these before going home.
 				$> PlayerStats.has_food1 = true
 			else

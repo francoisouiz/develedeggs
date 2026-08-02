@@ -3,7 +3,7 @@ if not PlayerStats.in_photo
 	match PlayerStats.scene_progress
 		when 0
 			if not PlayerStats.has_food2
-				Max: Piyaya! I remember downing 8 packs of it when I was a kid.
+				Max: Puto bumbong! I remember downing 8 plates of it when I was a kid.
 				Max: I was on our porcelain throne for a solid 2 hours after that incident.
 				Max: For sure grabbing some for the road.
 				$> PlayerStats.has_food2 = true

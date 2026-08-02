@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bpqwda7stwh1y"
+path="res://.godot/imported/round_table.dialogue-bf3cd5126537175480a4aa63b66b03e6.tres"
+
+[deps]
+
+source_file="res://dialogue/province/round_table.dialogue"
+dest_files=["res://.godot/imported/round_table.dialogue-bf3cd5126537175480a4aa63b66b03e6.tres"]
+
+[params]
+
+defaults=true

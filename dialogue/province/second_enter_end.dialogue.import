@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dr2c8vtu51ibe"
+path="res://.godot/imported/second_enter_end.dialogue-85185fdb72ef2359698746128debb006.tres"
+
+[deps]
+
+source_file="res://dialogue/province/second_enter_end.dialogue"
+dest_files=["res://.godot/imported/second_enter_end.dialogue-85185fdb72ef2359698746128debb006.tres"]
+
+[params]
+
+defaults=true

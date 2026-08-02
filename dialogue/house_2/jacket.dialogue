@@ -1,0 +1,6 @@
+~ start
+Max: My trusty highschool jacket.
+Max: I do need this jacket. Better to be too warm with a jacket than too cold without one.
+Max: I can't seem to pick it up though. I probably need to go back with the camera and get it from there.
+$> PlayerStats.can_jacket = true
+=> END

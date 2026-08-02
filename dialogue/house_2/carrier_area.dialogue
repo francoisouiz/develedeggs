@@ -1,0 +1,6 @@
+~ start
+do play_carrier()
+Max: Yeap, the carrier was indeed below my bed.
+Max: It seemed as if Bart intentionally hid it from me...
+$> PlayerStats.picked_up_carrier = true
+=> END

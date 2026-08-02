@@ -1,0 +1,26 @@
+~ start
+match PlayerStats.curr_level
+	when "start"
+		match PlayerStats.scene_progress
+			when 0
+				Driver: Hello, this package is already paid for by the sender.
+				Max: Thank you very much?
+				do play_package()
+				Max: Huh, a polaroid camera.
+				Max: A note is attached to it... from my Tita Comafay.
+				Max: "The best way to relive the past is to capture its image, yet the only way to capture its image is to beget the past"
+				Max: ...Interesting. Tita didn't strike me as a poet?
+				do PlayerStats.continue_scene()
+				$> PlayerStats.has_cam = true
+			when 2
+				Max: Do I wanna go to Joshua's store already?
+				- Yes
+					do go_to_store() 
+				- No
+	when "messy_house"
+		if PlayerStats.scene_progress == 1
+			Max: Do I wanna go to the province already?
+			- Yes
+				do go_to_province()
+			- No
+=> END

@@ -24,7 +24,8 @@ func _ready() -> void:
 		animated_sprite_2d.play("idle no cam")
 	add_to_group(&"Player")
 	label.hide()
-	house_1.queso_finished.connect(on_queso_finished)
+	if PlayerStats.curr_level == "start":
+		house_1.queso_finished.connect(on_queso_finished)
 	
 func _physics_process(_delta: float) -> void:
 	get_nearest_interactable()

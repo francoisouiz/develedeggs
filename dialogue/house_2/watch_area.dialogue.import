@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dhyllxvae5d2g"
+path="res://.godot/imported/watch_area.dialogue-4331aa258ebf4d1f2608c304880b1589.tres"
+
+[deps]
+
+source_file="res://dialogue/house_2/watch_area.dialogue"
+dest_files=["res://.godot/imported/watch_area.dialogue-4331aa258ebf4d1f2608c304880b1589.tres"]
+
+[params]
+
+defaults=true

@@ -27,6 +27,49 @@
 [ext_resource type="AudioStream" uid="uid://c1s3o2cpbtoea" path="res://assets/audio/package.mp3" id="18_8fpgl"]
 [ext_resource type="AudioStream" uid="uid://jqdbs41hai2w" path="res://assets/audio/home_draft.mp3" id="19_g6v37"]
 [ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="22_fjg4f"]
+[ext_resource type="Script" uid="uid://dgd3mymgmg8lw" path="res://scripts/interactables/watch_area.gd" id="28_g6v37"]
+[ext_resource type="Script" uid="uid://1yibixew8plv" path="res://scripts/interactables/carrier_area.gd" id="29_3quma"]
+[ext_resource type="Script" uid="uid://cjjrgc5x3m4mh" path="res://scripts/interactables/medicine_area.gd" id="29_42mrm"]
+[ext_resource type="Script" uid="uid://b8r8ncsenlmyl" path="res://scripts/interactables/jacket_area.gd" id="29_dnkxc"]
+[ext_resource type="PackedScene" uid="uid://c8suja75qf7m6" path="res://scenes/interactables/watch_closeup.tscn" id="29_lq8vg"]
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="31_fjg4f"]
+
+[sub_resource type="Animation" id="Animation_g6v37"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14901961, 0.14901961, 0.14901961, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lq8vg"]
+resource_name = "canvas_anim"
+length = 0.39999999999999997
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.14901961, 0.14901961, 0.14901961, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_42mrm"]
+_data = {
+&"RESET": SubResource("Animation_g6v37"),
+&"canvas_anim": SubResource("Animation_lq8vg")
+}
 
 [sub_resource type="Environment" id="Environment_vr0rt"]
 background_mode = 3
@@ -39,11 +82,82 @@ glow_blend_mode = 2
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2g58"]
 bg_color = Color(0.4, 0.2509804, 0.2, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
+size = Vector2(23, 16.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fpgl"]
+size = Vector2(23, 18.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6v37"]
+size = Vector2(17, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lq8vg"]
+size = Vector2(17.375, 15)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_42mrm"]
+load_path = "res://.godot/imported/closeups.png-ac8bb0645823638d244d23643d972a57.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjg4f"]
+atlas = SubResource("CompressedTexture2D_42mrm")
+region = Rect2(7, 60, 58, 58)
+
+[sub_resource type="Animation" id="Animation_n0k2o"]
+length = 0.39999999999999997
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hwbqv"]
+resource_name = "watch_transition"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dnkxc"]
+_data = {
+&"RESET": SubResource("Animation_n0k2o"),
+&"watch_transition": SubResource("Animation_hwbqv")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi71w"]
+atlas = ExtResource("31_fjg4f")
+region = Rect2(142, 63, 2, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnkxc"]
+atlas = ExtResource("31_fjg4f")
+region = Rect2(49, 2, 14, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3quma"]
+atlas = ExtResource("31_fjg4f")
+region = Rect2(74, 51, 17, 10)
+
 [node name="House 2" type="Node2D" unique_id=1938029275]
 script = ExtResource("1_dx4pa")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1010844489]
-color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+
+[node name="CanvasAnim" type="AnimationPlayer" parent="CanvasModulate" unique_id=1724019010]
+libraries/ = SubResource("AnimationLibrary_42mrm")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1855041528]
 environment = SubResource("Environment_vr0rt")
@@ -91,10 +205,11 @@ tile_set = ExtResource("3_bh02f")
 position = Vector2(186, 116)
 
 [node name="Jacket" parent="HiddenObjects" unique_id=1289356418 instance=ExtResource("6_xs8by")]
-position = Vector2(152, 105)
+position = Vector2(168, 71)
+scale = Vector2(0.715, 0.715)
 
 [node name="Medicine" parent="HiddenObjects" unique_id=781152904 instance=ExtResource("12_utx66")]
-position = Vector2(210, 78)
+position = Vector2(90, 95)
 
 [node name="CatCarrier" parent="HiddenObjects" unique_id=1095099862 instance=ExtResource("7_8fpgl")]
 position = Vector2(215, 116)
@@ -115,6 +230,9 @@ position = Vector2(220, 74)
 [node name="Bed" parent="StaticObjects" unique_id=432711283 instance=ExtResource("6_dx4pa")]
 position = Vector2(215, 116)
 
+[node name="MedicalBills" parent="StaticObjects" unique_id=911890532 instance=ExtResource("13_2itsv")]
+position = Vector2(91, 95)
+
 [node name="PhotoBed" parent="StaticObjects" unique_id=906732320 instance=ExtResource("6_dx4pa")]
 visible = false
 position = Vector2(215, 85)
@@ -126,22 +244,22 @@ position = Vector2(145, 65)
 position = Vector2(152.8, 65.765)
 
 [node name="FoldedClothes" parent="StaticObjects" unique_id=374037775 instance=ExtResource("8_bduq6")]
-position = Vector2(151, 105)
+position = Vector2(194, 98)
 
 [node name="FoldedClothes2" parent="StaticObjects" unique_id=36228650 instance=ExtResource("8_bduq6")]
 position = Vector2(92, 109)
 sprite_id = 4
 
 [node name="FoldedClothes4" parent="StaticObjects" unique_id=2093820876 instance=ExtResource("8_bduq6")]
-position = Vector2(186, 114)
+position = Vector2(186, 115)
 sprite_id = 4
 
 [node name="FoldedClothes3" parent="StaticObjects" unique_id=1064667795 instance=ExtResource("8_bduq6")]
-position = Vector2(169, 69)
+position = Vector2(167, 69)
 sprite_id = 3
 
 [node name="FoldedClothes5" parent="StaticObjects" unique_id=1014125672 instance=ExtResource("8_bduq6")]
-position = Vector2(184, 87)
+position = Vector2(207, 68)
 sprite_id = 3
 
 [node name="Books" parent="StaticObjects" unique_id=1406148510 instance=ExtResource("10_ihvlh")]
@@ -159,16 +277,13 @@ position = Vector2(117, 81)
 [node name="SingleBook2" parent="StaticObjects" unique_id=1024145413 instance=ExtResource("11_bduq6")]
 position = Vector2(96, 79)
 
-[node name="MedicalBills" parent="StaticObjects" unique_id=911890532 instance=ExtResource("13_2itsv")]
-position = Vector2(209, 79)
-
 [node name="Interactable" type="Node2D" parent="." unique_id=1975110209]
 
 [node name="Cat" parent="Interactable" unique_id=1510551811 instance=ExtResource("10_utx66")]
-position = Vector2(151, 95)
+position = Vector2(156, 118)
 
 [node name="DuffleBag" parent="Interactable" unique_id=487774771 instance=ExtResource("11_2itsv")]
-position = Vector2(215, 96)
+position = Vector2(189, 68)
 
 [node name="Television" parent="Interactable" unique_id=644916159 instance=ExtResource("12_xs8by")]
 position = Vector2(145, 56)
@@ -200,3 +315,66 @@ visible = false
 [node name="Player" parent="." unique_id=2008015409 instance=ExtResource("9_0lq3d")]
 position = Vector2(115.00002, 114)
 scale = Vector2(0.12, 0.12)
+
+[node name="WatchArea" type="Area2D" parent="." unique_id=181321327]
+script = ExtResource("28_g6v37")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WatchArea" unique_id=644777843]
+position = Vector2(186, 115.5)
+shape = SubResource("RectangleShape2D_s3x7s")
+
+[node name="CarrierArea" type="Area2D" parent="." unique_id=941157748]
+script = ExtResource("29_3quma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarrierArea" unique_id=1085111953]
+position = Vector2(213.5, 116.25)
+shape = SubResource("RectangleShape2D_8fpgl")
+
+[node name="JacketArea" type="Area2D" parent="." unique_id=626262951]
+script = ExtResource("29_dnkxc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JacketArea" unique_id=1982224983]
+position = Vector2(167.5, 71.5)
+shape = SubResource("RectangleShape2D_g6v37")
+
+[node name="MedicineArea" type="Area2D" parent="." unique_id=1389431672]
+script = ExtResource("29_42mrm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MedicineArea" unique_id=1851317266]
+position = Vector2(91, 95)
+shape = SubResource("RectangleShape2D_lq8vg")
+
+[node name="WatchCloseup" parent="." unique_id=793976936 instance=ExtResource("29_lq8vg")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(147, 88)
+texture = SubResource("AtlasTexture_fjg4f")
+
+[node name="WatchAnim" type="AnimationPlayer" parent="WatchCloseup" unique_id=394123476]
+libraries/ = SubResource("AnimationLibrary_dnkxc")
+
+[node name="MedicineCloseup" parent="." unique_id=1648849152 instance=ExtResource("29_lq8vg")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(153, 89)
+scale = Vector2(8.74, 8.74)
+texture = SubResource("AtlasTexture_oi71w")
+
+[node name="MedicineAnim" type="AnimationPlayer" parent="MedicineCloseup" unique_id=767189181]
+libraries/ = SubResource("AnimationLibrary_dnkxc")
+
+[node name="JacketCloseup" parent="." unique_id=896440590 instance=ExtResource("29_lq8vg")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(153, 89)
+scale = Vector2(4.125, 4.125)
+texture = SubResource("AtlasTexture_dnkxc")
+
+[node name="JacketAnim" type="AnimationPlayer" parent="JacketCloseup" unique_id=1632227445]
+libraries/ = SubResource("AnimationLibrary_dnkxc")
+
+[node name="CarrierCloseup" parent="." unique_id=1542658139 instance=ExtResource("29_lq8vg")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(153, 89)
+scale = Vector2(4.125, 4.125)
+texture = SubResource("AtlasTexture_3quma")
+
+[node name="CarrierAnim" type="AnimationPlayer" parent="CarrierCloseup" unique_id=163677789]
+libraries/ = SubResource("AnimationLibrary_dnkxc")

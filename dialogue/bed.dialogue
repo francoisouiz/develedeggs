@@ -1,0 +1,16 @@
+~ start
+match PlayerStats.curr_level
+	when "start"
+		if not PlayerStats.in_photo
+			Max: Sad to say I haven't slept on this bed for a while.
+			Max: Work has made me sleep in my crooked office nowadays.
+		else
+			Max: The same old dusty bed I never sleep in...
+			$> PlayerStats.bed_interacted = true
+	when "messy_house"
+		if not PlayerStats.in_photo
+			Max: How did Bart even move an entire bed???
+			Max: Is this guy really a cat...
+		else
+			Max: The same old dusty bed I never sleep in...
+=> END

@@ -19,7 +19,7 @@ texture = ExtResource("1_6bq17")
 hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1229821787]
-visible = false
+position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_m2g58")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=1640051471]

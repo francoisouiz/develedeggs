@@ -1,0 +1,9 @@
+~ start
+do PlayerStats.continue_scene() 
+Max: Alright, that’s everything.
+Max: Nice going Bart. I’ll be going back home to a big mess.
+Max: ...
+Max: This camera really does take me back to the past. 
+Max: Maybe... maybe I can do it.
+Max: Time to head out for the province!
+=> END

@@ -99,10 +99,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
-size = Vector2(127.27272, 127.27272)
+size = Vector2(52, 127.27272)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3q5lw"]
-size = Vector2(160.00024, 160.00021)
+size = Vector2(144.00024, 160.00021)
 
 [node name="Player" type="CharacterBody2D" unique_id=2008015409]
 scale = Vector2(0.25, 0.25)
@@ -125,13 +125,13 @@ sprite_frames = SubResource("SpriteFrames_s3x7s")
 animation = &"walking no cam"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1615751801]
-position = Vector2(-2.1674416e-06, -1.7339532e-06)
+position = Vector2(1.9999981, -1.7339532e-06)
 shape = SubResource("RectangleShape2D_s3x7s")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=2047871102]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=266006491]
-position = Vector2(3.576278e-06, 7.152555e-06)
+position = Vector2(3.5762787e-06, 7.152555e-06)
 scale = Vector2(0.99999833, 0.99999833)
 shape = SubResource("RectangleShape2D_3q5lw")
 

@@ -1,0 +1,172 @@
+[gd_scene format=4 uid="uid://r7lvestv6bu3"]
+
+[ext_resource type="TileSet" uid="uid://chejnjf0y6xfk" path="res://assets/tilesets/province.tres" id="1_2e8tg"]
+[ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="2_s0sel"]
+[ext_resource type="PackedScene" uid="uid://dryev7r8enta3" path="res://scenes/interactables/door.tscn" id="3_s0sel"]
+[ext_resource type="PackedScene" uid="uid://dknajkr1x47qe" path="res://scenes/static_bodies/duffle_bag.tscn" id="4_2jrc7"]
+[ext_resource type="PackedScene" uid="uid://xsq5qxknt7fm" path="res://scenes/static_bodies/dining_chair.tscn" id="4_6dtqq"]
+[ext_resource type="PackedScene" uid="uid://dhay354ul8ust" path="res://scenes/static_bodies/long_table.tscn" id="4_wu3ay"]
+[ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="6_6dtqq"]
+[ext_resource type="PackedScene" uid="uid://ch15vnk7yy65i" path="res://scenes/static_bodies/cabinet.tscn" id="7_b8v0t"]
+[ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="7_i0t7u"]
+[ext_resource type="PackedScene" uid="uid://doiubi1kc654m" path="res://scenes/static_bodies/refrigerator.tscn" id="8_e3f6a"]
+[ext_resource type="PackedScene" uid="uid://detvj8qedytbv" path="res://scenes/static_bodies/bookshelf_vertical.tscn" id="9_e3f6a"]
+[ext_resource type="PackedScene" uid="uid://byexge2f5tysf" path="res://scenes/static_bodies/round_table.tscn" id="11_svv7e"]
+
+[sub_resource type="Environment" id="Environment_2jrc7"]
+background_mode = 3
+tonemap_mode = 1
+glow_enabled = true
+glow_intensity = 1.5
+glow_bloom = 0.25
+glow_blend_mode = 2
+
+[sub_resource type="Animation" id="Animation_j1wce"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14901961, 0.14901961, 0.14901961, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_un3t3"]
+resource_name = "canvas_anim"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.14901961, 0.14901961, 0.14901961, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_msnqu"]
+_data = {
+&"RESET": SubResource("Animation_j1wce"),
+&"canvas_anim": SubResource("Animation_un3t3")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jmyr"]
+bg_color = Color(0.4, 0.2509804, 0.2, 1)
+
+[node name="Province" type="Node2D" unique_id=843740400]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1361326637]
+color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1541771838]
+environment = SubResource("Environment_2jrc7")
+
+[node name="CanvasAnim" type="AnimationPlayer" parent="WorldEnvironment" unique_id=1327119559]
+libraries/ = SubResource("AnimationLibrary_msnqu")
+
+[node name="Panel" type="Panel" parent="." unique_id=496608562]
+offset_left = 21.0
+offset_top = 31.0
+offset_right = 304.0
+offset_bottom = 217.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7jmyr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1710895034]
+position = Vector2(162, 112)
+zoom = Vector2(4.5, 4.5)
+
+[node name="Tilemaps" type="Node2D" parent="." unique_id=1776393118]
+texture_filter = 1
+
+[node name="Floor" type="TileMapLayer" parent="Tilemaps" unique_id=95358824]
+tile_map_data = PackedByteArray("AAAFAAQAAAABAAIAAAAGAAQAAAACAAIAAAAHAAQAAAADAAIAAAAFAAUAAAABAAIAAAAGAAUAAAACAAIAAAAHAAUAAAADAAIAAAAIAAYAAAABAAIAAAAJAAYAAAACAAIAAAAKAAYAAAADAAIAAAAIAAcAAAABAAIAAAAJAAcAAAACAAIAAAAKAAcAAAADAAIAAAALAAcAAAABAAIAAAAMAAcAAAACAAIAAAANAAcAAAADAAIAAAALAAYAAAABAAIAAAAMAAYAAAACAAIAAAANAAYAAAADAAIAAAALAAUAAAABAAIAAAAMAAUAAAACAAIAAAANAAUAAAADAAIAAAALAAQAAAABAAIAAAAMAAQAAAACAAIAAAANAAQAAAADAAIAAAAIAAQAAAABAAIAAAAJAAQAAAACAAIAAAAKAAQAAAADAAIAAAAIAAUAAAABAAIAAAAJAAUAAAACAAIAAAAKAAUAAAADAAIAAAAFAAYAAAABAAIAAAAGAAYAAAACAAIAAAAHAAYAAAADAAIAAAAFAAcAAAABAAIAAAAGAAcAAAACAAIAAAAHAAcAAAADAAIAAAAJAAgAAAABAAIAAAAKAAgAAAACAAIAAAALAAgAAAADAAIAAAAJAAkAAAABAAIAAAAKAAkAAAACAAIAAAALAAkAAAADAAIAAAAJAAoAAAABAAIAAAAKAAoAAAACAAIAAAALAAoAAAADAAIAAAAMAAgAAAABAAIAAAANAAgAAAACAAIAAAAMAAkAAAABAAIAAAANAAkAAAACAAIAAAAMAAoAAAABAAIAAAANAAoAAAACAAIAAAAJAAsAAAACAAIAAAAKAAsAAAACAAIAAAAKAAwAAAACAAIAAAAJAAwAAAACAAIAAAALAAsAAAACAAIAAAALAAwAAAACAAIAAAAMAAwAAAACAAIAAAANAAwAAAACAAIAAAANAAsAAAACAAIAAAAMAAsAAAACAAIAAAA=")
+tile_set = ExtResource("1_2e8tg")
+
+[node name="Wall" type="TileMapLayer" parent="Tilemaps" unique_id=628456234]
+tile_map_data = PackedByteArray("AAAFAAIAAAABAAAAAAAGAAIAAAABAAAAAAAHAAIAAAABAAAAAAAIAAIAAAABAAAAAAAJAAIAAAABAAAAAAAKAAIAAAABAAAAAAALAAIAAAABAAAAAAAMAAIAAAABAAAAAAANAAIAAAABAAAAAAAIAAgAAAAGAAAAAAAHAAgAAAADAAMAAAAGAAgAAAADAAMAAAAFAAgAAAADAAMAAAAEAAgAAAAAAAMAAAAOAAIAAAAEAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAEAAAAEAAQAAAAAAAEAAAAEAAUAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAcAAAAAAAEAAAAOAAMAAAAEAAIAAAAOAAQAAAAEAAIAAAAOAAUAAAAEAAIAAAAOAAYAAAAEAAIAAAAFAAMAAAADAAEAAAAGAAMAAAADAAEAAAAHAAMAAAACAAEAAAAIAAMAAAADAAEAAAAJAAMAAAADAAEAAAAKAAMAAAACAAEAAAALAAMAAAADAAEAAAAMAAMAAAADAAEAAAANAAMAAAADAAEAAAAIAAkAAAAAAAIAAAAIAAoAAAAAAAIAAAAIAAsAAAAAAAIAAAAOAAsAAAAEAAEAAAAOAAoAAAAFAAIAAAAOAAkAAAAEAAIAAAAMAAsAAAADAAEAAAANAAsAAAADAAEAAAAOAAgAAAAEAAIAAAAOAAcAAAAEAAIAAAANAAoAAAADAAAAAAAMAAoAAAADAAAAAAAKAAsAAAAGAAMAAAALAAoAAAADAAAAAAALAAsAAAADAAEAAAAKAAoAAAAGAAIAAAA=")
+tile_set = ExtResource("1_2e8tg")
+
+[node name="Lights" type="Node2D" parent="." unique_id=358544165]
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights" unique_id=51688404]
+texture_filter = 1
+position = Vector2(207, 93)
+color = Color(0.98851186, 0.9317842, 0.7939912, 1)
+energy = 0.75
+texture = ExtResource("2_s0sel")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lights" unique_id=1138085433]
+position = Vector2(132, 75)
+color = Color(0.98851186, 0.9317842, 0.7939912, 1)
+energy = 0.75
+texture = ExtResource("2_s0sel")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Lights" unique_id=2067003217]
+position = Vector2(152, 159)
+color = Color(0.98851186, 0.9317842, 0.7939912, 1)
+energy = 0.75
+texture = ExtResource("2_s0sel")
+
+[node name="StaticObjects" type="Node2D" parent="." unique_id=1230515167]
+
+[node name="Door" parent="StaticObjects" unique_id=392175972 instance=ExtResource("3_s0sel")]
+position = Vector2(152, 167)
+
+[node name="Door2" parent="StaticObjects" unique_id=457041448 instance=ExtResource("3_s0sel")]
+position = Vector2(95, 120)
+
+[node name="DiningChair" parent="StaticObjects" unique_id=595576632 instance=ExtResource("4_6dtqq")]
+position = Vector2(194, 98)
+sprite_id = 2
+
+[node name="DiningChair2" parent="StaticObjects" unique_id=1350617225 instance=ExtResource("4_6dtqq")]
+position = Vector2(184, 110)
+sprite_id = 1
+
+[node name="DiningChair3" parent="StaticObjects" unique_id=1964770813 instance=ExtResource("4_6dtqq")]
+position = Vector2(184, 125)
+sprite_id = 1
+
+[node name="DiningChair5" parent="StaticObjects" unique_id=1731398980 instance=ExtResource("4_6dtqq")]
+position = Vector2(206, 125)
+sprite_id = 4
+
+[node name="DiningChair6" parent="StaticObjects" unique_id=1596905358 instance=ExtResource("4_6dtqq")]
+position = Vector2(206, 108)
+sprite_id = 4
+
+[node name="LongTable" parent="StaticObjects" unique_id=554747416 instance=ExtResource("4_wu3ay")]
+position = Vector2(195, 119)
+
+[node name="DiningChair4" parent="StaticObjects" unique_id=2016559099 instance=ExtResource("4_6dtqq")]
+position = Vector2(195, 136)
+
+[node name="DuffleBag" parent="StaticObjects" unique_id=487774771 instance=ExtResource("4_2jrc7")]
+position = Vector2(120, 122)
+
+[node name="Cabinet" parent="StaticObjects" unique_id=2135505440 instance=ExtResource("7_b8v0t")]
+position = Vector2(94, 59)
+
+[node name="Refrigerator" parent="StaticObjects" unique_id=1233546609 instance=ExtResource("8_e3f6a")]
+position = Vector2(214, 59)
+
+[node name="BookshelfVertical" parent="StaticObjects" unique_id=1233828754 instance=ExtResource("9_e3f6a")]
+position = Vector2(220, 129)
+
+[node name="RoundTable" parent="StaticObjects" unique_id=843981629 instance=ExtResource("11_svv7e")]
+position = Vector2(144, 80)
+
+[node name="PhotoFilmTexture" parent="." unique_id=1465462974 instance=ExtResource("6_6dtqq")]
+visible = false
+
+[node name="Player" parent="." unique_id=2008015409 instance=ExtResource("7_i0t7u")]
+position = Vector2(100, 101.00001)
+scale = Vector2(0.15, 0.15)

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ch15vnk7yy65i"]
+
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_q5yqo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
+atlas = ExtResource("1_q5yqo")
+region = Rect2(98, 114, 26, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72ghi"]
+size = Vector2(24, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nj4ij"]
+
+[node name="Cabinet" type="StaticBody2D" unique_id=2135505440]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1980120642]
+texture = SubResource("AtlasTexture_k6aki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=907263703]
+shape = SubResource("RectangleShape2D_72ghi")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=246696449]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=71378884]
+shape = SubResource("RectangleShape2D_nj4ij")

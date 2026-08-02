@@ -8,7 +8,7 @@ const SCENE_PATHS: Dictionary = {
 	"cemetery": "uid://f30c0tc054x8",
 	"main_menu": "uid://blqco4uwjomll",
 	"store_outside": "",
-	"province": ""
+	"province": "uid://r7lvestv6bu3",
 }
 
 const DIALOGUE_PATHS: Dictionary[String, String] = {

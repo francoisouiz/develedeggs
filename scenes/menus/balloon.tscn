@@ -149,7 +149,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer" unique_id=810051587]
-modulate = Color(1, 1, 1, 0.8980392)
+modulate = Color(1, 1, 1, 0.93333334)
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1
@@ -164,9 +164,10 @@ theme_override_constants/separation = 20
 
 [node name="TextureRect" type="TextureRect" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=2057282415]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(158.19, 0)
+custom_minimum_size = Vector2(113.635, 0)
 layout_mode = 2
 expand_mode = 4
+stretch_mode = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1624289611]
 layout_mode = 2

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ca4uyhd4y2rkw"
+path="res://.godot/imported/jacket_area.dialogue-619042440d8c117846bede26b3cf015a.tres"
+
+[deps]
+
+source_file="res://dialogue/house_2/jacket_area.dialogue"
+dest_files=["res://.godot/imported/jacket_area.dialogue-619042440d8c117846bede26b3cf015a.tres"]
+
+[params]
+
+defaults=true

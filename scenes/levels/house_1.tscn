@@ -25,14 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="21_dvkny"]
 [ext_resource type="PackedScene" uid="uid://c8suja75qf7m6" path="res://scenes/interactables/watch_closeup.tscn" id="24_n0k2o"]
 
-[sub_resource type="Environment" id="Environment_vr0rt"]
-background_mode = 3
-tonemap_mode = 1
-glow_enabled = true
-glow_intensity = 1.5
-glow_bloom = 0.25
-glow_blend_mode = 2
-
 [sub_resource type="Animation" id="Animation_j1wce"]
 length = 0.001
 tracks/0/type = "value"
@@ -69,6 +61,14 @@ _data = {
 &"RESET": SubResource("Animation_j1wce"),
 &"canvas_anim": SubResource("Animation_un3t3")
 }
+
+[sub_resource type="Environment" id="Environment_vr0rt"]
+background_mode = 3
+tonemap_mode = 1
+glow_enabled = true
+glow_intensity = 1.5
+glow_bloom = 0.25
+glow_blend_mode = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2g58"]
 bg_color = Color(0.4, 0.2509804, 0.2, 1)
@@ -116,11 +116,12 @@ script = ExtResource("1_r6q8b")
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1010844489]
 color = Color(0.14901961, 0.14901961, 0.14901961, 1)
 
+[node name="CanvasAnim" type="AnimationPlayer" parent="CanvasModulate" unique_id=1821638570]
+root_node = NodePath("../../WorldEnvironment")
+libraries/ = SubResource("AnimationLibrary_3oibf")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1855041528]
 environment = SubResource("Environment_vr0rt")
-
-[node name="CanvasAnim" type="AnimationPlayer" parent="WorldEnvironment" unique_id=1821638570]
-libraries/ = SubResource("AnimationLibrary_3oibf")
 
 [node name="Panel" type="Panel" parent="." unique_id=306915669]
 offset_left = 61.0

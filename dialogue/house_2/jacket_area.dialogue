@@ -1,0 +1,6 @@
+~ start
+do play_jacket()
+Max: Wouldn't you know, a piece of clothing buried in a pile of clothes.
+Max: I'll quickly put this in my bag.
+$> PlayerStats.picked_up_jacket = true
+=> END

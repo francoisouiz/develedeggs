@@ -1,0 +1,6 @@
+~ start
+do play_watch()
+Max: My watch really was here! 
+Max: This camera is quite useful in hindsight.
+$> PlayerStats.picked_up_watch = true
+=> END

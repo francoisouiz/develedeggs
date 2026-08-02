@@ -7,7 +7,7 @@ atlas = ExtResource("1_o285d")
 region = Rect2(13, 34, 8, 9)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_72ghi"]
-radius = 4.0
+radius = 2.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k6aki"]
 radius = 4.0
@@ -19,7 +19,6 @@ texture_filter = 1
 texture = SubResource("AtlasTexture_k6aki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=659314978]
-visible = false
 shape = SubResource("CircleShape2D_72ghi")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=393981055]

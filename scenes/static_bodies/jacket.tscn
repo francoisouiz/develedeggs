@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6owyi14ryg2x"]
 
 [ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_g3i1e"]
+[ext_resource type="Script" uid="uid://dp0ihgf0jttpy" path="res://scripts/interactables/jacket.gd" id="2_dxw4j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
 atlas = ExtResource("1_g3i1e")
@@ -10,7 +11,7 @@ region = Rect2(49, 2, 15, 13)
 radius = 5.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nj4ij"]
-radius = 7.0
+radius = 8.0
 
 [node name="Jacket" type="StaticBody2D" unique_id=1289356418]
 
@@ -18,9 +19,11 @@ radius = 7.0
 texture = SubResource("AtlasTexture_k6aki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=748068224]
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_72ghi")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=2119238060]
+script = ExtResource("2_dxw4j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1974615023]
 shape = SubResource("CircleShape2D_nj4ij")

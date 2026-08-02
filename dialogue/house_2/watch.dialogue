@@ -1,0 +1,7 @@
+~ start
+Max: This watch was my dad’s. 
+Max: Supposedly he got it from his father too. 
+Max: It’s amazing that it still works so well. I should bring it along with me when I see him.
+Max: I can't seem to pick it up though. I probably need to go back with the camera and get it from there.
+$> PlayerStats.can_watch = true
+=> END

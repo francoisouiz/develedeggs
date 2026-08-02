@@ -140,7 +140,7 @@ scale = Vector2(0.15, 0.15)
 [node name="SDoor" parent="." unique_id=2039554147 instance=ExtResource("13_clymf")]
 position = Vector2(128, 8)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1835408448]
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=1835408448]
 stream = ExtResource("14_o7fgo")
 volume_db = -10.0
 autoplay = true

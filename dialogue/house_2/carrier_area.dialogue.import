@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://da25aqgsv3h7e"
+path="res://.godot/imported/carrier_area.dialogue-fea858bbb5c57c339c509498b81ea310.tres"
+
+[deps]
+
+source_file="res://dialogue/house_2/carrier_area.dialogue"
+dest_files=["res://.godot/imported/carrier_area.dialogue-fea858bbb5c57c339c509498b81ea310.tres"]
+
+[params]
+
+defaults=true

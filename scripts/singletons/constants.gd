@@ -28,9 +28,9 @@ const DIALOGUE_PATHS: Dictionary[String, String] = {
 }
 
 const CHARACTER_ICON_PATHS: Dictionary[String, String] = {
-	"Max": "uid://4q335xxs2p",
-	"Joshua": "uid://b6iebvwqbl1rp",
-	"Martin": "uid://cvd0xw28tuhy3",
+	"Max": "uid://b2v2yh8issx3m",
+	"Joshua": "uid://ui6si11jgl73",
+	"Martin": "uid://bk50cabvxvubg",
 	"Driver": "uid://bygrfesmr5pkk"
 }
 

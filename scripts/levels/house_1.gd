@@ -10,7 +10,9 @@ extends Node2D
 @onready var duffle_bag: StaticBody2D = $Interactable/DuffleBag
 @onready var cat: StaticBody2D = $Interactable/Cat
 @onready var martin: CharacterBody2D = $Martin
+@onready var martin_anim: AnimatedSprite2D = $Martin/AnimatedSprite2D
 @onready var joshua: CharacterBody2D = $Joshua
+@onready var joshua_anim: AnimatedSprite2D = $Joshua/AnimatedSprite2D
 @onready var bookshelf_horizontal: StaticBody2D = $StaticObjects/BookshelfHorizontal
 @onready var bookshelf_horizontal_2: StaticBody2D = $StaticObjects/BookshelfHorizontal2
 @onready var console: StaticBody2D = $StaticObjects/Console
@@ -59,7 +61,10 @@ func on_entered_photo() -> void:
 	disable_node(bookshelf_horizontal_2)
 	enable_node(console)
 	joshua.global_position = Vector2(100, 110)
+	joshua_anim.stop()
 	martin.global_position = Vector2(95, 84)
+	martin_anim.flip_h = true
+	martin_anim.pause()
 	background_music.pitch_scale = 0.6
 	
 func on_exited_photo() -> void:
@@ -71,7 +76,10 @@ func on_exited_photo() -> void:
 	enable_node(bookshelf_horizontal_2)
 	disable_node(console)
 	joshua.global_position = Vector2(166, 103)
+	joshua_anim.play("idle")
 	martin.global_position = Vector2(188, 102)
+	martin_anim.play("idle")
+	martin_anim.flip_h = false
 	background_music.pitch_scale = 1
 
 func disable_node(node: Node) -> void:
@@ -101,7 +109,7 @@ func play_watch() -> void:
 	await watch_anim.animation_finished
 	
 func go_to_store() -> void:
-	SceneLoader.load_scene(Constants.SCENE_PATHS.main_menu)
+	SceneLoader.load_scene(Constants.SCENE_PATHS.store_inside)
 	
 func on_dialogue_ended(resource: DialogueResource) -> void:
 	if PlayerStats.scene_progress == 1 and PlayerStats.bed_interacted and PlayerStats.has_talked_house and PlayerStats.console_interacted and PlayerStats.calendar_interacted:

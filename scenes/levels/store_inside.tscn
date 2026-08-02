@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="11_6qlkj"]
 [ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="11_i1bva"]
 [ext_resource type="PackedScene" uid="uid://8knopplr1vny" path="res://scenes/static_bodies/sdoor.tscn" id="13_clymf"]
+[ext_resource type="AudioStream" uid="uid://c4dq1f8a5bhap" path="res://assets/audio/store_inside.mp3" id="14_o7fgo"]
 
 [sub_resource type="Environment" id="Environment_kas8u"]
 background_mode = 3
@@ -133,3 +134,8 @@ scale = Vector2(0.15, 0.15)
 
 [node name="SDoor" parent="." unique_id=2039554147 instance=ExtResource("13_clymf")]
 position = Vector2(128, 8)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1835408448]
+stream = ExtResource("14_o7fgo")
+volume_db = -10.0
+autoplay = true

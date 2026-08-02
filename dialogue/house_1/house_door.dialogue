@@ -9,6 +9,7 @@ match PlayerStats.scene_progress
 		Max: "The best way to relive the past is to capture its image, yet the only way to capture its image is to beget the past"
 		Max: ...Interesting. Tita didn't strike me as a poet?
 		do PlayerStats.continue_scene()
+		$> PlayerStats.has_cam = true
 	when 2
 		Max: Do I wanna go to Joshua's store already?
 		- Yes

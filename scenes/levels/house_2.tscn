@@ -1,0 +1,202 @@
+[gd_scene format=4 uid="uid://lwpelvekgdtu"]
+
+[ext_resource type="Script" uid="uid://cquk6xu5u4jhl" path="res://scripts/levels/house_2.gd" id="1_dx4pa"]
+[ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="2_we1d7"]
+[ext_resource type="TileSet" uid="uid://c6oiehtpxvgqs" path="res://assets/tilesets/room.res" id="3_bh02f"]
+[ext_resource type="PackedScene" uid="uid://bfol2tlu43457" path="res://scenes/static_bodies/watch.tscn" id="4_2itsv"]
+[ext_resource type="PackedScene" uid="uid://ccrft7gb3nvsr" path="res://scenes/static_bodies/bookshelf_horizontal.tscn" id="4_kckwm"]
+[ext_resource type="PackedScene" uid="uid://l8c00jroeji7" path="res://scenes/static_bodies/night_stand.tscn" id="5_tbgrb"]
+[ext_resource type="PackedScene" uid="uid://dk5jtc25y63m6" path="res://scenes/static_bodies/bed.tscn" id="6_dx4pa"]
+[ext_resource type="PackedScene" uid="uid://c6owyi14ryg2x" path="res://scenes/static_bodies/jacket.tscn" id="6_xs8by"]
+[ext_resource type="PackedScene" uid="uid://dw3ty0jcumf7u" path="res://scenes/static_bodies/cat_carrier.tscn" id="7_8fpgl"]
+[ext_resource type="PackedScene" uid="uid://de2lit42uv5hl" path="res://scenes/static_bodies/desk_horizontal.tscn" id="7_ihvlh"]
+[ext_resource type="PackedScene" uid="uid://r5arwt0rxink" path="res://scenes/static_bodies/folded_clothes.tscn" id="8_bduq6"]
+[ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="9_0lq3d"]
+[ext_resource type="PackedScene" uid="uid://druuebev04twd" path="res://scenes/interactables/console.tscn" id="9_utx66"]
+[ext_resource type="PackedScene" uid="uid://dvyn7452c5rl" path="res://scenes/static_bodies/books.tscn" id="10_ihvlh"]
+[ext_resource type="PackedScene" uid="uid://bmcwnlb3oa7tt" path="res://scenes/interactables/cat.tscn" id="10_utx66"]
+[ext_resource type="PackedScene" uid="uid://dknajkr1x47qe" path="res://scenes/static_bodies/duffle_bag.tscn" id="11_2itsv"]
+[ext_resource type="PackedScene" uid="uid://dbl8e1lnpft0w" path="res://scenes/static_bodies/single_book.tscn" id="11_bduq6"]
+[ext_resource type="PackedScene" uid="uid://5mim6cyvewpe" path="res://scenes/static_bodies/medicine.tscn" id="12_utx66"]
+[ext_resource type="PackedScene" uid="uid://r2p6dxl41mpf" path="res://scenes/interactables/television.tscn" id="12_xs8by"]
+[ext_resource type="PackedScene" uid="uid://dnh1pgg08cgnm" path="res://scenes/static_bodies/medical_bills.tscn" id="13_2itsv"]
+[ext_resource type="PackedScene" uid="uid://dryev7r8enta3" path="res://scenes/interactables/door.tscn" id="13_8fpgl"]
+[ext_resource type="PackedScene" uid="uid://ctdc38toal8rl" path="res://scenes/interactables/calendar.tscn" id="14_g6v37"]
+[ext_resource type="AudioStream" uid="uid://bra18aykgnoy7" path="res://assets/audio/doorbell.mp3" id="15_lq8vg"]
+[ext_resource type="AudioStream" uid="uid://cu4hmomc6e3y3" path="res://assets/audio/cat_purr.mp3" id="17_xs8by"]
+[ext_resource type="AudioStream" uid="uid://c1s3o2cpbtoea" path="res://assets/audio/package.mp3" id="18_8fpgl"]
+[ext_resource type="AudioStream" uid="uid://jqdbs41hai2w" path="res://assets/audio/home_draft.mp3" id="19_g6v37"]
+[ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="22_fjg4f"]
+
+[sub_resource type="Environment" id="Environment_vr0rt"]
+background_mode = 3
+tonemap_mode = 1
+glow_enabled = true
+glow_intensity = 1.5
+glow_bloom = 0.25
+glow_blend_mode = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2g58"]
+bg_color = Color(0.4, 0.2509804, 0.2, 1)
+
+[node name="House 2" type="Node2D" unique_id=1938029275]
+script = ExtResource("1_dx4pa")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1010844489]
+color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1855041528]
+environment = SubResource("Environment_vr0rt")
+
+[node name="Panel" type="Panel" parent="." unique_id=306915669]
+offset_left = 61.0
+offset_top = 36.0
+offset_right = 242.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m2g58")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=115279644]
+position = Vector2(152, 88)
+zoom = Vector2(6.65, 6.65)
+
+[node name="Lights" type="Node2D" parent="." unique_id=1078453975]
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights" unique_id=1518812349]
+texture_filter = 1
+position = Vector2(190, 93)
+color = Color(0.98851186, 0.9317842, 0.7939912, 1)
+energy = 0.75
+texture = ExtResource("2_we1d7")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lights" unique_id=374803047]
+position = Vector2(109, 91)
+color = Color(0.98851186, 0.9317842, 0.7939912, 1)
+energy = 0.75
+texture = ExtResource("2_we1d7")
+
+[node name="Tilemaps" type="Node2D" parent="." unique_id=726801911]
+texture_filter = 1
+
+[node name="Floor" type="TileMapLayer" parent="Tilemaps" unique_id=1476268581]
+tile_map_data = PackedByteArray("AAAFAAQAAQABAAIAAAAGAAQAAQACAAIAAAAHAAQAAQADAAIAAAAFAAUAAQABAAIAAAAGAAUAAQACAAIAAAAHAAUAAQADAAIAAAAFAAYAAQABAAIAAAAGAAYAAQACAAIAAAAHAAYAAQADAAIAAAAIAAYAAQABAAIAAAAJAAYAAQACAAIAAAAKAAYAAQADAAIAAAAIAAUAAQABAAIAAAAJAAUAAQACAAIAAAAKAAUAAQADAAIAAAAIAAQAAQABAAIAAAAJAAQAAQACAAIAAAAKAAQAAQADAAIAAAALAAQAAQABAAIAAAAMAAQAAQACAAIAAAANAAQAAQADAAIAAAALAAUAAQABAAIAAAAMAAUAAQACAAIAAAANAAUAAQADAAIAAAALAAYAAQABAAIAAAAMAAYAAQACAAIAAAANAAYAAQADAAIAAAAKAAcAAQADAAIAAAALAAcAAQABAAIAAAAMAAcAAQACAAIAAAAIAAcAAQABAAIAAAAJAAcAAQACAAIAAAAGAAcAAQACAAIAAAAHAAcAAQADAAIAAAAFAAcAAQABAAIAAAANAAcAAQADAAIAAAA=")
+tile_set = ExtResource("3_bh02f")
+
+[node name="Wall" type="TileMapLayer" parent="Tilemaps" unique_id=1392033631]
+tile_map_data = PackedByteArray("AAAFAAMAAQADAAEAAAAGAAMAAQADAAEAAAAHAAMAAQADAAEAAAAIAAMAAQADAAEAAAAJAAMAAQACAAEAAAAKAAMAAQADAAEAAAALAAMAAQADAAEAAAAMAAMAAQACAAEAAAANAAMAAQADAAEAAAAFAAIAAQADAAAAAAAGAAIAAQADAAAAAAAHAAIAAQADAAAAAAAIAAIAAQADAAAAAAAJAAIAAQADAAAAAAAKAAIAAQADAAAAAAALAAIAAQADAAAAAAAMAAIAAQADAAAAAAANAAIAAQADAAAAAAAOAAIAAQAEAAAAAAAOAAMAAQAEAAEAAAAOAAQAAQAEAAEAAAAOAAUAAQAEAAEAAAAOAAYAAQAEAAEAAAAOAAcAAQAEAAEAAAAEAAMAAQAAAAEAAAAEAAQAAQAAAAEAAAAEAAUAAQAAAAEAAAAEAAYAAQAAAAEAAAAEAAcAAQAAAAEAAAAEAAIAAQAAAAAAAAAFAAgAAQADAAMAAAAGAAgAAQADAAMAAAAHAAgAAQADAAMAAAAIAAgAAQADAAMAAAAJAAgAAQADAAMAAAAKAAgAAQADAAMAAAALAAgAAQADAAMAAAAMAAgAAQADAAMAAAANAAgAAQADAAMAAAAOAAgAAQAEAAMAAAAEAAgAAQAAAAMAAAA=")
+tile_set = ExtResource("3_bh02f")
+
+[node name="HiddenObjects" type="Node2D" parent="." unique_id=1874429688]
+
+[node name="Watch" parent="HiddenObjects" unique_id=27694661 instance=ExtResource("4_2itsv")]
+position = Vector2(186, 116)
+
+[node name="Jacket" parent="HiddenObjects" unique_id=1289356418 instance=ExtResource("6_xs8by")]
+position = Vector2(152, 105)
+
+[node name="Medicine" parent="HiddenObjects" unique_id=781152904 instance=ExtResource("12_utx66")]
+position = Vector2(210, 78)
+
+[node name="CatCarrier" parent="HiddenObjects" unique_id=1095099862 instance=ExtResource("7_8fpgl")]
+position = Vector2(215, 116)
+
+[node name="StaticObjects" type="Node2D" parent="." unique_id=1053370653]
+texture_filter = 1
+
+[node name="BookshelfHorizontal" parent="StaticObjects" unique_id=1964835267 instance=ExtResource("4_kckwm")]
+position = Vector2(96, 60)
+sprite_id = 1
+
+[node name="BookshelfHorizontal2" parent="StaticObjects" unique_id=572557387 instance=ExtResource("4_kckwm")]
+position = Vector2(123, 60)
+
+[node name="Nightstand" parent="StaticObjects" unique_id=943642657 instance=ExtResource("5_tbgrb")]
+position = Vector2(220, 74)
+
+[node name="Bed" parent="StaticObjects" unique_id=432711283 instance=ExtResource("6_dx4pa")]
+position = Vector2(215, 116)
+
+[node name="PhotoBed" parent="StaticObjects" unique_id=906732320 instance=ExtResource("6_dx4pa")]
+visible = false
+position = Vector2(215, 85)
+
+[node name="DeskHorizontal" parent="StaticObjects" unique_id=1601209415 instance=ExtResource("7_ihvlh")]
+position = Vector2(145, 65)
+
+[node name="Console" parent="StaticObjects" unique_id=692288730 instance=ExtResource("9_utx66")]
+position = Vector2(152.8, 65.765)
+
+[node name="FoldedClothes" parent="StaticObjects" unique_id=374037775 instance=ExtResource("8_bduq6")]
+position = Vector2(151, 105)
+
+[node name="FoldedClothes2" parent="StaticObjects" unique_id=36228650 instance=ExtResource("8_bduq6")]
+position = Vector2(92, 109)
+sprite_id = 4
+
+[node name="FoldedClothes4" parent="StaticObjects" unique_id=2093820876 instance=ExtResource("8_bduq6")]
+position = Vector2(186, 114)
+sprite_id = 4
+
+[node name="FoldedClothes3" parent="StaticObjects" unique_id=1064667795 instance=ExtResource("8_bduq6")]
+position = Vector2(169, 69)
+sprite_id = 3
+
+[node name="FoldedClothes5" parent="StaticObjects" unique_id=1014125672 instance=ExtResource("8_bduq6")]
+position = Vector2(184, 87)
+sprite_id = 3
+
+[node name="Books" parent="StaticObjects" unique_id=1406148510 instance=ExtResource("10_ihvlh")]
+position = Vector2(118, 75)
+
+[node name="Books2" parent="StaticObjects" unique_id=1927481522 instance=ExtResource("10_ihvlh")]
+position = Vector2(124, 78)
+
+[node name="Books3" parent="StaticObjects" unique_id=493709375 instance=ExtResource("10_ihvlh")]
+position = Vector2(91, 77)
+
+[node name="SingleBook" parent="StaticObjects" unique_id=1396255644 instance=ExtResource("11_bduq6")]
+position = Vector2(117, 81)
+
+[node name="SingleBook2" parent="StaticObjects" unique_id=1024145413 instance=ExtResource("11_bduq6")]
+position = Vector2(96, 79)
+
+[node name="MedicalBills" parent="StaticObjects" unique_id=911890532 instance=ExtResource("13_2itsv")]
+position = Vector2(209, 79)
+
+[node name="Interactable" type="Node2D" parent="." unique_id=1975110209]
+
+[node name="Cat" parent="Interactable" unique_id=1510551811 instance=ExtResource("10_utx66")]
+position = Vector2(151, 95)
+
+[node name="DuffleBag" parent="Interactable" unique_id=487774771 instance=ExtResource("11_2itsv")]
+position = Vector2(215, 96)
+
+[node name="Television" parent="Interactable" unique_id=644916159 instance=ExtResource("12_xs8by")]
+position = Vector2(145, 56)
+
+[node name="Door" parent="Interactable" unique_id=392175972 instance=ExtResource("13_8fpgl")]
+position = Vector2(115, 120)
+
+[node name="Calendar" parent="Interactable" unique_id=616343683 instance=ExtResource("14_g6v37")]
+position = Vector2(220, 69)
+
+[node name="Doorbell" type="AudioStreamPlayer2D" parent="." unique_id=1473498917]
+stream = ExtResource("15_lq8vg")
+
+[node name="Cat" type="AudioStreamPlayer2D" parent="." unique_id=1989016382]
+stream = ExtResource("17_xs8by")
+volume_db = 5.0
+
+[node name="Package" type="AudioStreamPlayer2D" parent="." unique_id=694105155]
+stream = ExtResource("18_8fpgl")
+volume_db = 7.0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=1547267549]
+stream = ExtResource("19_g6v37")
+autoplay = true
+
+[node name="PhotoFilmTexture" parent="." unique_id=1465462974 instance=ExtResource("22_fjg4f")]
+visible = false
+
+[node name="Player" parent="." unique_id=2008015409 instance=ExtResource("9_0lq3d")]
+position = Vector2(115.00002, 114)
+scale = Vector2(0.12, 0.12)

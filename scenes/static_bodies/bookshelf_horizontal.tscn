@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://ccrft7gb3nvsr"]
 
+[ext_resource type="Script" uid="uid://v1uajm6potl1" path="res://scripts/interactables/sprite_2d_selector.gd" id="1_8awvg"]
 [ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="2_22nti"]
 [ext_resource type="Script" uid="uid://51kc6lcfvklc" path="res://scripts/interactables/bookshelf_horizontal.gd" id="3_8awvg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8awvg"]
 atlas = ExtResource("2_22nti")
-region = Rect2(3, 8.855113, 26.317547, 23.741356)
+region = Rect2(0, 114, 96, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ykry"]
 size = Vector2(24, 15.5)
@@ -14,12 +15,16 @@ size = Vector2(24, 15.5)
 size = Vector2(24, 22)
 
 [node name="BookshelfHorizontal" type="StaticBody2D" unique_id=1964835267]
+script = ExtResource("1_8awvg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127524125]
 texture_filter = 1
 texture = SubResource("AtlasTexture_8awvg")
+hframes = 3
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=19024271]
+visible = false
 position = Vector2(0, -1.75)
 shape = SubResource("RectangleShape2D_8ykry")
 
@@ -27,4 +32,5 @@ shape = SubResource("RectangleShape2D_8ykry")
 script = ExtResource("3_8awvg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1741063181]
+visible = false
 shape = SubResource("RectangleShape2D_s3x7s")

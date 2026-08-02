@@ -1,0 +1,8 @@
+~ start
+Max: That should be it.
+Max: If I'm able to bring things back into the past, the furnitue should still be in tact.
+Max: And hopefully... they too will be back.
+Max: Time to switch back into the present.
+$> PlayerStats.can_photo = true
+$> PlayerStats.continue_scene()
+=> END

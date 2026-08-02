@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://chqfl5x4puwcc"
+path="res://.godot/imported/first_enter.dialogue-4a36fd895b664c3510f3890f3812a5a7.tres"
+
+[deps]
+
+source_file="res://dialogue/province/first_enter.dialogue"
+dest_files=["res://.godot/imported/first_enter.dialogue-4a36fd895b664c3510f3890f3812a5a7.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b5eby0mh1ygur"]
+
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_0nfsh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugovh"]
+atlas = ExtResource("1_0nfsh")
+region = Rect2(58, 36, 9, 4)
+
+[node name="Bibingka" type="Sprite2D" unique_id=623088668]
+texture_filter = 1
+texture = SubResource("AtlasTexture_ugovh")

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cql6qrdv8phrl"
+path="res://.godot/imported/refrigerator.dialogue-e812af5d185763bcde9497cdce9075a7.tres"
+
+[deps]
+
+source_file="res://dialogue/province/refrigerator.dialogue"
+dest_files=["res://.godot/imported/refrigerator.dialogue-e812af5d185763bcde9497cdce9075a7.tres"]
+
+[params]
+
+defaults=true

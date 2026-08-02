@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://doiubi1kc654m"]
 
 [ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_ipete"]
+[ext_resource type="Script" uid="uid://id36i1tc7cq4" path="res://scripts/interactables/refrigerator.gd" id="2_ewn4e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
 atlas = ExtResource("1_ipete")
 region = Rect2(132, 68, 8, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72ghi"]
-size = Vector2(8, 23)
+size = Vector2(8, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nj4ij"]
 size = Vector2(8, 23)
@@ -19,10 +20,11 @@ texture_filter = 1
 texture = SubResource("AtlasTexture_k6aki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=455429438]
-position = Vector2(0, 0.5)
+position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_72ghi")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=2115515482]
+script = ExtResource("2_ewn4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=210253584]
 position = Vector2(0, 0.5)

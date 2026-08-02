@@ -1,10 +1,12 @@
 [gd_scene format=4 uid="uid://r7lvestv6bu3"]
 
 [ext_resource type="TileSet" uid="uid://chejnjf0y6xfk" path="res://assets/tilesets/province.tres" id="1_2e8tg"]
+[ext_resource type="Script" uid="uid://si1sol4ij0n7" path="res://scripts/levels/province.gd" id="1_svv7e"]
 [ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="2_s0sel"]
 [ext_resource type="PackedScene" uid="uid://dryev7r8enta3" path="res://scenes/interactables/door.tscn" id="3_s0sel"]
 [ext_resource type="PackedScene" uid="uid://dknajkr1x47qe" path="res://scenes/static_bodies/duffle_bag.tscn" id="4_2jrc7"]
 [ext_resource type="PackedScene" uid="uid://xsq5qxknt7fm" path="res://scenes/static_bodies/dining_chair.tscn" id="4_6dtqq"]
+[ext_resource type="PackedScene" uid="uid://b5eby0mh1ygur" path="res://scenes/interactables/bibingka.tscn" id="4_m7fkx"]
 [ext_resource type="PackedScene" uid="uid://dhay354ul8ust" path="res://scenes/static_bodies/long_table.tscn" id="4_wu3ay"]
 [ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="6_6dtqq"]
 [ext_resource type="PackedScene" uid="uid://ch15vnk7yy65i" path="res://scenes/static_bodies/cabinet.tscn" id="7_b8v0t"]
@@ -12,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://doiubi1kc654m" path="res://scenes/static_bodies/refrigerator.tscn" id="8_e3f6a"]
 [ext_resource type="PackedScene" uid="uid://detvj8qedytbv" path="res://scenes/static_bodies/bookshelf_vertical.tscn" id="9_e3f6a"]
 [ext_resource type="PackedScene" uid="uid://byexge2f5tysf" path="res://scenes/static_bodies/round_table.tscn" id="11_svv7e"]
+[ext_resource type="PackedScene" uid="uid://ct0c321jjx8s4" path="res://scenes/interactables/puto_bumbong.tscn" id="13_8fpki"]
+[ext_resource type="Texture2D" uid="uid://57cg8cqo53x7" path="res://assets/textures/folded_clothes.tres" id="14_lxjkw"]
+[ext_resource type="PackedScene" uid="uid://buhgjic2tty3q" path="res://scenes/interactables/tito_elpa.tscn" id="17_8fpki"]
 
 [sub_resource type="Environment" id="Environment_2jrc7"]
 background_mode = 3
@@ -61,7 +66,52 @@ _data = {
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jmyr"]
 bg_color = Color(0.4, 0.2509804, 0.2, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3q5lw"]
+atlas = ExtResource("14_lxjkw")
+region = Rect2(33, 5, 14, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3x7s"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_m7fkx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8fpki"]
+resource_name = "transition_anim"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lxjkw"]
+_data = {
+&"RESET": SubResource("Animation_m7fkx"),
+&"transition_anim": SubResource("Animation_8fpki")
+}
+
 [node name="Province" type="Node2D" unique_id=843740400]
+script = ExtResource("1_svv7e")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1361326637]
 color = Color(0.14901961, 0.14901961, 0.14901961, 1)
@@ -110,12 +160,16 @@ energy = 0.75
 texture = ExtResource("2_s0sel")
 
 [node name="PointLight2D3" type="PointLight2D" parent="Lights" unique_id=2067003217]
-position = Vector2(152, 159)
+position = Vector2(151, 159)
 color = Color(0.98851186, 0.9317842, 0.7939912, 1)
 energy = 0.75
 texture = ExtResource("2_s0sel")
 
 [node name="StaticObjects" type="Node2D" parent="." unique_id=1230515167]
+
+[node name="Bibingka" parent="StaticObjects" unique_id=623088668 instance=ExtResource("4_m7fkx")]
+position = Vector2(214, 69)
+scale = Vector2(0.97222054, 1.1249995)
 
 [node name="Door" parent="StaticObjects" unique_id=392175972 instance=ExtResource("3_s0sel")]
 position = Vector2(152, 167)
@@ -146,9 +200,6 @@ sprite_id = 4
 [node name="LongTable" parent="StaticObjects" unique_id=554747416 instance=ExtResource("4_wu3ay")]
 position = Vector2(195, 119)
 
-[node name="DiningChair4" parent="StaticObjects" unique_id=2016559099 instance=ExtResource("4_6dtqq")]
-position = Vector2(195, 136)
-
 [node name="DuffleBag" parent="StaticObjects" unique_id=487774771 instance=ExtResource("4_2jrc7")]
 position = Vector2(120, 122)
 
@@ -164,9 +215,45 @@ position = Vector2(220, 129)
 [node name="RoundTable" parent="StaticObjects" unique_id=843981629 instance=ExtResource("11_svv7e")]
 position = Vector2(144, 80)
 
+[node name="PutoBumbong" parent="StaticObjects" unique_id=1078260638 instance=ExtResource("13_8fpki")]
+position = Vector2(195, 108.00001)
+rotation = -0.3926991
+scale = Vector2(0.6666667, 0.7)
+
+[node name="PutoBumbong3" parent="StaticObjects" unique_id=618347591 instance=ExtResource("13_8fpki")]
+position = Vector2(194.99998, 127)
+rotation = -0.3926991
+scale = Vector2(0.6666667, 0.7)
+
+[node name="PutoBumbong2" parent="StaticObjects" unique_id=2034016896 instance=ExtResource("13_8fpki")]
+position = Vector2(193.99998, 117.99999)
+rotation = 0.3926991
+scale = Vector2(0.6666667, 0.7)
+
+[node name="LeatherJacket" type="Sprite2D" parent="StaticObjects" unique_id=438529239]
+position = Vector2(144, 76)
+scale = Vector2(0.85714287, 0.8)
+texture = SubResource("AtlasTexture_3q5lw")
+
+[node name="DiningChair4" parent="StaticObjects" unique_id=2016559099 instance=ExtResource("4_6dtqq")]
+position = Vector2(195, 136)
+
 [node name="PhotoFilmTexture" parent="." unique_id=1465462974 instance=ExtResource("6_6dtqq")]
 visible = false
 
 [node name="Player" parent="." unique_id=2008015409 instance=ExtResource("7_i0t7u")]
 position = Vector2(100, 101.00001)
 scale = Vector2(0.15, 0.15)
+
+[node name="TitoElpa" parent="." unique_id=919867986 instance=ExtResource("17_8fpki")]
+position = Vector2(127, 76)
+
+[node name="Panel2" type="Panel" parent="." unique_id=534583183]
+offset_left = 34.0
+offset_top = 40.0
+offset_right = 292.0
+offset_bottom = 190.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s3x7s")
+
+[node name="TransitionAnim" type="AnimationPlayer" parent="Panel2" unique_id=816918442]
+libraries/ = SubResource("AnimationLibrary_lxjkw")

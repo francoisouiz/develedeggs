@@ -61,7 +61,8 @@ const CHARACTER_ICON_PATHS: Dictionary[String, String] = {
 	"Max": "uid://b2v2yh8issx3m",
 	"Joshua": "uid://ui6si11jgl73",
 	"Martin": "uid://bk50cabvxvubg",
-	"Driver": "uid://dwtwpw7ysstmw"
+	"Driver": "uid://dwtwpw7ysstmw",
+	"Tito Elpa": "uid://dti14avwv3s2"
 }
 
 const CHARACTER_AUDIO_PATHS: Dictionary[String, String] = {

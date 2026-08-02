@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://buhgjic2tty3q"]
+
+[ext_resource type="Texture2D" uid="uid://caefijtk8ts7m" path="res://assets/sprites/characters.png" id="1_00k3p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_415ry"]
+atlas = ExtResource("1_00k3p")
+region = Rect2(52, 77, 9, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olfvt"]
+atlas = ExtResource("1_00k3p")
+region = Rect2(61, 77, 9, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s3x7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_415ry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olfvt")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3q5lw"]
+size = Vector2(8, 18)
+
+[node name="TitoElpa" type="CharacterBody2D" unique_id=919867986]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=710618005]
+sprite_frames = SubResource("SpriteFrames_s3x7s")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2022636497]
+shape = SubResource("RectangleShape2D_3q5lw")

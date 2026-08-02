@@ -51,13 +51,13 @@ zoom = Vector2(4, 4)
 
 [node name="PointLight2D" type="PointLight2D" parent="Lights" unique_id=1249863752]
 texture_filter = 1
-position = Vector2(128, 79)
+position = Vector2(144.835, 61.725)
 color = Color(0.98039216, 0.9607843, 0.9019608, 1)
 energy = 0.75
 texture = ExtResource("2_kas8u")
 
 [node name="PointLight2D2" type="PointLight2D" parent="Lights" unique_id=220756175]
-position = Vector2(67, 79)
+position = Vector2(47.665, 72.135)
 color = Color(0.9800367, 0.9619611, 0.90186304, 1)
 energy = 0.75
 texture = ExtResource("2_kas8u")

@@ -51,7 +51,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_lq8vg"]
 resource_name = "canvas_anim"
-length = 0.39999999999999997
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -102,7 +102,7 @@ atlas = SubResource("CompressedTexture2D_42mrm")
 region = Rect2(7, 60, 58, 58)
 
 [sub_resource type="Animation" id="Animation_n0k2o"]
-length = 0.39999999999999997
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="6_8c860"]
 [ext_resource type="PackedScene" uid="uid://bn130s1xpb2wn" path="res://scenes/static_bodies/cemetery_tree.tscn" id="6_xnejn"]
 [ext_resource type="Texture2D" uid="uid://8k1fx43u7v57" path="res://assets/overlaps/dirt_overlap_2.png" id="7_1sonu"]
+[ext_resource type="AudioStream" uid="uid://00ppt0tsxv4u" path="res://assets/audio/mixkit-pond-ambience-with-crickets-1783.mp3" id="15_hc01x"]
 
 [sub_resource type="Environment" id="Environment_8rrfi"]
 background_mode = 3
@@ -466,3 +467,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_s3x7s")
 
 [node name="TransitionAnim" type="AnimationPlayer" parent="Panel2" unique_id=1796707121]
 libraries/ = SubResource("AnimationLibrary_lxjkw")
+
+[node name="BackgroundAudio" type="AudioStreamPlayer2D" parent="." unique_id=1894533555]
+stream = ExtResource("15_hc01x")
+autoplay = true

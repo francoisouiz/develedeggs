@@ -150,3 +150,7 @@ func _on_interactable_area_area_entered(area: Area2D) -> void:
 func _on_interactable_area_area_exited(area: Area2D) -> void:
 	if area is Interactable:
 		nearby_interactables.erase(area)
+
+func go_to_store_indoor() -> void:
+	PlayerStats.curr_level = "store_inside"
+	SceneLoader.load_scene(Constants.SCENE_PATHS.province)

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bsfiqnyuhtplh"]
+
+[ext_resource type="Texture2D" uid="uid://bqmvsao4ooeyc" path="res://assets/sprites/store_past.png" id="1_b5ahh"]
+[ext_resource type="Script" uid="uid://b4f3fi2uh7b0g" path="res://scripts/interactables/store_building.gd" id="1_su55s"]
+[ext_resource type="Texture2D" uid="uid://cu2tk5sqj8v6h" path="res://assets/sprites/store_new.png" id="2_su55s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6aki"]
+size = Vector2(116, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72ghi"]
+size = Vector2(109, 49)
+
+[node name="StoreBuilding" type="StaticBody2D" unique_id=1645456500]
+script = ExtResource("1_su55s")
+
+[node name="PastSprite" type="Sprite2D" parent="." unique_id=1281597551]
+visible = false
+texture = ExtResource("1_b5ahh")
+
+[node name="NewSprite" type="Sprite2D" parent="." unique_id=1225916166]
+texture = ExtResource("2_su55s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1997112791]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_k6aki")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=191131732]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=811097258]
+position = Vector2(0.5, -6.5)
+shape = SubResource("RectangleShape2D_72ghi")

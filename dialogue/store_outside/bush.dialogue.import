@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b8leublumfoyw"
+path="res://.godot/imported/bush.dialogue-fe6c1fc5d4ca73548f779ae8efd1125a.tres"
+
+[deps]
+
+source_file="res://dialogue/store_outside/bush.dialogue"
+dest_files=["res://.godot/imported/bush.dialogue-fe6c1fc5d4ca73548f779ae8efd1125a.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,4 @@
+~ start
+Max: Would you look at that, the key was actually hidden inside.
+do pickup_key()
+=> END

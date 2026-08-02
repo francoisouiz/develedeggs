@@ -1,0 +1,5 @@
+~ start
+Max: Wha- What happened. I’m… back here again? Before the store got renovated?
+Max: Joshua? Where are you?
+do PlayerStats.continue_scene()
+=> END

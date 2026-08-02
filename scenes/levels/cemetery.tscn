@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="1_5eprs"]
 [ext_resource type="Shader" uid="uid://cubgisy3gl206" path="res://assets/shaders/grass.gdshader" id="2_1sonu"]
 [ext_resource type="TileSet" uid="uid://dt8djw8fevw0o" path="res://assets/tilesets/cemetery.tres" id="2_xnejn"]
-[ext_resource type="Texture2D" uid="uid://wbsk6x5pctva" path="res://assets/overlaps/dirt_overlap.png" id="3_6est8"]
 [ext_resource type="Material" uid="uid://cmbcfxlkxxnwq" path="res://addons/TileMapDual/ghost_material.tres" id="3_k2vcp"]
 [ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="4_8rrfi"]
 [ext_resource type="Script" uid="uid://cjk8nronimk5r" path="res://addons/TileMapDual/tile_map_dual.gd" id="4_15unr"]
@@ -13,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bmj5a4stp7my" path="res://scenes/static_bodies/graves.tscn" id="5_da4n3"]
 [ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="6_8c860"]
 [ext_resource type="PackedScene" uid="uid://bn130s1xpb2wn" path="res://scenes/static_bodies/cemetery_tree.tscn" id="6_xnejn"]
+[ext_resource type="Texture2D" uid="uid://8k1fx43u7v57" path="res://assets/overlaps/dirt_overlap_2.png" id="7_1sonu"]
 
 [sub_resource type="Environment" id="Environment_8rrfi"]
 background_mode = 3
@@ -241,8 +241,8 @@ sources/0 = SubResource("TileSetAtlasSource_1ab2g")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6est8"]
 shader = ExtResource("2_1sonu")
 shader_parameter/grass_overlay_tex = ExtResource("4_hc01x")
-shader_parameter/dirt_overlay_tex = ExtResource("3_6est8")
-shader_parameter/scale = 0.005
+shader_parameter/dirt_overlay_tex = ExtResource("7_1sonu")
+shader_parameter/scale = 0.007
 
 [sub_resource type="Animation" id="Animation_1sonu"]
 resource_name = "walk_away"

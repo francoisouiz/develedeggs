@@ -1,0 +1,12 @@
+~ start
+match PlayerStats.curr_level
+	when "start"
+		Max: Who needs a wardrobe when you can put all your clothes on the floor.
+		Max: ...
+		Max: I should probably put them in my perfectly empty duffle bag
+	when "messy_house"
+		% 
+			Max: What was once a messy pile of clothes...
+			Max: Is now a messier pile of clothes.
+		% Max: I should really get a wardrobe soon.
+=> END

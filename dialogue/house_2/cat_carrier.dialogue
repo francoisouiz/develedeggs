@@ -1,0 +1,5 @@
+~ start
+Max: There’s Bart’s carrier. This should stop him from making any more mess.
+Max: I can't seem to pick it up though. I probably need to go back with the camera and get it from there.
+$> PlayerStats.can_carrier = true
+=> END

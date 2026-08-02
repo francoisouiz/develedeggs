@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dw3ty0jcumf7u"]
 
 [ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_j0mwe"]
+[ext_resource type="Script" uid="uid://bn3urg4ryqj7q" path="res://scripts/interactables/cat_carrier.gd" id="2_spjnu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
 atlas = ExtResource("1_j0mwe")
@@ -22,6 +23,7 @@ position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_72ghi")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=1189294025]
+script = ExtResource("2_spjnu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=2124377238]
 position = Vector2(0.5, 1)

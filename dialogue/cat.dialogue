@@ -1,0 +1,17 @@
+~ start
+match PlayerStats.curr_level
+	when "start"
+		do play_cat()
+		Max: Oh to be a cat and have the liberty to doze off all day.
+		Max: Sleep well, Bart.
+	when "messy_house"
+		Max: How in the world did you manage to make this much of a mess???
+		...: Unfortunately, Bart refuses to give you an answer.
+		...: Possibilities flash through your mind. 
+		...: Perhaps it is guilt. 
+		...: Perhaps it is pride. 
+		...: Perhaps he truly does not know the answer.
+		...: Nay, his silence is from neither of these.
+		...: It is because he is a cat.
+
+=> END

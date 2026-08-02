@@ -1,0 +1,6 @@
+~ start
+Max: So this is where my medicines were. Work really has been taking a toll on me. 
+Max: I hope I have enough supplements to last me the whole trip.
+Max: I can't seem to pick it up though. I probably need to go back with the camera and get it from there.
+$> PlayerStats.can_medicine = true
+=> END

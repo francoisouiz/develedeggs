@@ -14,6 +14,14 @@ var post_photo_played: bool = false
 var has_food1: bool = false
 var has_food2: bool = false
 var has_clothes: bool = false
+var can_watch: bool = false
+var can_jacket: bool = false
+var can_medicine: bool = false
+var picked_up_watch: bool = false
+var picked_up_medicine: bool = false
+var picked_up_jacket: bool = false
+var can_carrier: bool = false
+var picked_up_carrier: bool = false
 
 func continue_scene() -> void:
 	scene_progress += 1

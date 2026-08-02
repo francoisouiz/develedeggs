@@ -4,10 +4,11 @@ const SCENE_PATHS: Dictionary = {
 	"loading_screen": "uid://qk4cctayieey",
 	"house_1": "uid://cjggqamfjfa5j",
 	"store_inside": "uid://dm8cnmbmk8prj",
-	"messy_house": "uid://lwpelvekgdtu",
-	"province": "uid://r7lvestv6bu3",
+	"house_2": "uid://lwpelvekgdtu",
 	"cemetery": "uid://f30c0tc054x8",
-	"main_menu": "uid://blqco4uwjomll"
+	"main_menu": "uid://blqco4uwjomll",
+	"store_outside": "",
+	"province": "uid://r7lvestv6bu3",
 }
 
 const DIALOGUE_PATHS: Dictionary[String, String] = {
@@ -31,14 +32,25 @@ const DIALOGUE_PATHS: Dictionary[String, String] = {
 	"vertical_storeshelf": "uid://b45bse7qxbsym",
 	"clothes_rack": "uid://bex5og6ofepfx",
 	"post_getting": "uid://c3p7kkvewitnf",
-	"sdoor": "uid://dh0yrf05ycle5"
+	"sdoor": "uid://dh0yrf05ycle5",
+	"house_2_start": "uid://btutujhghpbi2",
+	"watch": "uid://bkax5a4e5ylkj",
+	"jacket": "uid://b4wj5rp36f1h7",
+	"medicine": "uid://cweehobuk4o0m",
+	"cat_carrier": "uid://kanp1kc1ftow",
+	"watch_area": "uid://dhyllxvae5d2g",
+	"medical_bills": "uid://cixcpgqmtcvpp",
+	"medicine_area": "uid://cxekgjygykbgh",
+	"jacket_area": "uid://ca4uyhd4y2rkw",
+	"house_2_end": "uid://chy7rpx4jjgpr",
+	"carrier_area": "uid://da25aqgsv3h7e"
 }
 
 const CHARACTER_ICON_PATHS: Dictionary[String, String] = {
 	"Max": "uid://b2v2yh8issx3m",
 	"Joshua": "uid://ui6si11jgl73",
 	"Martin": "uid://bk50cabvxvubg",
-	"Driver": "uid://bygrfesmr5pkk"
+	"Driver": "uid://dwtwpw7ysstmw"
 }
 
 const CHARACTER_AUDIO_PATHS: Dictionary[String, String] = {

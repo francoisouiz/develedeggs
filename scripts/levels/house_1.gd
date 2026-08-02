@@ -18,7 +18,7 @@ extends Node2D
 @onready var console: StaticBody2D = $StaticObjects/Console
 var loading_screen: PackedScene = preload(Constants.SCENE_PATHS.loading_screen)
 @onready var watch_anim: AnimationPlayer = $WatchCloseup/WatchAnim
-@onready var canvas_anim: AnimationPlayer = $WorldEnvironment/CanvasAnim
+@onready var canvas_anim: AnimationPlayer = $CanvasModulate/CanvasAnim
 
 signal queso_finished
 signal load_finished

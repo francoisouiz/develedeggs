@@ -41,3 +41,40 @@ var has_placed_bibingka: bool = false
 
 func continue_scene() -> void:
 	scene_progress += 1
+
+func reset_stats() -> void:
+	curr_level = ""
+	scene_progress = 0
+	can_move = false
+
+	# House 1
+	has_cam = false
+	has_talked_to_josh = false
+	can_photo = true
+	in_photo = false
+	has_talked_house = false
+	calendar_interacted = false
+	bed_interacted = false
+	console_interacted = false
+	post_photo_played = false
+
+	# Store Outside
+	found_key = false
+	has_key = false
+
+	# Store Inside
+	has_food1 = false
+	has_food2 = false
+	has_clothes = false
+
+	# House 2
+	can_watch = false
+	can_jacket = false
+	can_medicine = false
+	picked_up_watch = false
+	picked_up_medicine = false
+	picked_up_jacket = false
+	can_carrier = false
+	picked_up_carrier = false
+	
+	print("RESET!")

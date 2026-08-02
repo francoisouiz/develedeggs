@@ -21,13 +21,15 @@ func walk_away() -> void:
 	
 	walking_animation.animation_finished.connect(_on_walk_finish)
 	walking_animation.play("walk_away")
+	transition_anim.play("fadeout")
 	
 func on_dialogue_ended(resource: DialogueResource) -> void:
 	PlayerStats.can_move = false
 	walk_away()
 
 func _on_walk_finish(anim_name: String) ->void:
-	print("fin")
+	PlayerStats.curr_level = ""
+	SceneLoader.load_scene(Constants.SCENE_PATHS.main_menu)
 
 func quick_dim(dim_duration: float) -> void:
 	transition_anim.play("transition_anim")

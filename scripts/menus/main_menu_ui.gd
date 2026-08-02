@@ -1,8 +1,8 @@
 extends Control
 
 func _on_start_pressed() -> void:
-	PlayerStats.curr_level = "province"
-	SceneLoader.load_scene(Constants.SCENE_PATHS.province)
+	PlayerStats.curr_level = "cemetery"
+	SceneLoader.load_scene(Constants.SCENE_PATHS.cemetery)
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()

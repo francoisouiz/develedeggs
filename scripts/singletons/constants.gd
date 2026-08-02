@@ -53,7 +53,8 @@ const DIALOGUE_PATHS: Dictionary[String, String] = {
 	"first_enter_end": "uid://dbugcs8irtu0w",
 	"second_enter": "uid://cow545lqq80mv",
 	"second_enter_end": "uid://dr2c8vtu51ibe",
-	"second_exit": "uid://4rx8vhuxi5vp"
+	"second_exit": "uid://4rx8vhuxi5vp",
+	"cemetery": "uid://8r4svn0cby2w",
 }
 
 const CHARACTER_ICON_PATHS: Dictionary[String, String] = {

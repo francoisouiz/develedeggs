@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci3imxudqp33o"
-path="res://.godot/imported/grass.png-a276a6b82cfa521a67a5b96f247ec98c.ctex"
+uid="uid://wbsk6x5pctva"
+path="res://.godot/imported/dirt_overlap.png-cd9c7add04ee793e2390bd88f12d0c8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/grass.png"
-dest_files=["res://.godot/imported/grass.png-a276a6b82cfa521a67a5b96f247ec98c.ctex"]
+source_file="res://assets/overlaps/dirt_overlap.png"
+dest_files=["res://.godot/imported/dirt_overlap.png-cd9c7add04ee793e2390bd88f12d0c8c.ctex"]
 
 [params]
 

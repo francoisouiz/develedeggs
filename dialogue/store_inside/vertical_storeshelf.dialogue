@@ -1,0 +1,16 @@
+~ start
+if not PlayerStats.in_photo
+	match PlayerStats.scene_progress
+		when 0
+			if not PlayerStats.has_food2
+				Max: Piyaya! I remember downing 8 packs of it when I was a kid.
+				Max: I was on our porcelain throne for a solid 2 hours after that incident.
+				Max: For sure grabbing some for the road.
+				$> PlayerStats.has_food2 = true
+			else
+				Max: Nothing much here.
+		when 2
+			Max: I've already gathered enough pasalubong.
+else
+	Max: I can't exactly grab anything from the past.
+=> END

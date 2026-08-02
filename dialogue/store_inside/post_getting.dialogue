@@ -1,0 +1,12 @@
+~ start
+Joshua: Wow, that’s a lot of stuff. Are you really bringing all of this back to the province?
+Max: Why? Is something wrong with it?
+Joshua: No no! It’s just…
+Joshua: Don’t you think going back would be “pasalubong” enough? 
+Joshua: Or if you really want to bring something back, why not show them your photos? 
+Joshua: I bet they’d love to hear about what you’ve been up to recently.
+Max: Pasalubong being me is a bit weird, don’t you think?
+Joshua: Well, yeah. But it’s not like they’ll…
+Joshua: You know what, nevermind. It would be nice to leave them a few things.
+$> PlayerStats.continue_scene()
+=> END

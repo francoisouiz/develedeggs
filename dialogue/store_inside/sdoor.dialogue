@@ -1,0 +1,7 @@
+~ start
+if PlayerStats.scene_progress == 2:
+	Max: Do I wanna go to back to my house already?
+	- Yes
+		do go_to_house_2() 
+	- No
+=> END

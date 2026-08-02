@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b5olxe1wu01fs"
+path="res://.godot/imported/joshua.dialogue-79abfef85a7d3aca8b70585d1ca57790.tres"
+
+[deps]
+
+source_file="res://dialogue/joshua.dialogue"
+dest_files=["res://.godot/imported/joshua.dialogue-79abfef85a7d3aca8b70585d1ca57790.tres"]
+
+[params]
+
+defaults=true

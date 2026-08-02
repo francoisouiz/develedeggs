@@ -1,0 +1,6 @@
+~ start
+do PlayerStats.continue_scene()
+do province_wait()
+Max: It worked! I could even bring my pasalubong with me. 
+Max: Alright, time to place these where Mom and Dad can see it.
+=> END

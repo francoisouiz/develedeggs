@@ -1,0 +1,10 @@
+~ start
+do province_wait()
+Max: Oh? They... didn't come with me
+Max: May-... Maybe I just didn’t leave the pasalubong there properly?
+Max: I can't let this power go to waste... Not like this.
+do pick_up_items()
+Max: Ok, I've picked up the pasalubong again.
+Max: I'll try going back one more time.
+do PlayerStats.continue_scene()
+=> END

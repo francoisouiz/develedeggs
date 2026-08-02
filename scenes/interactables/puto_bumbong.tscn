@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ct0c321jjx8s4"]
+
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_ds0wn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb4bb"]
+atlas = ExtResource("1_ds0wn")
+region = Rect2(57, 43, 12, 5)
+
+[node name="PutoBumbong" type="Sprite2D" unique_id=1078260638]
+texture_filter = 1
+texture = SubResource("AtlasTexture_fb4bb")

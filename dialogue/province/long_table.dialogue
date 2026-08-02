@@ -1,0 +1,18 @@
+~ start
+match PlayerStats.scene_progress
+	when 1
+		if not PlayerStats.has_placed_puto
+			Max: I'll put the puto bumbong on the dining table for the world to see.
+			Max: What better way to enter your home with a surprise puto bumbong.
+			do show_sprite("puto")
+			$> PlayerStats.has_placed_puto = true
+		else
+			Max: I'm practically drooling just looking at 'em.
+	when 4
+		if not PlayerStats.has_placed_puto
+			Max: ...Will no one come home to see the food splayed on our table?
+			do show_sprite("puto")
+			$> PlayerStats.has_placed_puto = true
+		else
+			Max: ...
+=> END

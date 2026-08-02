@@ -83,7 +83,7 @@ glow_blend_mode = 2
 bg_color = Color(0.4, 0.2509804, 0.2, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
-size = Vector2(23, 16.5)
+size = Vector2(15, 14.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fpgl"]
 size = Vector2(23, 18.5)
@@ -313,14 +313,14 @@ autoplay = true
 visible = false
 
 [node name="Player" parent="." unique_id=2008015409 instance=ExtResource("9_0lq3d")]
-position = Vector2(115.00002, 114)
-scale = Vector2(0.12, 0.12)
+position = Vector2(108, 104.00001)
+scale = Vector2(0.15, 0.15)
 
 [node name="WatchArea" type="Area2D" parent="." unique_id=181321327]
 script = ExtResource("28_g6v37")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WatchArea" unique_id=644777843]
-position = Vector2(186, 115.5)
+position = Vector2(186.5, 116.375)
 shape = SubResource("RectangleShape2D_s3x7s")
 
 [node name="CarrierArea" type="Area2D" parent="." unique_id=941157748]

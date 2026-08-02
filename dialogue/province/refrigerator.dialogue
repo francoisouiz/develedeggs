@@ -1,0 +1,18 @@
+~ start
+match PlayerStats.scene_progress
+	when 1
+		if not PlayerStats.has_placed_bibingka
+			Max: I better store the bibingka in the refrigerator.
+			Max: It's easy to heat up anyways.
+			do show_sprite("bibingka")
+			$> PlayerStats.has_placed_bibingka = true
+		else
+			Max: Rest well in cold slumber, my precious little babies.
+	when 4
+		if not PlayerStats.has_placed_bibingka
+			Max: ...Will this bibingka also rot just like them?
+			do show_sprite("bibingka")
+			$> PlayerStats.has_placed_bibingka = true
+		else
+			Max: ...
+=> END

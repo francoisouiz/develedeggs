@@ -74,11 +74,26 @@ func _input(event: InputEvent) -> void:
 		if PlayerStats.curr_level == "start" and PlayerStats.scene_progress == 0:
 			return
 		elif PlayerStats.curr_level == "start" and PlayerStats.scene_progress == 1:
-			PlayerStats.can_photo = false
-			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.queso), "start")
+			if PlayerStats.has_talked_to_josh:
+				PlayerStats.can_photo = false
+				DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.queso), "start")
+			else:
+				return
 		elif PlayerStats.curr_level == "start" and PlayerStats.scene_progress == 2 and not PlayerStats.post_photo_played:
 			flash()
 			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.post_photo), "start")
+		elif PlayerStats.curr_level == "province" and PlayerStats.scene_progress == 0:
+			flash()
+			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.first_enter), "start")
+		elif PlayerStats.curr_level == "province" and PlayerStats.scene_progress == 3:
+			flash()
+			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.first_exit), "start")
+		elif PlayerStats.curr_level == "province" and PlayerStats.scene_progress == 4:
+			flash()
+			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.second_enter), "start")
+		elif PlayerStats.curr_level == "province" and PlayerStats.scene_progress == 5:
+			flash()
+			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.second_exit), "start")
 		else:
 			flash()
 				

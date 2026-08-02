@@ -8,7 +8,7 @@ atlas = ExtResource("2_osu2f")
 region = Rect2(53, 15, 28, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6aki"]
-size = Vector2(6, 16)
+size = Vector2(6, 11)
 
 [node name="DiningChair" type="StaticBody2D" unique_id=595576632]
 script = ExtResource("1_t6bsr")
@@ -19,4 +19,5 @@ hframes = 3
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1453981529]
+position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_k6aki")

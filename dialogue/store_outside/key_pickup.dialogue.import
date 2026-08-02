@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bec58y4tjexnt"
+path="res://.godot/imported/key_pickup.dialogue-3a40b5944bf861f95f46b37b248d3a72.tres"
+
+[deps]
+
+source_file="res://dialogue/store_outside/key_pickup.dialogue"
+dest_files=["res://.godot/imported/key_pickup.dialogue-3a40b5944bf861f95f46b37b248d3a72.tres"]
+
+[params]
+
+defaults=true

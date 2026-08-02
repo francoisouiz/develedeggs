@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://umpopxe7djl2"
+path="res://.godot/imported/key_find.dialogue-cefb722d5f65db207781fb95f9ee1ec3.tres"
+
+[deps]
+
+source_file="res://dialogue/store_outside/key_find.dialogue"
+dest_files=["res://.godot/imported/key_find.dialogue-cefb722d5f65db207781fb95f9ee1ec3.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,240 @@
+[gd_scene format=4 uid="uid://vg4ja2ov5rpo"]
+
+[ext_resource type="Script" uid="uid://d2v073kh80l85" path="res://scripts/levels/store_outside.gd" id="1_lvg0b"]
+[ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="1_s75pj"]
+[ext_resource type="Shader" uid="uid://b6mdqftk4fa2u" path="res://assets/shaders/floor.gdshader" id="2_guuq4"]
+[ext_resource type="Texture2D" uid="uid://cik30dbq2oc2s" path="res://assets/tilesets/clinker_tiles.png" id="2_o16ls"]
+[ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="3_3viaq"]
+[ext_resource type="Texture2D" uid="uid://b5x8s0pmflhg4" path="res://assets/overlaps/clinker_tiles_overlap.png" id="3_dxkoh"]
+[ext_resource type="PackedScene" uid="uid://bsfiqnyuhtplh" path="res://scenes/static_bodies/store_building.tscn" id="3_o16ls"]
+[ext_resource type="Texture2D" uid="uid://70pattk25jl1" path="res://assets/sprites/buildings.png" id="4_3viaq"]
+[ext_resource type="PackedScene" uid="uid://m8i7eq3sedcn" path="res://scenes/player.tscn" id="4_lvg0b"]
+[ext_resource type="Texture2D" uid="uid://ci3imxudqp33o" path="res://assets/tilesets/Grass.png" id="5_b61kw"]
+[ext_resource type="TileSet" uid="uid://dt8djw8fevw0o" path="res://assets/tilesets/cemetery.tres" id="6_q80gb"]
+[ext_resource type="PackedScene" uid="uid://d1xves3s5ijtb" path="res://scenes/interactables/joshua.tscn" id="8_538hb"]
+[ext_resource type="PackedScene" uid="uid://dtry6mym1a15y" path="res://scenes/static_bodies/bush.tscn" id="11_58dfl"]
+[ext_resource type="PackedScene" uid="uid://bpi2803uojrlm" path="res://scenes/static_bodies/key.tscn" id="12_d1oh4"]
+[ext_resource type="Script" uid="uid://depq8x1eo5j16" path="res://scripts/interactables/key_area.gd" id="16_ptjc1"]
+
+[sub_resource type="Environment" id="Environment_guuq4"]
+background_mode = 3
+tonemap_mode = 1
+glow_enabled = true
+glow_intensity = 1.5
+glow_bloom = 0.25
+glow_blend_mode = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxkoh"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lvg0b"]
+shader = ExtResource("2_guuq4")
+shader_parameter/target_color = Color(0.7764706, 0.77254903, 0.7921569, 1)
+shader_parameter/tolerance = 0.1
+shader_parameter/replacement_tex = ExtResource("3_dxkoh")
+shader_parameter/scale = 0.02
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_538hb"]
+texture = ExtResource("2_o16ls")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q80gb"]
+texture = ExtResource("5_b61kw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_k6aki"]
+sources/0 = SubResource("TileSetAtlasSource_538hb")
+sources/1 = SubResource("TileSetAtlasSource_q80gb")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvg0b"]
+atlas = ExtResource("4_3viaq")
+region = Rect2(1, 2, 512, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72ghi"]
+size = Vector2(104, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nj4ij"]
+size = Vector2(121, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tno63"]
+size = Vector2(98, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6aki"]
+size = Vector2(126, 70.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_losew"]
+size = Vector2(101, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pculj"]
+size = Vector2(15, 16)
+
+[node name="StoreOutside" type="Node2D" unique_id=757739313]
+script = ExtResource("1_lvg0b")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=570861761]
+color = Color(0.2065543, 0.2065543, 0.20655426, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1964822000]
+environment = SubResource("Environment_guuq4")
+
+[node name="Panel" type="Panel" parent="." unique_id=2054753575]
+offset_left = -46.0
+offset_top = -8.0
+offset_right = 243.0
+offset_bottom = 152.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxkoh")
+
+[node name="Tilemaps" type="Node2D" parent="." unique_id=129865324]
+
+[node name="Floor" type="TileMapLayer" parent="Tilemaps" unique_id=1277359028]
+material = SubResource("ShaderMaterial_lvg0b")
+tile_map_data = PackedByteArray("AAAAAAQAAAACAAEAAAABAAQAAAACAAEAAAACAAQAAAACAAEAAAADAAQAAAACAAEAAAAEAAQAAAACAAEAAAAFAAQAAAACAAEAAAAGAAQAAAACAAEAAAAHAAQAAAACAAEAAAAIAAQAAAACAAEAAAAJAAQAAAACAAEAAAAKAAQAAAADAAIAAAALAAQAAAAAAAMAAAAMAAQAAAABAAAAAAANAAQAAAACAAEAAAAOAAQAAAACAAEAAAAPAAQAAAACAAEAAAAQAAQAAAACAAEAAAARAAQAAAACAAEAAAASAAQAAAACAAEAAAATAAQAAAACAAEAAAAUAAQAAAACAAEAAAAVAAQAAAACAAEAAAAWAAQAAAACAAEAAAACAAYAAAAAAAMAAAADAAYAAAAAAAMAAAAEAAYAAAAAAAMAAAAFAAYAAAAAAAMAAAAGAAYAAAAAAAMAAAAHAAYAAAAAAAMAAAAIAAYAAAAAAAMAAAAJAAYAAAAAAAMAAAAKAAYAAAAAAAMAAAALAAYAAAAAAAMAAAAMAAYAAAAAAAMAAAANAAYAAAAAAAMAAAAOAAYAAAAAAAMAAAAPAAYAAAAAAAMAAAAQAAYAAAAAAAMAAAARAAYAAAAAAAMAAAASAAYAAAAAAAMAAAATAAYAAAAAAAMAAAAUAAYAAAAAAAMAAAAVAAYAAAAAAAMAAAAWAAYAAAAAAAMAAAARAAUAAAABAAIAAAASAAUAAAABAAIAAAATAAUAAAABAAIAAAAUAAUAAAABAAIAAAAVAAUAAAABAAIAAAAWAAUAAAABAAIAAAAQAAUAAAABAAIAAAAPAAUAAAABAAIAAAAOAAUAAAABAAIAAAANAAUAAAABAAIAAAAMAAUAAAAAAAIAAAALAAUAAAAAAAMAAAAKAAUAAAADAAMAAAAJAAUAAAABAAIAAAAIAAUAAAABAAIAAAAHAAUAAAABAAIAAAAGAAUAAAABAAIAAAAFAAUAAAABAAIAAAAEAAUAAAABAAIAAAADAAUAAAABAAIAAAACAAUAAAABAAIAAAABAAUAAAABAAIAAAAAAAUAAAABAAIAAAAKAAMAAAADAAIAAAAKAAIAAAADAAIAAAAKAAEAAAADAAIAAAAKAAAAAAADAAIAAAALAAMAAAAAAAMAAAALAAIAAAAAAAMAAAALAAEAAAAAAAMAAAALAAAAAAAAAAMAAAAMAAMAAAABAAAAAAAMAAIAAAABAAAAAAAMAAEAAAABAAAAAAAMAAAAAAABAAAAAAAMAP//AAABAAAAAAAMAP7/AAABAAAAAAAKAP//AAADAAIAAAAKAP7/AAADAAIAAAALAP7/AAAAAAMAAAALAP//AAAAAAMAAAD//wQAAAACAAEAAAD+/wQAAAACAAEAAAD9/wQAAAACAAEAAAD8/wQAAAACAAEAAAD7/wQAAAACAAEAAAD//wYAAAAAAAMAAAD+/wYAAAADAAIAAAD9/wYAAAAAAAMAAAD8/wYAAAAAAAMAAAD7/wYAAAAAAAMAAAD//wUAAAABAAIAAAD+/wUAAAADAAEAAAD9/wUAAAABAAIAAAD8/wUAAAABAAIAAAD7/wUAAAABAAIAAAALAAcAAAAAAAMAAAALAAgAAAAAAAMAAAALAAkAAAAAAAMAAAALAAoAAAAAAAMAAAAMAAcAAAABAAMAAAAMAAgAAAABAAAAAAAMAAkAAAABAAAAAAAMAAoAAAABAAAAAAAKAAgAAAADAAIAAAAKAAkAAAADAAIAAAAKAAoAAAADAAIAAAAKAAcAAAAAAAAAAAACAAgAAAACAAEAAAACAAkAAAACAAEAAAADAAgAAAACAAEAAAADAAkAAAACAAEAAAAEAAcAAAADAAAAAAAEAAgAAAACAAEAAAAEAAkAAAACAAEAAAAFAAcAAAADAAAAAAAFAAgAAAACAAEAAAAFAAkAAAACAAEAAAAGAAcAAAADAAAAAAAGAAgAAAACAAEAAAAGAAkAAAACAAEAAAAHAAcAAAADAAAAAAAHAAgAAQABAAMAAAAHAAkAAQABAAAAAAAIAAcAAAADAAAAAAAIAAgAAQADAAAAAAAIAAkAAQACAAEAAAAJAAcAAAADAAAAAAAJAAgAAQAAAAAAAAAJAAkAAQADAAIAAAD7/wcAAAADAAAAAAD7/wgAAAACAAEAAAD7/wkAAAACAAEAAAD8/wcAAAADAAAAAAD8/wgAAAACAAEAAAD8/wkAAAACAAEAAAD9/wcAAAADAAAAAAD9/wgAAAACAAEAAAD9/wkAAAACAAEAAAD+/wcAAAADAAIAAAD+/wgAAAADAAIAAAD+/wkAAAADAAIAAAD//wcAAAAAAAMAAAD//wgAAAAAAAMAAAD//wkAAAAAAAMAAAANAAcAAAADAAAAAAANAAgAAAACAAEAAAANAAkAAAACAAEAAAANAAoAAAACAAEAAAAOAAcAAAADAAAAAAAOAAgAAAACAAEAAAAOAAkAAAACAAEAAAAOAAoAAAACAAEAAAAPAAcAAAADAAAAAAAPAAgAAAACAAEAAAAPAAkAAAACAAEAAAAPAAoAAAACAAEAAAAQAAcAAAADAAAAAAAQAAgAAAACAAEAAAAQAAkAAAACAAEAAAAQAAoAAAACAAEAAAANAP//AAACAAEAAAANAAAAAAACAAEAAAANAAEAAAACAAEAAAANAAIAAAACAAEAAAANAAMAAAACAAEAAAAOAP//AAACAAEAAAAOAAAAAAACAAEAAAAOAAEAAAACAAEAAAAOAAIAAAACAAEAAAAOAAMAAAACAAEAAAAPAP//AAACAAEAAAAPAAAAAAACAAEAAAAPAAEAAAACAAEAAAAPAAIAAAACAAEAAAAPAAMAAAACAAEAAAAQAP//AAACAAEAAAAQAAAAAAACAAEAAAAQAAEAAAACAAEAAAAQAAIAAAACAAEAAAAQAAMAAAACAAEAAAD7////AAACAAEAAAD7/wAAAAACAAEAAAD7/wEAAAACAAEAAAD7/wIAAAACAAEAAAD7/wMAAAACAAEAAAD8////AAACAAEAAAD8/wAAAAACAAEAAAD8/wEAAAACAAEAAAD8/wIAAAACAAEAAAD8/wMAAAACAAEAAAD9////AAACAAEAAAD9/wAAAAACAAEAAAD9/wEAAAACAAEAAAD9/wIAAAACAAEAAAD9/wMAAAACAAEAAAD+////AAACAAEAAAD+/wAAAAACAAEAAAD+/wEAAAACAAEAAAD+/wIAAAACAAEAAAD+/wMAAAACAAEAAAD/////AAACAAEAAAD//wAAAAACAAEAAAD//wEAAAACAAEAAAD//wIAAAACAAEAAAD//wMAAAACAAEAAAAAAP//AAACAAEAAAAAAAAAAAACAAEAAAAAAAEAAAACAAEAAAAAAAIAAAACAAEAAAAAAAMAAAACAAEAAAABAP//AAACAAEAAAABAAAAAAACAAEAAAABAAEAAAACAAEAAAABAAIAAAACAAEAAAABAAMAAAACAAEAAAACAP//AAACAAEAAAACAAAAAAACAAEAAAACAAEAAAACAAEAAAACAAIAAAACAAEAAAACAAMAAAACAAEAAAADAP//AAACAAEAAAADAAAAAAACAAEAAAADAAEAAAACAAEAAAADAAIAAAACAAEAAAADAAMAAAACAAEAAAAEAP//AAACAAEAAAAEAAAAAAACAAEAAAAEAAEAAAACAAEAAAAEAAIAAAACAAEAAAAEAAMAAAACAAEAAAAFAP//AAACAAEAAAAFAAAAAAACAAEAAAAFAAEAAAACAAEAAAAFAAIAAAACAAEAAAAFAAMAAAACAAEAAAAGAP//AAACAAEAAAAGAAAAAAACAAEAAAAGAAEAAAACAAEAAAAGAAIAAAACAAEAAAAGAAMAAAACAAEAAAAHAP//AAACAAEAAAAHAAAAAAACAAEAAAAHAAEAAAACAAEAAAAHAAIAAAACAAEAAAAHAAMAAAACAAEAAAAIAP//AAACAAEAAAAIAAAAAAACAAEAAAAIAAEAAAACAAEAAAAIAAIAAAACAAEAAAAIAAMAAAACAAEAAAAJAP//AAACAAEAAAAJAAAAAAACAAEAAAAJAAEAAAACAAEAAAAJAAIAAAACAAEAAAAJAAMAAAACAAEAAAABAAYAAAAAAAMAAAAAAAYAAAAAAAMAAAABAAcAAAADAAAAAAABAAgAAAACAAEAAAABAAkAAAACAAEAAAAAAAcAAAABAAMAAAAAAAgAAAABAAAAAAAAAAkAAAABAAAAAAACAAcAAAADAAAAAAADAAcAAAADAAAAAAARAP//AAACAAEAAAARAAAAAAACAAEAAAARAAEAAAACAAEAAAARAAIAAAACAAEAAAARAAMAAAACAAEAAAASAP//AAACAAEAAAASAAAAAAACAAEAAAASAAEAAAACAAEAAAASAAIAAAACAAEAAAASAAMAAAACAAEAAAATAP//AAACAAEAAAATAAAAAAACAAEAAAATAAEAAAACAAEAAAATAAIAAAACAAEAAAATAAMAAAACAAEAAAAUAP//AAACAAEAAAAUAAAAAAACAAEAAAAUAAEAAAACAAEAAAAUAAIAAAACAAEAAAAUAAMAAAACAAEAAAARAAcAAAADAAAAAAASAAcAAAADAAAAAAATAAcAAAADAAAAAAAUAAcAAAADAAAAAAAVAAcAAAADAAAAAAAWAAcAAAADAAAAAAAJAP7/AAACAAEAAAAIAP7/AAACAAEAAAAHAP7/AAACAAEAAAAGAP7/AAACAAEAAAAFAP7/AAACAAEAAAAEAP7/AAACAAEAAAADAP7/AAACAAEAAAACAP7/AAACAAEAAAABAP7/AAACAAEAAAAAAP7/AAACAAEAAAD///7/AAACAAEAAAD+//7/AAACAAEAAAD9//7/AAACAAEAAAD8//7/AAACAAEAAAD7//7/AAACAAEAAAD6//7/AAACAAEAAAANAP7/AAACAAEAAAAOAP7/AAACAAEAAAAPAP7/AAACAAEAAAAQAP7/AAACAAEAAAARAP7/AAACAAEAAAASAP7/AAACAAEAAAATAP7/AAACAAEAAAAUAP7/AAACAAEAAAAVAP7/AAACAAEAAAAWAP7/AAACAAEAAAAWAP//AAACAAEAAAAWAAAAAAACAAEAAAAWAAEAAAACAAEAAAAWAAIAAAACAAEAAAAWAAMAAAACAAEAAAAVAAMAAAACAAEAAAAVAAIAAAACAAEAAAAVAAEAAAACAAEAAAAVAAAAAAACAAEAAAAVAP//AAACAAEAAAANAAsAAAACAAEAAAAOAAsAAAACAAEAAAAPAAsAAAACAAEAAAAQAAsAAAACAAEAAAARAAgAAAACAAEAAAARAAkAAAACAAEAAAARAAoAAAACAAEAAAARAAsAAAACAAEAAAASAAgAAAACAAEAAAASAAkAAAACAAEAAAASAAoAAAACAAEAAAASAAsAAAACAAEAAAATAAgAAAACAAEAAAATAAkAAAACAAEAAAATAAoAAAACAAEAAAATAAsAAAACAAEAAAAUAAgAAAACAAEAAAAUAAkAAAACAAEAAAAUAAoAAAACAAEAAAAUAAsAAAACAAEAAAAVAAgAAAACAAEAAAAVAAkAAAACAAEAAAAVAAoAAAACAAEAAAAVAAsAAAACAAEAAAAWAAgAAAACAAEAAAAWAAkAAAACAAEAAAAWAAoAAAACAAEAAAAWAAsAAAACAAEAAAD7/woAAAACAAEAAAD8/woAAAACAAEAAAD9/woAAAACAAEAAAD+/woAAAADAAIAAAD//woAAAAAAAMAAAAAAAoAAAABAAAAAAABAAoAAAACAAEAAAACAAoAAAACAAEAAAADAAoAAAACAAEAAAAEAAoAAAACAAEAAAAFAAoAAAACAAEAAAAGAAoAAAACAAEAAAAHAAoAAQABAAAAAAAIAAoAAQACAAEAAAAJAAoAAQADAAIAAAD7/wsAAAACAAEAAAD7/wwAAAACAAEAAAD8/wsAAAACAAEAAAD8/wwAAAACAAEAAAD9/wsAAAACAAEAAAD9/wwAAAACAAEAAAD+/wsAAAADAAIAAAD+/wwAAAADAAIAAAD//wsAAAAAAAMAAAD//wwAAAAAAAMAAAAAAAsAAAABAAAAAAAAAAwAAAABAAAAAAABAAsAAAACAAEAAAABAAwAAAACAAEAAAACAAsAAAACAAEAAAACAAwAAAACAAEAAAADAAsAAAACAAEAAAADAAwAAAACAAEAAAAEAAsAAAACAAEAAAAEAAwAAAACAAEAAAAFAAsAAAACAAEAAAAFAAwAAAACAAEAAAAGAAsAAAACAAEAAAAGAAwAAAACAAEAAAAHAAsAAAACAAEAAAAHAAwAAAACAAEAAAAIAAsAAAACAAEAAAAIAAwAAAACAAEAAAAJAAsAAAACAAEAAAAJAAwAAAACAAEAAAAKAAsAAAADAAIAAAAKAAwAAAADAAIAAAALAAsAAAAAAAMAAAALAAwAAAAAAAMAAAAMAAsAAAABAAAAAAAMAAwAAAABAAAAAAANAAwAAAACAAEAAAAOAAwAAAACAAEAAAAPAAwAAAACAAEAAAAQAAwAAAACAAEAAAARAAwAAAACAAEAAAASAAwAAAACAAEAAAATAAwAAAACAAEAAAAUAAwAAAACAAEAAAAVAAwAAAACAAEAAAAWAAwAAAACAAEAAAA=")
+tile_set = SubResource("TileSet_k6aki")
+
+[node name="Wall" type="TileMapLayer" parent="Tilemaps" unique_id=1895666503]
+tile_map_data = PackedByteArray("AAAJAAgAAAAAAAAAAAAJAAkAAAAAAAAAAAAJAAoAAAAAAAAAAAAHAAgAAAAEAAAAAAAHAAkAAAAEAAAAAAAHAAoAAAAEAAAAAAA=")
+tile_set = ExtResource("6_q80gb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1966880727]
+position = Vector2(136, 69)
+scale = Vector2(-5.9191275, -3.3540618)
+zoom = Vector2(3.5, 3.5)
+
+[node name="Lights" type="Node2D" parent="." unique_id=1889072321]
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights" unique_id=1686654495]
+texture_filter = 1
+position = Vector2(190, 82)
+color = Color(0.9662648, 0.93343043, 0.83252555, 1)
+energy = 0.75
+texture = ExtResource("1_s75pj")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lights" unique_id=2040143098]
+position = Vector2(54, 52)
+color = Color(0.9662648, 0.93343043, 0.83252555, 1)
+energy = 0.75
+texture = ExtResource("1_s75pj")
+
+[node name="HiddenObjects" type="Node2D" parent="." unique_id=51567643]
+
+[node name="Key" parent="HiddenObjects" unique_id=954053790 instance=ExtResource("12_d1oh4")]
+visible = false
+position = Vector2(125, 144)
+
+[node name="Interactables" type="Node2D" parent="." unique_id=1075657256]
+
+[node name="StoreBuilding" parent="Interactables" unique_id=1645456500 instance=ExtResource("3_o16ls")]
+position = Vector2(106, 20)
+
+[node name="Building" type="StaticBody2D" parent="Interactables" unique_id=1462594356]
+position = Vector2(278, 13)
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactables/Building" unique_id=1788391745]
+position = Vector2(-17, 6)
+texture = SubResource("AtlasTexture_lvg0b")
+hframes = 4
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Building" unique_id=271650476]
+position = Vector2(-18, 9)
+shape = SubResource("RectangleShape2D_72ghi")
+
+[node name="Building2" type="StaticBody2D" parent="Interactables" unique_id=1166502540]
+position = Vector2(-10, 17)
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactables/Building2" unique_id=1665103073]
+position = Vector2(-17, 6)
+texture = SubResource("AtlasTexture_lvg0b")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Building2" unique_id=1594970876]
+position = Vector2(-17, -5)
+shape = SubResource("RectangleShape2D_nj4ij")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Interactables/Building2" unique_id=2014899625]
+position = Vector2(-28, 40)
+shape = SubResource("RectangleShape2D_tno63")
+
+[node name="Building3" type="StaticBody2D" parent="Interactables" unique_id=143254056]
+position = Vector2(268, 130)
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactables/Building3" unique_id=2115490378]
+texture = SubResource("AtlasTexture_lvg0b")
+hframes = 4
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Building3" unique_id=317664776]
+position = Vector2(0, 15.25)
+shape = SubResource("RectangleShape2D_k6aki")
+
+[node name="Building4" type="StaticBody2D" parent="Interactables" unique_id=90791878]
+position = Vector2(60, 136)
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactables/Building4" unique_id=1192443841]
+texture = SubResource("AtlasTexture_lvg0b")
+hframes = 4
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Building4" unique_id=305013828]
+position = Vector2(3, 16)
+shape = SubResource("RectangleShape2D_losew")
+
+[node name="Bush2" parent="Interactables" unique_id=440048208 instance=ExtResource("11_58dfl")]
+position = Vector2(124, 141)
+sprite_id = 1
+
+[node name="Joshua" parent="." unique_id=1281993070 instance=ExtResource("8_538hb")]
+position = Vector2(87, 59)
+scale = Vector2(0.11, 0.11)
+
+[node name="PhotoFilmTexture" parent="." unique_id=1465462974 instance=ExtResource("3_3viaq")]
+visible = false
+offset_left = -156.0
+offset_top = -77.0
+offset_right = 1444.0
+offset_bottom = 1033.0
+scale = Vector2(0.71999955, 1)
+
+[node name="Player" parent="." unique_id=2008015409 instance=ExtResource("4_lvg0b")]
+position = Vector2(127, 66)
+scale = Vector2(0.15, 0.15)
+
+[node name="KeyArea" type="Area2D" parent="." unique_id=1228288001]
+position = Vector2(125, 145)
+script = ExtResource("16_ptjc1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyArea" unique_id=678597990]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_pculj")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=870736344]

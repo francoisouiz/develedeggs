@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cv6m2tx2imns1"]
+
+[ext_resource type="Texture2D" uid="uid://70pattk25jl1" path="res://assets/sprites/buildings.png" id="1_wc73a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
+atlas = ExtResource("1_wc73a")
+region = Rect2(1, 2, 384, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72ghi"]
+size = Vector2(128, 70)
+
+[node name="Building" type="StaticBody2D" unique_id=344092738]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1677509664]
+texture = SubResource("AtlasTexture_k6aki")
+hframes = 3
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=275359253]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_72ghi")
+
+[node name="Node" type="Node" parent="." unique_id=325847725]

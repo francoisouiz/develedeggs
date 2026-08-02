@@ -3,11 +3,11 @@ extends Node
 const SCENE_PATHS: Dictionary = {
 	"loading_screen": "uid://qk4cctayieey",
 	"house_1": "uid://cjggqamfjfa5j",
+	"store_outside": "uid://vg4ja2ov5rpo",
 	"store_inside": "uid://dm8cnmbmk8prj",
 	"house_2": "uid://lwpelvekgdtu",
 	"cemetery": "uid://f30c0tc054x8",
 	"main_menu": "uid://blqco4uwjomll",
-	"store_outside": "",
 	"province": "uid://r7lvestv6bu3",
 }
 
@@ -55,6 +55,12 @@ const DIALOGUE_PATHS: Dictionary[String, String] = {
 	"second_enter_end": "uid://dr2c8vtu51ibe",
 	"second_exit": "uid://4rx8vhuxi5vp",
 	"cemetery": "uid://8r4svn0cby2w",
+	"store_outside_start": "uid://br5oheffpikgv",
+	"store_outside_end": "uid://cqsj7fjdon6yv",
+	"store_find_key": "uid://umpopxe7djl2",
+	"store_get_key": "uid://bec58y4tjexnt",
+	"store_past": "uid://dxatceur0pdn5",
+	"bush": "uid://b8leublumfoyw",
 }
 
 const CHARACTER_ICON_PATHS: Dictionary[String, String] = {

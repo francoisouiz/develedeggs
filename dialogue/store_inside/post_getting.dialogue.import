@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c3p7kkvewitnf"
+path="res://.godot/imported/post_getting.dialogue-c6e557a80a6d4fa88707e2881e732fdf.tres"
+
+[deps]
+
+source_file="res://dialogue/store_inside/post_getting.dialogue"
+dest_files=["res://.godot/imported/post_getting.dialogue-c6e557a80a6d4fa88707e2881e732fdf.tres"]
+
+[params]
+
+defaults=true

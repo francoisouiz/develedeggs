@@ -11,6 +11,9 @@ var calendar_interacted: bool = false
 var bed_interacted: bool = false
 var console_interacted: bool = false
 var post_photo_played: bool = false
+var has_food1: bool = false
+var has_food2: bool = false
+var has_clothes: bool = false
 
 func continue_scene() -> void:
 	scene_progress += 1

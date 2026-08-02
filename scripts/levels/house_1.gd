@@ -109,7 +109,9 @@ func play_watch() -> void:
 	await watch_anim.animation_finished
 	
 func go_to_store() -> void:
-	SceneLoader.load_scene(Constants.SCENE_PATHS.store_inside)
+	PlayerStats.scene_progress = 0
+	PlayerStats.curr_level = "store_inside"
+	SceneLoader.load_scene(Constants.SCENE_PATHS.main_menu)
 	
 func on_dialogue_ended(resource: DialogueResource) -> void:
 	if PlayerStats.scene_progress == 1 and PlayerStats.bed_interacted and PlayerStats.has_talked_house and PlayerStats.console_interacted and PlayerStats.calendar_interacted:

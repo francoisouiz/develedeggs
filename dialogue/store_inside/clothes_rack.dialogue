@@ -1,0 +1,13 @@
+~ start
+if not PlayerStats.in_photo
+	match PlayerStats.scene_progress
+		when 0
+			Max: The official Lolo Martin leather jacket from the hit series "Ang Maynila Boy"???
+			Max: My dad would LOVE to have this.
+			Max: Copping this for sure.
+			$> PlayerStats.has_clothes = true
+		when 2
+			Max: I've already gathered enough pasalubong.
+else
+	Max: I can't exactly grab anything from the past.
+=> END

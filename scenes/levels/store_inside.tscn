@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dm8cnmbmk8prj"]
 
 [ext_resource type="TileSet" uid="uid://bcy6e1346sv0x" path="res://assets/tilesets/store.tres" id="1_fl5pn"]
+[ext_resource type="Script" uid="uid://bc3kkwmvxj4lb" path="res://scripts/levels/store_inside.gd" id="1_o7fgo"]
 [ext_resource type="Texture2D" uid="uid://c5ascowb5ad0b" path="res://assets/sprites/2d_lights_and_shadows_neutral_point_light.png" id="2_kas8u"]
 [ext_resource type="PackedScene" uid="uid://dfk0tc12mj1ph" path="res://scenes/static_bodies/store_shelf_horizontal.tscn" id="3_im67j"]
 [ext_resource type="PackedScene" uid="uid://d1xves3s5ijtb" path="res://scenes/interactables/joshua.tscn" id="4_vydj2"]
@@ -27,6 +28,7 @@ glow_blend_mode = 2
 bg_color = Color(1, 1, 1, 1)
 
 [node name="Store Inside" type="Node2D" unique_id=675514822]
+script = ExtResource("1_o7fgo")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1413475699]
 color = Color(0.2065543, 0.2065543, 0.20655426, 1)
@@ -35,10 +37,10 @@ color = Color(0.2065543, 0.2065543, 0.20655426, 1)
 environment = SubResource("Environment_kas8u")
 
 [node name="Panel" type="Panel" parent="." unique_id=330638386]
-offset_left = -75.0
-offset_top = -15.0
-offset_right = 242.0
-offset_bottom = 162.0
+offset_left = -46.0
+offset_top = -8.0
+offset_right = 243.0
+offset_bottom = 152.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_enyy3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=186705124]
@@ -72,7 +74,7 @@ tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAAAAAAAAAAAAAEAAAABAP//AAABAAA
 tile_set = ExtResource("1_fl5pn")
 
 [node name="Joshua" parent="." unique_id=1281993070 instance=ExtResource("4_vydj2")]
-position = Vector2(164, 25)
+position = Vector2(96, 38)
 scale = Vector2(0.1, 0.1)
 
 [node name="Interactables" type="Node2D" parent="." unique_id=942752220]
@@ -102,7 +104,7 @@ position = Vector2(48, 72)
 position = Vector2(145, 135)
 
 [node name="CheckoutTable2" parent="Interactables" unique_id=1101850620 instance=ExtResource("5_ojqlp")]
-position = Vector2(153, 30)
+position = Vector2(156, 29)
 
 [node name="StoreShelfVertical2" parent="Interactables" unique_id=228330972 instance=ExtResource("9_1eynv")]
 position = Vector2(20, 109)
@@ -114,7 +116,7 @@ position = Vector2(171, 119)
 position = Vector2(20, 44)
 
 [node name="CheckoutTable" parent="Interactables" unique_id=1478182563 instance=ExtResource("5_ojqlp")]
-position = Vector2(154, 62)
+position = Vector2(157, 61)
 
 [node name="ClothesRackHorizontalB2" parent="Interactables" unique_id=487126144 instance=ExtResource("6_1eynv")]
 position = Vector2(48, 136)
@@ -126,7 +128,10 @@ position = Vector2(96, 136)
 position = Vector2(69, 14)
 
 [node name="PhotoFilmTexture" parent="." unique_id=1465462974 instance=ExtResource("11_6qlkj")]
-visible = false
+offset_left = -107.0
+offset_top = -74.0
+offset_right = 1493.0
+offset_bottom = 1036.0
 
 [node name="Player" parent="." unique_id=2008015409 instance=ExtResource("11_i1bva")]
 position = Vector2(128, 32)

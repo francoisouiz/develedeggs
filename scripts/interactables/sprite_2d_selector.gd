@@ -13,6 +13,9 @@ func _ready() -> void:
 	
 	if sprite_id and sprite_id < sprite_count:
 		sprite_2d.frame = sprite_id
+	elif sprite_id and sprite_count <= sprite_id and sprite_id < 2*sprite_count:
+		sprite_2d.frame = sprite_id - sprite_count
+		sprite_2d.flip_h = true 
 	else:
 		sprite_2d.frame = 0
 	

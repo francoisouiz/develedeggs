@@ -30,7 +30,7 @@ extends Node2D
 @onready var jacket_anim: AnimationPlayer = $JacketCloseup/JacketAnim
 @onready var carrier_anim: AnimationPlayer = $CarrierCloseup/CarrierAnim
 
-@onready var removables: Array[StaticBody2D] = [bed, folded_clothes, folded_clothes_2, folded_clothes_3, folded_clothes_4, folded_clothes_5, books, books_2, books_3, single_book, single_book_2, duffle_bag, medical_bills]
+@onready var removables: Array[StaticBody2D] = [cat, bed, folded_clothes, folded_clothes_2, folded_clothes_3, folded_clothes_4, folded_clothes_5, books, books_2, books_3, single_book, single_book_2, duffle_bag, medical_bills]
 @onready var areas: Array[Interactable] = [watch_area, medicine_area, jacket_area, carrier_area]
 
 func _ready() -> void:

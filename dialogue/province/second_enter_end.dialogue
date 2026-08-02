@@ -1,3 +1,4 @@
 ~ start
 Max: That's it. I need to go back to the present now.
+$> PlayerStats.can_photo = true
 => END

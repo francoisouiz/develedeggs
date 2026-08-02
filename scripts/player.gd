@@ -84,12 +84,14 @@ func _input(event: InputEvent) -> void:
 			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.post_photo), "start")
 		elif PlayerStats.curr_level == "province" and PlayerStats.scene_progress == 0:
 			flash()
+			PlayerStats.can_photo = false
 			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.first_enter), "start")
 		elif PlayerStats.curr_level == "province" and PlayerStats.scene_progress == 3:
 			flash()
 			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.first_exit), "start")
 		elif PlayerStats.curr_level == "province" and PlayerStats.scene_progress == 4:
 			flash()
+			PlayerStats.can_photo = false
 			DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.second_enter), "start")
 		elif PlayerStats.curr_level == "province" and PlayerStats.scene_progress == 5:
 			flash()

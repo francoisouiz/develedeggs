@@ -14,7 +14,46 @@
 [ext_resource type="PackedScene" uid="uid://d1xves3s5ijtb" path="res://scenes/interactables/joshua.tscn" id="8_538hb"]
 [ext_resource type="PackedScene" uid="uid://dtry6mym1a15y" path="res://scenes/static_bodies/bush.tscn" id="11_58dfl"]
 [ext_resource type="PackedScene" uid="uid://bpi2803uojrlm" path="res://scenes/static_bodies/key.tscn" id="12_d1oh4"]
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="16_o2tpf"]
 [ext_resource type="Script" uid="uid://depq8x1eo5j16" path="res://scripts/interactables/key_area.gd" id="16_ptjc1"]
+[ext_resource type="AudioStream" uid="uid://ccfvkgqm50pbs" path="res://assets/audio/outside_bgm.mp3" id="16_t67v0"]
+
+[sub_resource type="Animation" id="Animation_ptjc1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.2065543, 0.2065543, 0.20655426, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o2tpf"]
+resource_name = "canvas_anim"
+length = 0.39999999999999997
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.2065543, 0.2065543, 0.20655426, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t67v0"]
+_data = {
+&"RESET": SubResource("Animation_ptjc1"),
+&"canvas_anim": SubResource("Animation_o2tpf")
+}
 
 [sub_resource type="Environment" id="Environment_guuq4"]
 background_mode = 3
@@ -98,11 +137,55 @@ size = Vector2(101, 71)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pculj"]
 size = Vector2(15, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1oh4"]
+atlas = ExtResource("16_o2tpf")
+region = Rect2(24, 42, 7, 3)
+
+[sub_resource type="Animation" id="Animation_n0k2o"]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hwbqv"]
+resource_name = "watch_transition"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ptjc1"]
+_data = {
+&"RESET": SubResource("Animation_n0k2o"),
+&"watch_transition": SubResource("Animation_hwbqv")
+}
+
 [node name="StoreOutside" type="Node2D" unique_id=757739313]
 script = ExtResource("1_lvg0b")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=570861761]
 color = Color(0.2065543, 0.2065543, 0.20655426, 1)
+
+[node name="CanvasAnim" type="AnimationPlayer" parent="CanvasModulate" unique_id=352532614]
+libraries/ = SubResource("AnimationLibrary_t67v0")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1964822000]
 environment = SubResource("Environment_guuq4")
@@ -127,6 +210,7 @@ tile_set = ExtResource("6_q80gb")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1966880727]
 position = Vector2(136, 69)
+rotation = 0.38646084
 scale = Vector2(-5.9191275, -3.3540618)
 zoom = Vector2(3.5, 3.5)
 
@@ -141,6 +225,18 @@ texture = ExtResource("1_s75pj")
 
 [node name="PointLight2D2" type="PointLight2D" parent="Lights" unique_id=2040143098]
 position = Vector2(54, 52)
+color = Color(0.9662648, 0.93343043, 0.83252555, 1)
+energy = 0.75
+texture = ExtResource("1_s75pj")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Lights" unique_id=1914043488]
+position = Vector2(127, 145)
+color = Color(0.9662648, 0.93343043, 0.83252555, 1)
+energy = 0.75
+texture = ExtResource("1_s75pj")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Lights" unique_id=1886740995]
+position = Vector2(116, -2)
 color = Color(0.9662648, 0.93343043, 0.83252555, 1)
 energy = 0.75
 texture = ExtResource("1_s75pj")
@@ -238,3 +334,16 @@ position = Vector2(-0.5, -2)
 shape = SubResource("RectangleShape2D_pculj")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=870736344]
+stream = ExtResource("16_t67v0")
+autoplay = true
+
+[node name="Key" type="Sprite2D" parent="." unique_id=75559828]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+position = Vector2(135.895, 68.9)
+rotation = -2.51851
+scale = Vector2(19.36, 19.36)
+texture = SubResource("AtlasTexture_d1oh4")
+
+[node name="KeyAnim" type="AnimationPlayer" parent="Key" unique_id=1208172883]
+libraries/ = SubResource("AnimationLibrary_ptjc1")

@@ -1,4 +1,7 @@
 ~ start
-Max: Would you look at that, the key was actually hidden inside.
+do play_key()
+Max: Would you look at that, the key was actually inside that bush.
+Max: So there are certain things that I can see inside this... 'past realm' that I normally can't.
+Max: Very... interesting.
 do pickup_key()
 => END

@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bmcwnlb3oa7tt" path="res://scenes/interactables/cat.tscn" id="15_6wds3"]
 [ext_resource type="AudioStream" uid="uid://cu4hmomc6e3y3" path="res://assets/audio/cat_purr.mp3" id="17_jm6tu"]
 [ext_resource type="AudioStream" uid="uid://c1s3o2cpbtoea" path="res://assets/audio/package.mp3" id="18_wql8k"]
-[ext_resource type="AudioStream" uid="uid://jqdbs41hai2w" path="res://assets/audio/home_draft.mp3" id="19_jud2l"]
+[ext_resource type="AudioStream" uid="uid://jd2hqbona2su" path="res://assets/audio/Home.mp3" id="19_n0k2o"]
 [ext_resource type="PackedScene" uid="uid://civv2yp8grlxw" path="res://scenes/interactables/martin.tscn" id="20_e11ul"]
 [ext_resource type="FontFile" uid="uid://c2ske2q13exsd" path="res://assets/fonts/body.ttf" id="21_56gmy"]
 [ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="21_dvkny"]
@@ -219,7 +219,7 @@ stream = ExtResource("18_wql8k")
 volume_db = 7.0
 
 [node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=1547267549]
-stream = ExtResource("19_jud2l")
+stream = ExtResource("19_n0k2o")
 autoplay = true
 
 [node name="Martin" parent="." unique_id=1828701731 instance=ExtResource("20_e11ul")]

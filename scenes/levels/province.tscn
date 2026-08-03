@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ct0c321jjx8s4" path="res://scenes/interactables/puto_bumbong.tscn" id="13_8fpki"]
 [ext_resource type="Texture2D" uid="uid://57cg8cqo53x7" path="res://assets/textures/folded_clothes.tres" id="14_lxjkw"]
 [ext_resource type="PackedScene" uid="uid://buhgjic2tty3q" path="res://scenes/interactables/tito_elpa.tscn" id="17_8fpki"]
+[ext_resource type="AudioStream" uid="uid://c2hclqh2wq88p" path="res://assets/audio/Memory.mp3" id="18_lxjkw"]
 
 [sub_resource type="Environment" id="Environment_2jrc7"]
 background_mode = 3
@@ -257,3 +258,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_s3x7s")
 
 [node name="TransitionAnim" type="AnimationPlayer" parent="Panel2" unique_id=816918442]
 libraries/ = SubResource("AnimationLibrary_lxjkw")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=1383743080]
+stream = ExtResource("18_lxjkw")
+autoplay = true

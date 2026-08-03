@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ui6si11jgl73"
-path="res://.godot/imported/joshua_portrait.png-0cd68c287ada68c8e348481677e2347a.ctex"
+uid="uid://dti14avwv3s2"
+path="res://.godot/imported/tito_elpa.png-eb91851cee9bfcfbe313d96c25e26ced.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/joshua_portrait.png"
-dest_files=["res://.godot/imported/joshua_portrait.png-0cd68c287ada68c8e348481677e2347a.ctex"]
+source_file="res://assets/portraits/temp/tito_elpa.png"
+dest_files=["res://.godot/imported/tito_elpa.png-eb91851cee9bfcfbe313d96c25e26ced.ctex"]
 
 [params]
 

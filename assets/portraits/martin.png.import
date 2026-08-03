@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2v2yh8issx3m"
-path="res://.godot/imported/max_portrait.png-04ab158fa1f6fbe7653fe43c68de1358.ctex"
+uid="uid://brsiab5t7hfd2"
+path="res://.godot/imported/martin.png-83155e994d0cfeaf1c572bfcf2b6d05a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/max_portrait.png"
-dest_files=["res://.godot/imported/max_portrait.png-04ab158fa1f6fbe7653fe43c68de1358.ctex"]
+source_file="res://assets/portraits/martin.png"
+dest_files=["res://.godot/imported/martin.png-83155e994d0cfeaf1c572bfcf2b6d05a.ctex"]
 
 [params]
 

@@ -7,6 +7,7 @@ extends Node2D
 @onready var transition_anim: AnimationPlayer = $Panel2/TransitionAnim
 
 func _ready() -> void:
+	await get_tree().create_timer(1.5).timeout
 	DialogueManager.dialogue_ended.connect(on_dialogue_ended)
 	DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.cemetery), "start")
 	
@@ -16,18 +17,23 @@ func walk_away() -> void:
 	
 	await get_tree().create_timer(1).timeout
 	
-	player_sprite.play("walking no cam")
-	
-	
-	walking_animation.animation_finished.connect(_on_walk_finish)
+	player_sprite.play("walking cam")
 	walking_animation.play("walk_away")
-	transition_anim.play("fadeout")
+	# call play_credits
+
+func play_credits() -> void:
+	pass
+	# play credits
+	# await credits
+	# play fadeout
+	# await fadeout
+	# call go back_menu
 	
 func on_dialogue_ended(resource: DialogueResource) -> void:
 	PlayerStats.can_move = false
 	walk_away()
 
-func _on_walk_finish(anim_name: String) ->void:
+func go_back_menu() ->void:
 	PlayerStats.curr_level = ""
 	SceneLoader.load_scene(Constants.SCENE_PATHS.main_menu)
 

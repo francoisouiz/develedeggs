@@ -5,11 +5,12 @@ Max: I see
 Max: ...
 Max: So why exactly are we just standing here?
 Joshua: …
-Joshua: I’m looking for the keys. It’s got to be in my bag somewhere.
+Joshua: I’m looking for the keys. It’s got to be in my pockets somewhere.
 Joshua: …
 Joshua: Please don’t tell me I lost it.
 Max: …
 Max: You truly are a genius. 
 Max: While you fiddle around with your bag, I best take a photo of this store
 Max: I bet my parents would love to see how much this store has grown.
+$> PlayerStats.can_move = true
 => END

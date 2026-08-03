@@ -50,20 +50,18 @@ func show_instruction() -> void:
 	instruction.show()
 
 func house_wait() -> void:
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.5).timeout
 	
 func on_entered_photo() -> void:
 	instruction.hide()
 	disable_node(folded_clothes)
 	disable_node(duffle_bag)
 	disable_node(cat)
-	disable_node(bookshelf_horizontal)
-	disable_node(bookshelf_horizontal_2)
 	enable_node(console)
 	joshua.global_position = Vector2(100, 110)
 	joshua_anim.stop()
 	martin.global_position = Vector2(95, 84)
-	martin_anim.flip_h = true
+	martin_anim.flip_h = false
 	martin_anim.pause()
 	background_music.pitch_scale = 0.6
 	
@@ -78,8 +76,8 @@ func on_exited_photo() -> void:
 	joshua.global_position = Vector2(166, 103)
 	joshua_anim.play("idle")
 	martin.global_position = Vector2(188, 102)
+	martin_anim.flip_h = true
 	martin_anim.play("idle")
-	martin_anim.flip_h = false
 	background_music.pitch_scale = 1
 
 func disable_node(node: Node) -> void:

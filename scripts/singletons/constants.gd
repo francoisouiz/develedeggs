@@ -64,11 +64,11 @@ const DIALOGUE_PATHS: Dictionary[String, String] = {
 }
 
 const CHARACTER_ICON_PATHS: Dictionary[String, String] = {
-	"Max": "uid://b2v2yh8issx3m",
-	"Joshua": "uid://ui6si11jgl73",
-	"Martin": "uid://bk50cabvxvubg",
-	"Driver": "uid://dwtwpw7ysstmw",
-	"Tito Elpa": "uid://dti14avwv3s2"
+	"Max": "uid://bdk8dig528as6",
+	"Joshua": "uid://cah7lhiheykfs",
+	"Martin": "uid://brsiab5t7hfd2",
+	"Driver": "uid://d381v5ej0i2mk",
+	"Tito Elpa": "uid://bifq4nqoko44w"
 }
 
 const CHARACTER_AUDIO_PATHS: Dictionary[String, String] = {

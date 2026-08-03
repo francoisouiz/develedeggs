@@ -29,6 +29,7 @@ extends Node2D
 @onready var medicine_anim: AnimationPlayer = $MedicineCloseup/MedicineAnim
 @onready var jacket_anim: AnimationPlayer = $JacketCloseup/JacketAnim
 @onready var carrier_anim: AnimationPlayer = $CarrierCloseup/CarrierAnim
+@onready var point_light_2d_3: PointLight2D = $Lights/PointLight2D3
 
 @onready var removables: Array[StaticBody2D] = [cat, bed, folded_clothes, folded_clothes_2, folded_clothes_3, folded_clothes_4, folded_clothes_5, books, books_2, books_3, single_book, single_book_2, duffle_bag, medical_bills]
 @onready var areas: Array[Interactable] = [watch_area, medicine_area, jacket_area, carrier_area]
@@ -36,8 +37,10 @@ extends Node2D
 func _ready() -> void:
 	cat.get_node("AnimatedSprite2D").play("seated")
 	PlayerStats.scene_progress = 0
+	PlayerStats.can_move = false
 	disable_node(console)
 	disable_node(photo_bed)
+	disable_node(point_light_2d_3)
 	player.entered_photo.connect(on_entered_photo)
 	player.exited_photo.connect(on_exited_photo)
 	await get_tree().create_timer(1.5).timeout
@@ -53,6 +56,7 @@ func on_entered_photo() -> void:
 		disable_node(interactable)
 	enable_node(console)
 	enable_node(photo_bed)
+	enable_node(point_light_2d_3)
 	background_music.pitch_scale = 0.6
 
 func on_exited_photo() -> void:
@@ -64,6 +68,7 @@ func on_exited_photo() -> void:
 		enable_node(interactable)
 	disable_node(console)
 	disable_node(photo_bed)
+	disable_node(point_light_2d_3)
 	background_music.pitch_scale = 1
 	
 func play_watch() -> void:

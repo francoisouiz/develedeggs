@@ -25,8 +25,8 @@
 [ext_resource type="AudioStream" uid="uid://bra18aykgnoy7" path="res://assets/audio/doorbell.mp3" id="15_lq8vg"]
 [ext_resource type="AudioStream" uid="uid://cu4hmomc6e3y3" path="res://assets/audio/cat_purr.mp3" id="17_xs8by"]
 [ext_resource type="AudioStream" uid="uid://c1s3o2cpbtoea" path="res://assets/audio/package.mp3" id="18_8fpgl"]
-[ext_resource type="AudioStream" uid="uid://jqdbs41hai2w" path="res://assets/audio/home_draft.mp3" id="19_g6v37"]
 [ext_resource type="PackedScene" uid="uid://sdxoheqqy1oc" path="res://scenes/photo_film_texture.tscn" id="22_fjg4f"]
+[ext_resource type="AudioStream" uid="uid://jd2hqbona2su" path="res://assets/audio/Home.mp3" id="25_3quma"]
 [ext_resource type="Script" uid="uid://dgd3mymgmg8lw" path="res://scripts/interactables/watch_area.gd" id="28_g6v37"]
 [ext_resource type="Script" uid="uid://1yibixew8plv" path="res://scripts/interactables/carrier_area.gd" id="29_3quma"]
 [ext_resource type="Script" uid="uid://cjjrgc5x3m4mh" path="res://scripts/interactables/medicine_area.gd" id="29_42mrm"]
@@ -83,7 +83,7 @@ glow_blend_mode = 2
 bg_color = Color(0.4, 0.2509804, 0.2, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
-size = Vector2(15, 14.75)
+size = Vector2(17.083374, 15.910477)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fpgl"]
 size = Vector2(23, 18.5)
@@ -186,6 +186,13 @@ texture = ExtResource("2_we1d7")
 position = Vector2(109, 91)
 color = Color(0.98851186, 0.9317842, 0.7939912, 1)
 energy = 0.75
+texture = ExtResource("2_we1d7")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Lights" unique_id=768449485]
+position = Vector2(187, 115.99999)
+scale = Vector2(0.11, 0.11)
+color = Color(0.98851186, 0.9317842, 0.7939912, 1)
+energy = 0.1
 texture = ExtResource("2_we1d7")
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=726801911]
@@ -306,7 +313,7 @@ stream = ExtResource("18_8fpgl")
 volume_db = 7.0
 
 [node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=1547267549]
-stream = ExtResource("19_g6v37")
+stream = ExtResource("25_3quma")
 autoplay = true
 
 [node name="PhotoFilmTexture" parent="." unique_id=1465462974 instance=ExtResource("22_fjg4f")]
@@ -320,7 +327,8 @@ scale = Vector2(0.15, 0.15)
 script = ExtResource("28_g6v37")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WatchArea" unique_id=644777843]
-position = Vector2(186.5, 116.375)
+position = Vector2(186.54216, 116.04432)
+rotation = -0.009624547
 shape = SubResource("RectangleShape2D_s3x7s")
 
 [node name="CarrierArea" type="Area2D" parent="." unique_id=941157748]

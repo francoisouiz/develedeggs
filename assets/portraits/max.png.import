@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwtwpw7ysstmw"
-path="res://.godot/imported/driver_portrait.png-d914c81059bebaeec9051da1936c3137.ctex"
+uid="uid://bdk8dig528as6"
+path="res://.godot/imported/max.png-87b8f20cfc3090f3ba4a502916488bfa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/driver_portrait.png"
-dest_files=["res://.godot/imported/driver_portrait.png-d914c81059bebaeec9051da1936c3137.ctex"]
+source_file="res://assets/portraits/max.png"
+dest_files=["res://.godot/imported/max.png-87b8f20cfc3090f3ba4a502916488bfa.ctex"]
 
 [params]
 

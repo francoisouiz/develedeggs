@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://xga6awtmyitb" path="res://assets/textures/pile_of_clothes.tres" id="1_2u2wd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
-size = Vector2(13, 6)
+size = Vector2(13, 7)
 
 [node name="PileOfClothes" type="StaticBody2D" unique_id=1586609565]
 
@@ -12,5 +12,5 @@ texture_filter = 1
 texture = ExtResource("1_2u2wd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2135983970]
-position = Vector2(0, 1)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_m2g58")

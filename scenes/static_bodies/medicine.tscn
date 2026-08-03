@@ -20,11 +20,12 @@ scale = Vector2(1.285, 1.285)
 texture = SubResource("AtlasTexture_k6aki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2068450645]
-position = Vector2(0, -0.77821016)
+position = Vector2(0, 0.77821016)
 shape = SubResource("CircleShape2D_k6aki")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=631958446]
 script = ExtResource("2_o2tyt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=884761204]
+visible = false
 shape = SubResource("CircleShape2D_72ghi")

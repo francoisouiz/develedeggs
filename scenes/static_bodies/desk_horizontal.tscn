@@ -2,12 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://dsg674cg7h8ec" path="res://assets/textures/desk_horizontal.tres" id="1_4ei1y"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
+size = Vector2(12, 8)
+
 [node name="DeskHorizontal" type="StaticBody2D" unique_id=1601209415]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1751074750]
 texture_filter = 1
 texture = ExtResource("1_4ei1y")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1242711446]
-position = Vector2(-1, 0)
-polygon = PackedVector2Array(-4, -5, -4, 2, 5, 2, 5, -5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=463699502]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_m2g58")

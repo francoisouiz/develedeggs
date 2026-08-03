@@ -8,7 +8,7 @@ atlas = ExtResource("1_xg7i5")
 region = Rect2(160, 1, 96, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1jp1"]
-size = Vector2(14, 28)
+size = Vector2(12, 13)
 
 [node name="Graves" type="StaticBody2D" unique_id=534206599]
 script = ExtResource("1_w1jp1")
@@ -19,11 +19,12 @@ hframes = 6
 frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1984414364]
-position = Vector2(1, 4)
+position = Vector2(0, 11.5)
 shape = SubResource("RectangleShape2D_w1jp1")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=435506476]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1622083499]
+visible = false
 position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_w1jp1")

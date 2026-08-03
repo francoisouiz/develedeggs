@@ -10,11 +10,10 @@ extends Node2D
 @onready var joshua: CharacterBody2D = $Joshua
 @onready var store_building: StaticBody2D = $Interactables/StoreBuilding
 @onready var point_light_2d: PointLight2D = $Lights/PointLight2D
-@onready var point_light_2d_2: PointLight2D = $Lights/PointLight2D2
 @onready var point_light_2d_3: PointLight2D = $Lights/PointLight2D3
 @onready var point_light_2d_4: PointLight2D = $Lights/PointLight2D4
 @onready var canvas_anim: AnimationPlayer = $CanvasModulate/CanvasAnim
-@onready var key_anim: AnimationPlayer = $Key/KeyAnim
+@onready var key_anim: AnimationPlayer = $Player/Camera2D/KeyCloseup/KeyAnim
 
 @onready var removables : Array[StaticBody2D] = [bush_2]
 @onready var hiddens : Array[StaticBody2D] = [key]
@@ -60,7 +59,6 @@ func on_entered_photo() -> void:
 	for node : StaticBody2D in hiddens:
 		enable_node(node)
 	disable_node(point_light_2d)
-	disable_node(point_light_2d_2)
 	enable_node(point_light_2d_3)
 	enable_node(point_light_2d_4)
 		
@@ -80,7 +78,6 @@ func on_exited_photo() -> void:
 		disable_node(node)
 		
 	enable_node(point_light_2d)
-	enable_node(point_light_2d_2)
 	disable_node(point_light_2d_3)
 	disable_node(point_light_2d_4)
 	

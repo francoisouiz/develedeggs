@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://ds00wc8qjwq3m" path="res://scripts/interactables/martin.gd" id="2_ful1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iku0"]
-size = Vector2(19.047623, 50.79366)
+size = Vector2(19.047623, 27.272732)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ful1d"]
-size = Vector2(19.047623, 50.793655)
+size = Vector2(60.60607, 61.76047)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_im66i"]
 atlas = ExtResource("2_axigw")
@@ -35,16 +35,17 @@ animations = [{
 scale = Vector2(0.33, 0.33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=231409900]
-position = Vector2(-7.5688416e-07, -1.0407159e-06)
-scale = Vector2(0.99999976, 0.99999976)
+position = Vector2(-7.568841e-07, 13.636361)
+scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_6iku0")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=1022864614]
 script = ExtResource("2_ful1d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1378141363]
-position = Vector2(-7.568843e-07, 2.649095e-06)
-scale = Vector2(0.9999998, 0.9999998)
+visible = false
+position = Vector2(-3.6124018e-07, -5.4834037)
+scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_ful1d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=535539326]

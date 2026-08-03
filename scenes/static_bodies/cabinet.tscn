@@ -7,9 +7,10 @@ atlas = ExtResource("1_q5yqo")
 region = Rect2(98, 114, 26, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72ghi"]
-size = Vector2(24, 26)
+size = Vector2(24, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nj4ij"]
+size = Vector2(30, 26)
 
 [node name="Cabinet" type="StaticBody2D" unique_id=2135505440]
 
@@ -17,9 +18,12 @@ size = Vector2(24, 26)
 texture = SubResource("AtlasTexture_k6aki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=907263703]
+visible = false
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_72ghi")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=246696449]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=71378884]
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_nj4ij")

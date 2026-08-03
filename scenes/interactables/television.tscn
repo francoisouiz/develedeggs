@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bkw4lw3e23f6s" path="res://scripts/interactables/television.gd" id="2_40vyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
-size = Vector2(14, 8.875)
+size = Vector2(14, 5.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
 size = Vector2(14, 19)
@@ -16,7 +16,7 @@ texture_filter = 1
 texture = ExtResource("1_j81ui")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=442442919]
-position = Vector2(0, -0.5625)
+position = Vector2(0, 0.9375)
 shape = SubResource("RectangleShape2D_m2g58")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=611879486]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://caefijtk8ts7m" path="res://assets/sprites/characters.png" id="2_wl1st"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
-size = Vector2(184.26967, 184.26967)
+size = Vector2(67.41574, 92.13483)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6aki"]
 size = Vector2(184.26971, 184.26971)
@@ -35,8 +35,8 @@ animations = [{
 scale = Vector2(0.445, 0.445)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1627342092]
-position = Vector2(-7.232923e-06, -8.572352e-06)
-scale = Vector2(0.9999999, 0.9999999)
+position = Vector2(4.4943833, 46.0674)
+scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_s3x7s")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=1590267598]

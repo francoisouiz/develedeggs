@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bjll4yk0onqdd" path="res://assets/textures/nightstand.tres" id="1_1lcli"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
-size = Vector2(6, 6.5)
+size = Vector2(6, 8.25)
 
 [node name="Nightstand" type="StaticBody2D" unique_id=943642657]
 
@@ -12,4 +12,5 @@ texture_filter = 1
 texture = ExtResource("1_1lcli")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1059041178]
+position = Vector2(0, 1.125)
 shape = SubResource("RectangleShape2D_m2g58")

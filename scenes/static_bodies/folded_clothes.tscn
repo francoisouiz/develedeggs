@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://d3y4fmtja2gq0" path="res://scripts/interactables/folded_clothes.gd" id="2_du4nn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
-size = Vector2(12.75, 5)
+size = Vector2(13.375, 7.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
 size = Vector2(14, 11)
@@ -19,7 +19,7 @@ texture = ExtResource("1_6bq17")
 hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1229821787]
-position = Vector2(1, 2)
+position = Vector2(0.6875, 3.25)
 shape = SubResource("RectangleShape2D_m2g58")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=1640051471]

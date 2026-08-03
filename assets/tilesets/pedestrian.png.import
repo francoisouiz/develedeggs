@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci3imxudqp33o"
-path="res://.godot/imported/grass.png-a276a6b82cfa521a67a5b96f247ec98c.ctex"
+uid="uid://bt81l4ddquwcr"
+path="res://.godot/imported/pedestrian.png-f13611c072740c89ce977d637d055233.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/grass.png"
-dest_files=["res://.godot/imported/grass.png-a276a6b82cfa521a67a5b96f247ec98c.ctex"]
+source_file="res://assets/tilesets/pedestrian.png"
+dest_files=["res://.godot/imported/pedestrian.png-f13611c072740c89ce977d637d055233.ctex"]
 
 [params]
 

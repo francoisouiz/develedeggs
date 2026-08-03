@@ -19,11 +19,12 @@ radius = 8.0
 texture = SubResource("AtlasTexture_k6aki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=748068224]
-position = Vector2(0, -2)
+position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_72ghi")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=2119238060]
 script = ExtResource("2_dxw4j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1974615023]
+visible = false
 shape = SubResource("CircleShape2D_nj4ij")

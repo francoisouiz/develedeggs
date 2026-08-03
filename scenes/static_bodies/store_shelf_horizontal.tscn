@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bolamixmbff0v" path="res://scripts/interactables/horizoneal_storeshelf.gd" id="2_2ryyn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
-size = Vector2(22, 15)
+size = Vector2(22, 12.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
 size = Vector2(22, 20)
@@ -16,11 +16,12 @@ texture_filter = 1
 texture = ExtResource("1_ff0o4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1125979147]
-position = Vector2(0, -3.5)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_m2g58")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=756985046]
 script = ExtResource("2_2ryyn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=125844475]
+visible = false
 shape = SubResource("RectangleShape2D_s3x7s")

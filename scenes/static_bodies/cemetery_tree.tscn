@@ -8,21 +8,23 @@ atlas = ExtResource("1_n6ua4")
 region = Rect2(0, 192, 88, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b845u"]
-size = Vector2(13, 29)
+size = Vector2(16, 11.5)
 
 [node name="CemeteryTree" type="StaticBody2D" unique_id=368678055]
 script = ExtResource("1_b845u")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1258245038]
 texture = SubResource("AtlasTexture_k6aki")
+offset = Vector2(0, -24.645)
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=977196571]
-position = Vector2(-1.5, 16.5)
+position = Vector2(-1, 2)
 shape = SubResource("RectangleShape2D_b845u")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=2019806309]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1701461378]
+visible = false
 position = Vector2(-1.5, 16.5)
 shape = SubResource("RectangleShape2D_b845u")

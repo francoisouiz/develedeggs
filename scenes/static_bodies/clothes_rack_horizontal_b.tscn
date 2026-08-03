@@ -7,7 +7,7 @@ atlas = ExtResource("1_7ob84")
 region = Rect2(176, 98, 32, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67ncf"]
-size = Vector2(32, 10)
+size = Vector2(32, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82y6e"]
 size = Vector2(32, 10)
@@ -19,9 +19,11 @@ texture_filter = 1
 texture = SubResource("AtlasTexture_3t3jn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=808406643]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_67ncf")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=28556323]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1673180295]
+visible = false
 shape = SubResource("RectangleShape2D_82y6e")

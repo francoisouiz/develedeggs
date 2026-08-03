@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://cu2tk5sqj8v6h" path="res://assets/sprites/store_new.png" id="2_su55s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6aki"]
-size = Vector2(116, 52)
+size = Vector2(116, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72ghi"]
-size = Vector2(109, 49)
+size = Vector2(116, 52)
 
 [node name="StoreBuilding" type="StaticBody2D" unique_id=1645456500]
 script = ExtResource("1_su55s")
@@ -21,11 +21,12 @@ texture = ExtResource("1_b5ahh")
 texture = ExtResource("2_su55s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1997112791]
-position = Vector2(0, -8)
+visible = false
+position = Vector2(0, 7.5)
 shape = SubResource("RectangleShape2D_k6aki")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=191131732]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=811097258]
-position = Vector2(0.5, -6.5)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_72ghi")

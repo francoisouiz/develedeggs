@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bxybnmdis88hn" path="res://assets/textures/duffle_bag.tres" id="1_mwadb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
-size = Vector2(15, 2)
+size = Vector2(17, 5)
 
 [node name="DuffleBag" type="StaticBody2D" unique_id=487774771]
 
@@ -12,5 +12,5 @@ texture_filter = 1
 texture = ExtResource("1_mwadb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1437005408]
-position = Vector2(-0.5, 1)
+position = Vector2(-0.5, 2.5)
 shape = SubResource("RectangleShape2D_s3x7s")

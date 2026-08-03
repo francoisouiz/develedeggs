@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bu6iebl1i7qf3" path="res://scripts/interactables/vertical_storeshelf.gd" id="2_25ssh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
-size = Vector2(6, 29)
+size = Vector2(8, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
 size = Vector2(8, 34)
@@ -15,12 +15,13 @@ size = Vector2(8, 34)
 texture = ExtResource("1_k52yy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1727094174]
-position = Vector2(0, -4.5)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_m2g58")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1897036818]
 script = ExtResource("2_25ssh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1312874142]
+visible = false
 texture_filter = 1
 shape = SubResource("RectangleShape2D_s3x7s")

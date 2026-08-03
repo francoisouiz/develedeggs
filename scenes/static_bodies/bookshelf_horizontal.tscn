@@ -9,7 +9,7 @@ atlas = ExtResource("2_22nti")
 region = Rect2(0, 114, 96, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ykry"]
-size = Vector2(24, 15.5)
+size = Vector2(26, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
 size = Vector2(24, 22)
@@ -24,8 +24,7 @@ hframes = 3
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=19024271]
-visible = false
-position = Vector2(0, -1.75)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_8ykry")
 
 [node name="InteractableArea" type="Area2D" parent="." unique_id=1214162894]

@@ -25,7 +25,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3q5lw"]
-size = Vector2(8, 18)
+size = Vector2(8, 9)
 
 [node name="TitoElpa" type="CharacterBody2D" unique_id=919867986]
 
@@ -34,4 +34,5 @@ sprite_frames = SubResource("SpriteFrames_s3x7s")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2022636497]
+position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_3q5lw")

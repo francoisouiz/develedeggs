@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ckrr7oja77lu2" path="res://assets/textures/bin.tres" id="1_5lal4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x7s"]
-size = Vector2(8, 6)
+size = Vector2(5, 5)
 
 [node name="Bin" type="StaticBody2D" unique_id=1128115162]
 
@@ -12,5 +12,5 @@ texture_filter = 1
 texture = ExtResource("1_5lal4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1330003927]
-position = Vector2(0, -1)
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_s3x7s")

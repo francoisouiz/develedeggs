@@ -13,6 +13,7 @@ glow_blend_mode = 2
 [node name="Root" type="Node" unique_id=2030083573]
 
 [node name="Main Menu UI" parent="." unique_id=1250129694 instance=ExtResource("1_j5px3")]
+curr_scene = "store_outside"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1721860758]
 environment = SubResource("Environment_j5px3")

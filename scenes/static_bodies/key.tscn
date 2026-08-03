@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bpi2803uojrlm"]
+
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="1_h262p"]
+[ext_resource type="Script" uid="uid://da4f1mf52uo18" path="res://scripts/interactables/key.gd" id="2_ep4da"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
+atlas = ExtResource("1_h262p")
+region = Rect2(24, 41, 8, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72ghi"]
+size = Vector2(7, 2)
+
+[node name="Key" type="StaticBody2D" unique_id=954053790]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=975441585]
+texture = SubResource("AtlasTexture_k6aki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=883538314]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_72ghi")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=1348244038]
+script = ExtResource("2_ep4da")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractableArea" unique_id=826856540]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_72ghi")

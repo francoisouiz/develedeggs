@@ -6,7 +6,7 @@ extends Node2D
 
 func _ready() -> void:
 	PlayerStats.scene_progress = 0
-	
+	PlayerStats.can_move = false
 	player.entered_photo.connect(on_entered_photo)
 	player.exited_photo.connect(on_exited_photo)
 	await get_tree().create_timer(1.5).timeout

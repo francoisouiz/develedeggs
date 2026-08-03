@@ -4,4 +4,5 @@ Joshua: You know, your parents would probably care more about you being healthy 
 Max: I’m telling you it’s…
 Max: You know what, nevermind. Let’s just try to find something for them.
 Joshua: Sure. I’ll be waiting here. Just tell me if you need anything.
+$> PlayerStats.can_move = true
 => END

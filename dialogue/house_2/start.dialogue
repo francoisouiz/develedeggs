@@ -7,4 +7,5 @@ Max: I really don’t have the time for this.
 Max: …
 Max: The camera.
 Max: Maybe I can use the camera to find out where those things are!
+$> PlayerStats.can_move = true
 => END

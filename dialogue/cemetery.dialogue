@@ -1,11 +1,19 @@
 ~ start
 Max: Hey, mom. Hey, dad. I’m back.
 Max: It’s been a long time since I’ve visited, huh? Sorry, I was kind of busy.
-Max: Who am I kidding? I couldn’t bring myself to come back. Because if you’re here, then that means I would have to accept that I would never hear from you again.
-Max: I brought you guys some things from Manila. Some food and new clothes. Even a bag for mom.
-Max: I also got the camera. I tried using it at home, and it felt like I was walking in our old house again.
-Max: Joshua and Martin begged me to take a photo of all of us. Reminded me of our parties back in college.
-Max: Speaking of, I actually dropped by Tito A’s shop in Manila. Joshua’s managing it now and it’s a whole lot bigger.
+Max: Who am I kidding? I couldn’t bring myself to come back. 
+Max: If you’re here, that means I would have to accept that I would never hear from you again.
+Max: It's selfish, I know. And for that, I'm s0rry.
+Max: I brought you guys some things from Manila. Some food, new clothes, even a bag for mom.
+Max: And get this, I had a mythical pull from the ukay-ukay.
+Max: THE OFFICIAL LOLO MARTIN JACKET. I know, I know, you don't have to thank me.
+Max: Oh, and I also got Tita's camera. 
+Max: I'm sure you guys know what it does.
+Max: I tried using it at home, and it felt like I was walking in our old house again.
+Max: Back in the city, Joshua and Martin begged me to take a photo of all of us. Reminded me of our parties back in college.
+Max: Speaking of, I actually got these pasaluong from Tito A’s shop in Manila. 
+Max: You wouldn't believe it but Joshua’s managing it now and it’s a whole lot bigger.
+Max: Who knew that scrawny little boy can manage a legitimate business now.
 Max: …
 Max: Actually, instead of describing it, why not I just show you.
 do place_photo()
@@ -16,9 +24,19 @@ do place_photo()
 Max: And also this time when I-
 do quick_dim(2.0)
 Max: ...
-Max: I guess, a lot really has happened since you left. Sorry that I couldn’t come back sooner.
-Max: Now I’m not too sure if you guys got all that haha.
+Max: A lot really has happened since you left. Sorry that I couldn’t come back sooner.
+Max: After all that yapping I’m not too sure if you guys even got all that hahaha...
 Max: …
-Max: Well, if you didn’t, then you can use these photos. They should be able to show you what I’ve been up to over the past year.
-Max: The next time I come back, I’m going to bring a lot more photos to show you guys. I promise.
+Max: I miss you guys.
+Max: I miss you guys so, so much.
+Max: It's hard to get by alone. 
+Max: No matter how hard I tried I can't seem to accept it.
+Max: It only felt like yesterday when Mom was making sinigang for the family.
+Max: ...
+Max: But I know it's selfish to be stuck in the past.
+Max: You guys would want to see me live the life I wanted, even if it's without you.
+Max: And for that and that alone, I will crawl my way through this world inch by inch.
+Max: Thank you for everything. I love you guys.
+Max: The next time I come back, I’m going to bring a lot more photos to show. I promise.
+Max: Until then.
 => END

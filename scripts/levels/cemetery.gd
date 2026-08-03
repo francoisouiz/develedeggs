@@ -4,10 +4,13 @@ extends Node2D
 @onready var player_sprite: AnimatedSprite2D = $Player/AnimatedSprite2D
 @onready var walking_animation: AnimationPlayer = $Player/WalkingPathAnimation
 
+@onready var photo_stack: Node2D = $PhotoStack
+
 @onready var transition_anim: AnimationPlayer = $Panel2/TransitionAnim
 
 func _ready() -> void:
 	await get_tree().create_timer(1.5).timeout
+	
 	DialogueManager.dialogue_ended.connect(on_dialogue_ended)
 	DialogueManager.show_dialogue_balloon(ResourceLoader.load(Constants.DIALOGUE_PATHS.cemetery), "start")
 	
@@ -46,6 +49,7 @@ func quick_dim(dim_duration: float) -> void:
 	transition_anim.play_backwards("transition_anim")
 	await transition_anim.animation_finished
 
-func place_photos() -> void:
-	print("photos placed")
-	await quick_dim(1.0)
+func place_photo() -> void:
+	player_sprite.play("place down")
+	photo_stack.reveal_photo()
+	await get_tree().create_timer(0.5).timeout

@@ -13,6 +13,14 @@ region = Rect2(19, 29, 10, 22)
 atlas = ExtResource("3_dqkch")
 region = Rect2(20, 51, 10, 22)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(50, 50, 10, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(20, 50, 10, 25)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
 atlas = ExtResource("3_dqkch")
 region = Rect2(19, 29, 10, 22)
@@ -62,6 +70,17 @@ animations = [{
 "loop": 1,
 "name": &"idle no cam",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oprun")
+}],
+"loop": 0,
+"name": &"place down",
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -121,7 +140,9 @@ horizontal_alignment = 1
 texture_filter = 1
 scale = Vector2(6.63, 6.63)
 sprite_frames = SubResource("SpriteFrames_s3x7s")
-animation = &"walking no cam"
+animation = &"place down"
+frame = 1
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1615751801]
 position = Vector2(1.9999981, -1.7339532e-06)

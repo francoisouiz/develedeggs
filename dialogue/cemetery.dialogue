@@ -16,9 +16,11 @@ Max: You wouldn't believe it but Joshua’s managing it now and it’s a whole l
 Max: Who knew that scrawny little boy can manage a legitimate business now.
 Max: …
 Max: Actually, instead of describing it, why not I just show you.
-do place_photos()
+do place_photo()
 Max: While I’m at it, here, take a look at this photo I took on New Year's Eve.
+do place_photo()
 Max: And there’s also this photo, I took during a company outing.
+do place_photo()
 Max: And also this time when I-
 do quick_dim(2.0)
 Max: ...

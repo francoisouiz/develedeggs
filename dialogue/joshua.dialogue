@@ -9,7 +9,11 @@ match PlayerStats.curr_level
 					Joshua: So what was that about?
 					Max: This old-timey camera from my parents apparently? Not sure what it’s about. Something about reliving the past.
 					Martin: I mean, a camera is used for pictures, ain’t it. Cmon, snap a photo of us right now!
-					Max: If you say so.
+					Joshua: True, let the [wave]professional[/wave] photographer show us his craft. 
+					Joshua: Surely, an entire year in the industry wasn't for naught, right?
+					Max: Unfortunately, a photo cannot capture what is not there.
+					Max: An ugly guy will forever be an ugly guy.
+					Max: Let's still take a photo though, might as well test this camera.
 					$> PlayerStats.has_talked_to_josh = true
 					do show_instruction()
 		else

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://blqco4uwjomll"]
 
 [ext_resource type="Script" uid="uid://dp3s2phqp7tjs" path="res://scripts/menus/main_menu_ui.gd" id="1_ag3nm"]
+[ext_resource type="Texture2D" uid="uid://dw5ok73yu38y2" path="res://assets/backgrounds/BG.png" id="2_6krui"]
 [ext_resource type="FontFile" uid="uid://c2ske2q13exsd" path="res://assets/fonts/body.ttf" id="2_v426f"]
-[ext_resource type="FontFile" uid="uid://bbga5wbdg3o80" path="res://assets/fonts/header.ttf" id="3_54tme"]
 
 [sub_resource type="Theme" id="Theme_u045a"]
 default_font = ExtResource("2_v426f")
@@ -25,8 +25,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_6krui")
+expand_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1140696443]
 layout_mode = 1
@@ -36,9 +42,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -124.5
-offset_top = -15.0
+offset_top = 88.0
 offset_right = 124.5
-offset_bottom = 139.0
+offset_bottom = 242.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -57,21 +63,6 @@ theme = SubResource("Theme_u045a")
 theme_override_font_sizes/font_size = 59
 theme_override_styles/normal = SubResource("StyleBoxFlat_s3x7s")
 text = "Quit"
-
-[node name="Label" type="Label" parent="." unique_id=408464295]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -128.5
-offset_top = 91.0
-offset_right = 128.5
-offset_bottom = 239.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_54tme")
-theme_override_font_sizes/font_size = 138
-text = "Snapshot"
-horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

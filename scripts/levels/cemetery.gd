@@ -8,6 +8,21 @@ extends Node2D
 
 @onready var transition_anim: AnimationPlayer = $Panel2/TransitionAnim
 
+@onready var title_animation: AnimationPlayer = $Control/TextureRect/TitleAnimation
+@onready var progarmmers_animation: AnimationPlayer = $Control/Label/ProgarmmersAnimation
+@onready var arts_animation: AnimationPlayer = $Control/Label2/ArtsAnimation
+@onready var soundtrack_animation: AnimationPlayer = $Control/Label3/SoundtrackAnimation
+@onready var voice_animation: AnimationPlayer = $Control/Label4/VoiceAnimation
+@onready var stock_animation_1: AnimationPlayer = $Control/Label5/StockAnimation1
+@onready var stock_animation_2: AnimationPlayer = $Control/Label6/StockAnimation2
+@onready var script_animation: AnimationPlayer = $Control/Label7/ScriptAnimation
+
+@onready var credit_animations: Array[AnimationPlayer] = [
+	title_animation, progarmmers_animation, script_animation,
+	arts_animation, soundtrack_animation,
+	voice_animation, stock_animation_1, stock_animation_2
+]
+
 func _ready() -> void:
 	await get_tree().create_timer(1.5).timeout
 	
@@ -22,10 +37,22 @@ func walk_away() -> void:
 	
 	player_sprite.play("walking cam")
 	walking_animation.play("walk_away")
-	# call play_credits
+	
+	await walking_animation.animation_finished
+	play_credits()
 
 func play_credits() -> void:
-	pass
+	await get_tree().create_timer(2.0).timeout
+	
+	for animation: AnimationPlayer in credit_animations:
+		animation.play("fade_inout")
+		await animation.animation_finished
+		await get_tree().create_timer(1.0).timeout
+	
+	transition_anim.play("fadeout")
+	await transition_anim.animation_finished
+	
+	go_back_menu()
 	# play credits
 	# await credits
 	# play fadeout

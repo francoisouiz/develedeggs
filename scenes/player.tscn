@@ -15,11 +15,11 @@ region = Rect2(20, 51, 10, 22)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("3_dqkch")
-region = Rect2(50, 50, 10, 25)
+region = Rect2(50, 30, 10, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
 atlas = ExtResource("3_dqkch")
-region = Rect2(20, 50, 10, 25)
+region = Rect2(40, 30, 10, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
 atlas = ExtResource("3_dqkch")

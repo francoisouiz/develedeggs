@@ -2,17 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://blqco4uwjomll" path="res://scenes/menus/main_menu_ui.tscn" id="1_j5px3"]
 
-[sub_resource type="Environment" id="Environment_m2g58"]
+[sub_resource type="Environment" id="Environment_j5px3"]
 background_mode = 3
 tonemap_mode = 1
 glow_enabled = true
-glow_intensity = 1.85
-glow_bloom = 0.2
+glow_intensity = 1.5
+glow_bloom = 0.25
+glow_blend_mode = 2
 
 [node name="Root" type="Node" unique_id=2030083573]
 
 [node name="Main Menu UI" parent="." unique_id=1250129694 instance=ExtResource("1_j5px3")]
-curr_scene = "cemetery"
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1194548668]
-environment = SubResource("Environment_m2g58")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1721860758]
+environment = SubResource("Environment_j5px3")

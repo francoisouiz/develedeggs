@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dovylgc8n72t"]
+
+[ext_resource type="Script" uid="uid://toh0lvfu8css" path="res://scripts/interactables/photo_stack.gd" id="1_37s1h"]
+[ext_resource type="Texture2D" uid="uid://c18igtpn43rus" path="res://assets/sprites/spritesheet.png" id="2_dpeln"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nj4ij"]
+atlas = ExtResource("2_dpeln")
+region = Rect2(177, 40, 6, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72ghi"]
+atlas = ExtResource("2_dpeln")
+region = Rect2(163, 39, 12, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6aki"]
+atlas = ExtResource("2_dpeln")
+region = Rect2(185, 39, 12, 11)
+
+[node name="PhotoStack" type="Node2D" unique_id=1952793013]
+script = ExtResource("1_37s1h")
+
+[node name="Photo3" type="Sprite2D" parent="." unique_id=1287727645]
+position = Vector2(5, 4)
+texture = SubResource("AtlasTexture_nj4ij")
+
+[node name="Photo2" type="Sprite2D" parent="." unique_id=890952059]
+position = Vector2(-8, 2)
+texture = SubResource("AtlasTexture_72ghi")
+
+[node name="Photo1" type="Sprite2D" parent="." unique_id=1914248577]
+texture = SubResource("AtlasTexture_k6aki")
